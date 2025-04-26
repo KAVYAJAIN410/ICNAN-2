@@ -1,13 +1,28 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
 import { Clock } from "lucide-react"
 import CountdownTimer from "@/components/countdown-timer"
+import useMediaQuery from "@/components/useMediaQuery"
+import SpeakerCard2 from "@/components/temp"
 import SpeakerCard from "@/components/speaker-card"
 import SponsorGrid from "@/components/sponsor-grid"
 import ResponsiveTimeline from "@/components/timeline"
+import { useRef,useEffect } from "react"
+import { motion, useInView, useAnimation } from "framer-motion";
 
 
 export default function Home() {
+  const isMobile = useMediaQuery("(max-width: 800px)");
+    const controls = useAnimation();
+    const ref = useRef<HTMLDivElement>(null);
+    const inView = useInView(ref, { once: true, amount: 0.5 }); // 👈 important
+      useEffect(() => {
+        if (inView) {
+          controls.start("visible");
+        }
+      }, [inView, controls]);
+    
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* Navigation Bar */}
@@ -209,6 +224,16 @@ export default function Home() {
       
       <div className="grid md:grid-cols-3 gap-4 mb-8">
         {[1, 2, 3].map((i) => (
+           <motion.div
+                  ref={ref}
+                  variants={{
+                    hidden: { opacity: 0, x: -200 },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                  initial="hidden"
+                  animate={controls}
+                  transition={{ duration: 1 }}
+                >
           <div key={i} className="overflow-hidden rounded-lg">
             <Image
               src="about.png"
@@ -218,6 +243,7 @@ export default function Home() {
               className="w-full h-auto"
             />
           </div>
+          </motion.div>
         ))}
       </div>
 
@@ -230,7 +256,7 @@ export default function Home() {
   </div>
 
   {/* Speakers Section */}
-  <SpeakerCard />
+  {isMobile ? <SpeakerCard2 /> : <SpeakerCard />}
 
   {/* Sponsors Section */}
   <SponsorGrid />

@@ -1,0 +1,106 @@
+.gallery {
+    position: relative;
+    height: 600px;
+
+  }
+  /* HTML: <div class="hexagon"></div> */
+  /* HTML: <div class="octagon"></div> */
+  
+  
+  .mediaText {
+    margin-top: 15%;
+  }
+  .gallery .item {
+    position: absolute;
+    width: 22vw;
+    height: 110px;
+    transition: transform 0.9s, width 0.9s, height 0.9s;
+    border-radius: 10px; /* Add border-radius */
+    overflow: hidden; /* Ensure image stays inside the rounded corners */
+  }
+  
+
+  .gallery div[data-pos="0"] {
+    width: 22vw;
+    height: 555px;
+    margin-left: 2%;
+    z-index: 10;
+  }
+  
+  div[data-pos="0"] {
+    transform: translate(0, 0);
+  }
+  div[data-pos="1"] {
+    transform: translate(26vw, 0);
+  }
+  div[data-pos="2"] {
+    transform: translate(50vw, 0);
+  }
+  div[data-pos="3"] {
+    transform: translate(74vw, 0);
+  }
+  div[data-pos="4"] {
+    transform: translate(26vw, 148.333px);
+  }
+  div[data-pos="5"] {
+    transform: translate(50vw, 148.333px);
+  }
+  div[data-pos="6"] {
+    transform: translate(74vw, 148.333px);
+  }
+  div[data-pos="7"] {
+    transform: translate(26vw, 296.66px);
+  }
+  div[data-pos="8"] {
+    transform: translate(50vw, 296.66px);
+  }
+  div[data-pos="9"] {
+    transform: translate(74vw, 296.66px);
+  }
+  div[data-pos="10"] {
+    transform: translate(26vw, 444.999px);
+  }
+  div[data-pos="11"] {
+    transform: translate(50vw, 444.999px);
+  }
+  div[data-pos="12"] {
+    transform: translate(74vw, 444.999px);
+  }
+  
+  
+  @media (max-width: 800px) {
+    .gallery {
+      width: 90vw;
+      height: 90vh;
+      margin-top: 10%;
+      margin-left: 5%;
+    }
+  
+    .gallery .item {
+      width: 45vw;
+      height: 25vh;
+    }
+  
+    .gallery div[data-pos="0"] {
+      width: 90vw;
+      height: 50vh;
+      z-index: 10;
+    }
+  
+    div[data-pos="0"] {
+      transform: translate(0, 0);
+    }
+    div[data-pos="1"] {
+      transform: translate(0, 51vh);
+    }
+    div[data-pos="2"] {
+      transform: translate(0, 76vh);
+    }
+    div[data-pos="3"] {
+      transform: translate(45vw, 51vh);
+    }
+    div[data-pos="4"] {
+      transform: translate(45vw, 76vh);
+    }
+  }
+  
