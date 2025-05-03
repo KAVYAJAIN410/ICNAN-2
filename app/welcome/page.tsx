@@ -4,8 +4,11 @@ const Welcome: React.FC = () => {
   return (
     <div className=" bg-white text-[#0a2240] px-6 py-12 md:px-20 lg:px-40 leading-relaxed">
       <h1 className="text-2xl md:text-3xl font-bold mb-6">
-        Dear Nano, Micro and Small Enthusiasts & Explorers!!
+        Welcome Message
       </h1>
+      <p className="mb-4">
+      Dear Nano, Micro and Small Enthusiasts & Explorers!!
+      </p>
       <p className="mb-4">
         Greetings and welcome to the Centre for Nanotechnology Research (CNR) at Vellore Institute of Technology, Vellore, India.
       </p>

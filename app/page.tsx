@@ -96,15 +96,15 @@ export default function Home() {
            
           </div>
           <div className="text-center  h-[500px] md:h-auto  text-white">
-            <h1 className="text-5xl font-bold mb-2 " style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>ICNAN '25</h1>
+            <h1 className="text-7xl font-bold mb-2 " style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>ICNAN '25</h1>
             <h2 className="text-xl mb-4">
               3<sup>rd</sup> International Conference on
               <br />
-              Nanoscience And Nanotechnology
+              Nanoscience and Nanotechnology
             </h2>
             <div className="flex items-center justify-center  mb-4">
               <Clock className="mr-2" />
-              <span>December 18-20, 2025</span>
+              <span>December 16-19, 2025</span>
             </div>
             <div className="flex items-center mb-4">
   <hr className="flex-grow border-t border-gray-300" />
@@ -117,7 +117,7 @@ export default function Home() {
             Centre for Nanotechnology Research, Vellore Institute of Technology, Vellore, TN, India
             </p>
             <div className="flex gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded">Schedule</button>
+              {/* <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded">Schedule</button> */}
               <button className="bg-transparent border border-white hover:bg-white/10 text-white px-6 py-2 rounded">
                 Brochure
               </button>
@@ -169,7 +169,7 @@ export default function Home() {
 </div>
 
       
-        <div className="flex justify-center gap-4 mt-8">
+        {/* <div className="flex justify-center gap-4 mt-8">
           <button className="border border-[#0a2240] text-[#0a2240] px-6 py-2 rounded hover:bg-gray-200">
             Full Paper
           </button>
@@ -179,7 +179,7 @@ export default function Home() {
           <button className="border border-[#0a2240] text-[#0a2240] px-6 py-2 rounded hover:bg-gray-200">
             Oral / Poster
           </button>
-        </div>
+        </div> */}
       </section>
       <section
   className="relative bg-cover bg-center bg-no-repeat text-white"

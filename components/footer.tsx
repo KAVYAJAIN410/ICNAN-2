@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-semibold">ICNAN-25</h3>
             <p className="text-sm text-gray-300">
-              International Conference on Nanoscience
+              International Conference on Nanoscience & Nanotechnology
             </p>
           </div>
         </div>
@@ -20,9 +20,10 @@ const Footer: React.FC = () => {
         <div className="text-md md:text-right">
           <p className="mb-1">Centre for Nanotechnology Research</p>
           <p className="mb-1">Vellore Institute of Technology, Vellore, TN, India</p>
-          <p className="mb-1">December 18–20, 2025</p>
-          <p className="mb-1">📧 contact@icnan25.org</p>
-          <p>📞 +91 123 456 7890</p>
+          <p className="mb-1">December 16–19, 2025</p>
+          <p className="mb-1">icnan25@vit.ac.in</p>
+          <p>📞 +91 9994882510</p>
+          <p>📞 +91 9791322311</p>
         </div>
       </div>
 

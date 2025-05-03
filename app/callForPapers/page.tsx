@@ -26,12 +26,7 @@ export default function CallForPapers() {
           </p>
         </section>
   
-        <section className="space-y-2">
-          <h2 className="text-2xl font-semibold">Registration</h2>
-          <p>
-            Details regarding registration will be shared soon.
-          </p>
-        </section>
+       
       </div>
     );
   }

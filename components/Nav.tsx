@@ -41,16 +41,16 @@ const Nav: React.FC = () => {
               { label: "About VIT", href: "/about" },
               { label: "About CNR", href: "/about" },
               { label: "Themes", href: "/themes" },
-              { label: "Highlights", href: "/conference/highlights" },
+            //   { label: "Highlights", href: "/conference/highlights" },
               { label: "Speakers", href: "/speakers" },
-              { label: "Conference Schedule", href: "/conference/schedule" }
+            //   { label: "Conference Schedule", href: "/conference/schedule" }
             ]} />
           </div>
 
           <div className="px-3">
             <Dropdown title="Organisers" items={[
-              { label: "Organising Committee", href: "/organisers/organising-committee" },
-              { label: "Advisory Committee", href: "/organisers/advisory-committee" }
+              { label: "Organising Committee", href: "/organisers" },
+              { label: "Advisory Committee", href: "/Advisory" }
             ]} />
           </div>
 
@@ -94,14 +94,14 @@ const Nav: React.FC = () => {
             { label: "About VIT", href: "/about" },
             { label: "About CNR", href: "/about" },
             { label: "Themes", href: "/themes" },
-            { label: "Highlights", href: "/conference/highlights" },
+            // { label: "Highlights", href: "/conference/highlights" },
             { label: "Speakers", href: "/speakers" },
-            { label: "Conference Schedule", href: "/conference/schedule" }
+            // { label: "Conference Schedule", href: "/conference/schedule" }
           ]} />
 
           <MobileDropdown title="Organisers" items={[
             { label: "Organising Committee", href: "/organisers/organising-committee" },
-            { label: "Advisory Committee", href: "/organisers/advisory-committee" }
+            { label: "Advisory Committee", href: "/Advisory" }
           ]} />
 
           <MobileDropdown title="Call for Papers" items={[
