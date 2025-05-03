@@ -7,6 +7,10 @@ import useMediaQuery from "@/components/useMediaQuery"
 import SpeakerCard2 from "@/components/temp"
 import SpeakerCard from "@/components/speaker-card"
 import SponsorGrid from "@/components/sponsor-grid"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/autoplay';
 import ResponsiveTimeline from "@/components/timeline"
 import { useRef,useEffect } from "react"
 import { motion, useInView, useAnimation } from "framer-motion";
@@ -57,7 +61,7 @@ export default function Home() {
         'Journal of Nanoscience and Nanotechnology Applications',
       ];
     
-    
+   let images=["https://vit.ac.in/ICNAN/images/gallery/3.jpg","https://vit.ac.in/ICNAN/images/icnan-11.jpg","https://vit.ac.in/ICNAN/images/icnan-5.jpg","https://vit.ac.in/ICNAN/images/gallery/4.jpg","https://vit.ac.in/ICNAN/images/icnan-1.jpg","https://vit.ac.in/ICNAN/images/icnan-9.jpg"]
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* Navigation Bar */}
@@ -181,8 +185,8 @@ export default function Home() {
   className="relative bg-cover bg-center bg-no-repeat text-white"
   style={{ backgroundImage: "url('image.png')" }}
 >
-
-      {/* Statistics */}
+{/* 
+      
       <section className="py-10 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-4 gap-4 text-center">
@@ -220,52 +224,55 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
  
   {/* Overlay to darken the bg a bit if needed */}
-  <div className=" py-10 px-4 text-white">
-    <div className="container mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-8" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>ABOUT ICNAN '25</h2>
-      
-      <div className="grid md:grid-cols-3 gap-4 mb-8">
-        {[1, 2, 3].map((i) => (
-           <motion.div
-                  ref={ref}
-                  variants={{
-                    hidden: { opacity: 0, x: -200 },
-                    visible: { opacity: 1, x: 0 },
-                  }}
-                  initial="hidden"
-                  animate={controls}
-                  transition={{ duration: 1 }}
-                >
-          <div key={i} className="overflow-hidden rounded-lg">
-            <Image
-              src="about.png"
-              alt="Conference Image"
-              width={400}
-              height={200}
-              className="w-full h-auto"
-            />
-          </div>
-          </motion.div>
-        ))}
+  <div className="py-10 px-4 text-white">
+      <div className="container mx-auto">
+        <h2 className="text-5xl font-bold text-center mb-8" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>
+          ABOUT ICNAN '25
+        </h2>
+
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={20}
+          slidesPerView={3}
+          
+          autoplay={{
+            delay: 2000, // time between slides (in ms)
+            disableOnInteraction: false, // keeps autoplay even when user interacts
+          }}
+          loop={true} // infinite loop
+          className="mb-8"
+        >
+          {[0,1, 2, 3, 4, 5].map((i) => (
+            <SwiperSlide key={i}>
+              <div className="overflow-hidden rounded-lg">
+                <Image
+                  src={`${images[i]}`}
+                  alt={`Conference Image ${i}`}
+                  width={400}
+                  height={200}
+                  className="w-full h-auto"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <p className="text-sm leading-relaxed">
+        ICNAN 2025 is your portal to the world where the tiniest manipulations lead to the grandest innovations, bringing together a vibrant tapestry of Indian and international minds – students, scientists, engineers, and industry titans – to ignite the next wave of nanoscale breakthroughs.
+
+Dive into a dynamic exchange of ideas, where cutting-edge research meets real-world applications. From fundamentals to advanced sustainable solutions, this conference is a global hub for interdisciplinary collaboration. Witness the explosive growth of nanotechnology across every sector, shaping the future of energy, medicine, environmental science, and electronics.
+        </p>
       </div>
-
-      <p className="text-sm leading-relaxed">
-        ICNAN '2025 aims to bring together Indian and International communities (students, scientists, engineers and
-        stakeholders) from all of the government, academics, industry and private research organizations. The
-        conference will provide a platform to exchange and discuss new and exciting advances in the field.
-      </p>
     </div>
-  </div>
-
   {/* Speakers Section */}
   {isMobile ? <SpeakerCard2 /> : <SpeakerCard />}
 
   {/* Sponsors Section */}
-  <SponsorGrid />
+  {/* <SponsorGrid /> */}
 
 
 </section>

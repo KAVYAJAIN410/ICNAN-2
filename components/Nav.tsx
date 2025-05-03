@@ -56,7 +56,7 @@ const Nav: React.FC = () => {
 
           <div className="px-3">
             <Dropdown title="Call for Papers" items={[
-              { label: "Publications and Proceedings", href: "/papers/publications-proceedings" },
+              { label: "Publications and Proceedings", href: "/callForPapers"},
               { label: "Research Awards", href: "/papers/research-awards" }
             ]} />
           </div>
@@ -105,7 +105,7 @@ const Nav: React.FC = () => {
           ]} />
 
           <MobileDropdown title="Call for Papers" items={[
-            { label: "Publications and Proceedings", href: "/papers/publications-proceedings" },
+            { label: "Publications and Proceedings", href: "/callForPapers" },
             { label: "Research Awards", href: "/papers/research-awards" }
           ]} />
 
