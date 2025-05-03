@@ -66,19 +66,28 @@ const Nav: React.FC = () => {
           </div>
 
           <div className="px-3">
-            <Dropdown title="Contact" items={[
-              { label: "How to reach", href: "/contact/how-to-reach" },
-              { label: "Accommodation", href: "/contact/accommodation" },
-              { label: "For Enquiry", href: "/contact/enquiry" }
+            <Dropdown title="Gallery" items={[
+              { label: "ICNAN'19", href: "/callForPapers"},
+              { label: "ICNAN'16", href: "/papers/research-awards" }
             ]} />
           </div>
+
+          <div className="px-3">
+            <Dropdown title="Contact" items={[
+            //   { label: "How to reach", href: "/contact/how-to-reach" },
+              { label: "Accommodation", href: "/contact/accommodation" },
+              { label: "For Enquiry", href: "/Enquiry" }
+            ]} />
+          </div>
+
+          
 
           <div className="px-3">
             <Link href="/registration" className="hover:underline">Registration</Link>
           </div>
 
           <div className="px-3">
-            <Link href="/faq" className="hover:underline">FAQ</Link>
+            {/* <Link href="/faq" className="hover:underline">FAQ</Link> */}
           </div>
         </nav>
       </div>
@@ -118,7 +127,7 @@ const Nav: React.FC = () => {
           ]} />
 
           <Link href="/registration" className="block hover:underline">Registration</Link>
-          <Link href="/faq" className="block hover:underline">FAQ</Link>
+          {/* <Link href="/faq" className="block hover:underline">FAQ</Link> */}
         </div>
       )}
     </header>
