@@ -22,50 +22,46 @@ export default function Home() {
           controls.start("visible");
         }
       }, [inView, controls]);
+      const themes = [
+        'Advanced Nanomaterials and Characterization',
+        'Thin Film Deposition Techniques',
+        'Molecular Nanoscience, Catalysis, and Applications',
+        'Semiconducting Materials and Devices',
+        'Electronic Inks for Flexible and Printed Electronics',
+        'Nanomaterials and Devices for Energy Harvesting (Solar Cells, Nanogenerators & self-powered devices - triboelectric, piezoelectric and thermoelectric)',
+        'Nanomaterials and Devices for Energy Storage (Supercapacitors, Batteries) and Energy Conversion (Fuel Cells)',
+        'Nanomaterials and Devices for Environmental Applications (Water Purification, Adsorbents, CO₂ Remediation)',
+        'Sensor Technologies',
+        'Food, Agriculture, and Healthcare Applications',
+        'Automotive Applications',
+        'Hydrogen Energy Solutions',
+        'Nano-enabled Biomedical Systems and Devices',
+        'Nanophotonics and Plasmonics',
+        'Magnetic Nanomaterials and Their Applications',
+        'Nanocoatings and Surface Modifications',
+        'Flexible Electronic Devices',
+        'Additive Manufacturing for Energy and Electronic Devices',
+        'Nanoelectronics: Modelling, Simulation and Fabrication',
+        'Artificial Intelligence and Machine Learning Techniques in Nanotechnology',
+        'Density Functional Theory and Molecular Dynamics in Nanotechnology',
+        'Quantum Computing Applications in Nanotechnology'
+      ];
+      
+    
+      const journals = [
+        'Journal of Nanoscience and Nanotechnology',
+        'Advanced Materials and Interfaces',
+        'Advanced Nanomaterials (Nanomedicine)',
+        'Journal of Nanomaterials and Nanotechnology',
+        'Polymer Composites and Nanocomposites',
+        'Journal of Nanoscience and Nanotechnology Applications',
+      ];
+    
     
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* Navigation Bar */}
-      <header className="bg-[#0a2240] text-white py-2 px-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <Image src="VITLOGO.png" alt="VIT Logo" width={120} height={120} className="mr-2" />
-          </div>
-          <nav className="hidden md:flex space-x-4 text-sm">
-            <Link href="#" className="hover:underline">
-              Home
-            </Link>
-            <span>|</span>
-            <Link href="#" className="hover:underline">
-              Conference info
-            </Link>
-            <span>|</span>
-            <Link href="#" className="hover:underline">
-              Organisers
-            </Link>
-            <span>|</span>
-            <Link href="#" className="hover:underline">
-              Call for papers
-            </Link>
-            <span>|</span>
-            <Link href="#" className="hover:underline">
-              Gallery
-            </Link>
-            <span>|</span>
-            <Link href="#" className="hover:underline">
-              Contact
-            </Link>
-            <span>|</span>
-            <Link href="#" className="hover:underline">
-              FAQ
-            </Link>
-            <span>|</span>
-            <Link href="#" className="hover:underline">
-              Login
-            </Link>
-          </nav>
-        </div>
-      </header>
+
 
       {/* Hero Section */}
       <section className="relative w-full  overflow-hidden">
@@ -81,38 +77,42 @@ export default function Home() {
   className="object-cover absolute inset-0 z-10 opacity-80"
 />
      
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between relative z-10 min-h-[600px]">
+        <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-center  relative z-10 md:min-h-[600px]">
           <div className="flex-shrink-0 mb-6 md:mb-0 ">
             
              
                   <Image
                     src={`Logo.png`}
                     alt={`Icon `}
-                    width={64}
-                    height={64}
-                    className="w-full h-full object-cover"
+                    width={200}
+                    height={200}
+                    className="lg:w-full lg:h-full object-cover"
                   />
                 
            
           </div>
-          <div className="text-center md:text-right h-[500px] md:h-auto  text-white">
-            <h1 className="text-4xl font-bold mb-2">ICNAN '25</h1>
+          <div className="text-center  h-[500px] md:h-auto  text-white">
+            <h1 className="text-5xl font-bold mb-2 " style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>ICNAN '25</h1>
             <h2 className="text-xl mb-4">
               3<sup>rd</sup> International Conference on
               <br />
               Nanoscience And Nanotechnology
             </h2>
-            <div className="flex items-center justify-center md:justify-end mb-4">
+            <div className="flex items-center justify-center  mb-4">
               <Clock className="mr-2" />
               <span>December 18-20, 2025</span>
             </div>
-            <p className="mb-4">ORGANISED BY</p>
+            <div className="flex items-center mb-4">
+  <hr className="flex-grow border-t border-gray-300" />
+  <span className="mx-4 text-sm font-semibol">ORGANISED BY</span>
+  <hr className="flex-grow border-t border-gray-300" />
+</div>
+
+           
             <p className="text-sm mb-6">
-              Centre for Nanoscience and Technology
-              <br />
-              Institute of Technology-Vellore, TN, India
+            Centre for Nanotechnology Research, Vellore Institute of Technology, Vellore, TN, India
             </p>
-            <div className="flex gap-4 justify-center md:justify-end">
+            <div className="flex gap-4 justify-center">
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded">Schedule</button>
               <button className="bg-transparent border border-white hover:bg-white/10 text-white px-6 py-2 rounded">
                 Brochure
@@ -125,7 +125,7 @@ export default function Home() {
       {/* Countdown Timer */}
       <CountdownTimer />
 
-      <h2 className="text-3xl font-bold text-center mt-8  bold">IMPORTANT DATES</h2>
+      <h2 className="text-5xl font-bold text-center mt-8  bold text-[#0a2240]" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>IMPORTANT DATES</h2>
       <div className=" md:py-12 md:m-10 ">
       <div className="container mx-auto">
   
@@ -134,31 +134,37 @@ export default function Home() {
     </div>
 
       {/* Themes and Journals */}
+      
       <section className="py-10 px-4">
-        <div className="container mx-auto grid md:grid-cols-2 gap-8">
-          <div>
-            <h3 className="text-xl font-semibold mb-4 text-center">Themes</h3>
-            <ul className="list-disc pl-6 space-y-2 text-sm">
-              <li>Materials and Nanoscience (Advanced Materials)</li>
-              <li>Nanomaterials and Nanotechnology</li>
-              <li>Advanced Nanomaterials (Nanomedicine)</li>
-              <li>Nanomaterials for Energy Applications</li>
-              <li>Polymer Blends and Nanocomposites</li>
-              <li>Nanoscience and Nanotechnology Applications</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-4 text-center">Journals and Publications</h3>
-            <ul className="list-disc pl-6 space-y-2 text-sm">
-              <li>Journal of Nanoscience and Nanotechnology</li>
-              <li>Advanced Materials and Interfaces</li>
-              <li>Advanced Nanomaterials (Nanomedicine)</li>
-              <li>Journal of Nanomaterials and Nanotechnology</li>
-              <li>Polymer Composites and Nanocomposites</li>
-              <li>Journal of Nanoscience and Nanotechnology Applications</li>
-            </ul>
-          </div>
-        </div>
+      <div className="container mx-auto grid md:grid-cols-2 gap-8">
+
+{/* Themes Box with Scrolling List */}
+<div>
+  <h3 className="text-xl font-semibold mb-4 text-center">Themes</h3>
+  <div className="border rounded-xl p-4 bg-white shadow h-64 overflow-hidden relative">
+    <ul className="animate-verticalScroll space-y-2 text-sm text-gray-700">
+      {themes.concat(themes).map((theme, index) => (
+        <li key={index} className="list-disc list-inside">{theme}</li>
+      ))}
+    </ul>
+  </div>
+</div>
+
+{/* Journals Box with Scrolling List */}
+<div>
+  <h3 className="text-xl font-semibold mb-4 text-center">Journals and Publications</h3>
+  <div className="border rounded-xl p-4 bg-white shadow h-64 overflow-hidden relative">
+    <ul className="animate-verticalScroll space-y-2 text-sm text-gray-700">
+      {journals.concat(journals).map((journal, index) => (
+        <li key={index} className="list-disc list-inside">{journal}</li>
+      ))}
+    </ul>
+  </div>
+</div>
+
+</div>
+
+      
         <div className="flex justify-center gap-4 mt-8">
           <button className="border border-[#0a2240] text-[#0a2240] px-6 py-2 rounded hover:bg-gray-200">
             Full Paper
@@ -220,7 +226,7 @@ export default function Home() {
   {/* Overlay to darken the bg a bit if needed */}
   <div className=" py-10 px-4 text-white">
     <div className="container mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-8">ABOUT ICNAN '25</h2>
+      <h2 className="text-3xl font-bold text-center mb-8" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>ABOUT ICNAN '25</h2>
       
       <div className="grid md:grid-cols-3 gap-4 mb-8">
         {[1, 2, 3].map((i) => (
@@ -261,31 +267,7 @@ export default function Home() {
   {/* Sponsors Section */}
   <SponsorGrid />
 
-  {/* Footer */}
-  <footer className=" text-white py-8 px-4 bg-[#0a2240]">
-    <div className="container mx-auto">
-      <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-        <div className="flex items-center mb-4 md:mb-0">
-          <div className="mr-4">
-            <Image src="logo.png" alt="ICNAN Logo" width={140} height={140} />
-          </div>
-          <div>
-            <h3 className="text-lg font-bold">ICNAN-25</h3>
-          </div>
-        </div>
-        <div className="text-sm text-right">
-          <p>Centre for Nanoscience and Technology</p>
-          <p>Institute of Technology-Vellore, TN, India</p>
-          <p>December 18-20, 2025</p>
-          <p>Email: contact@icnan25.org</p>
-          <p>Phone: +91 123 456 7890</p>
-        </div>
-      </div>
-      <div className="text-center text-xs">
-        <p>© 2025 ICNAN. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
+
 </section>
 
     </div>

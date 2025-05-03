@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Nav from "@/components/Nav"
+import Footer from "@/components/footer"
 
 export const metadata: Metadata = {
   title: 'v0 App',
@@ -13,8 +15,16 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
+   
     <html lang="en">
-      <body>{children}</body>
+      
+      
+      <body>
+      <Nav></Nav>
+        {children}
+        <Footer></Footer>
+        </body>
+      
     </html>
   )
 }

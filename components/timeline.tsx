@@ -1,6 +1,24 @@
 "use client"
 
 import { useEffect, useState } from "react"
+// add on top
+import { motion } from "framer-motion"
+
+// Animation Variants
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20, scale: 0.8 },
+  visible: { opacity: 1, y: 0, scale: 1 },
+}
+
 
 interface TimelineItem {
   id: number
@@ -32,43 +50,42 @@ export default function ResponsiveTimeline() {
       id: 1,
       title: "Abstract Submission",
       subtitle: "Extended Abstract (2 pages, 1000 words)",
-      date: "20.09.2025",
-      status: "closed",
+      date: "01.10.2025",
       position: "top",
     },
     {
       id: 2,
-      title: "Early Bird",
-      subtitle: "Registration",
-      date: "20.09.2025",
+      title: "Acceptance",
+      subtitle: "",
+      date: "15.10.2025",
       position: "bottom",
     },
     {
       id: 3,
       title: "Early Bird",
       subtitle: "Registration",
-      date: "20.09.2025",
+      date: "01.10.2025",
       position: "top",
     },
     {
       id: 4,
-      title: "Early Bird",
-      subtitle: "Registration",
-      date: "20.09.2025",
+      title: "Last date",
+      subtitle: "For Registration",
+      date: "15.11.2025",
       position: "bottom",
     },
     {
       id: 5,
-      title: "Early Bird",
-      subtitle: "Registration",
-      date: "20.09.2025",
+      title: "Last Date ",
+      subtitle: "For Full paper submission",
+      date: "20.11.2025",
       position: "top",
     },
     {
       id: 6,
-      title: "Early Bird",
-      subtitle: "Registration",
-      date: "20.09.2025",
+      title: "Conference Dates",
+      subtitle: "",
+      date: "Dec 16-19,2025",
       position: "bottom",
     },
   ]
@@ -84,20 +101,36 @@ export default function ResponsiveTimeline() {
 
 function DesktopTimeline({ items }: { items: TimelineItem[] }) {
   return (
-    <div className="relative">
+    <motion.div
+      className="relative"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="flex items-center">
         {items.map((item, index) => (
-          <div key={item.id} className="flex-1 relative" style={{ zIndex: items.length - index }}>
+          <motion.div
+            key={item.id}
+            className="flex-1 relative"
+            style={{ zIndex: items.length - index }}
+            variants={itemVariants}
+          >
             {/* Label */}
             <div
               className={`absolute ${item.position === "top" ? "-top-24" : "bottom-[-6.5rem]"} ${index === 0 ? "left-0" : index === items.length - 1 ? "right-0" : "left-1/2 transform -translate-x-1/2"} w-48 text-center`}
             >
-              <div className={`flex flex-col items-center`}>
-                <div className={`text-center ${item.status === "closed" ? "text-red-600" : ""}`}>
+              <div className="flex flex-col items-center">
+                <motion.div
+                  className={`text-center ${item.status === "closed" ? "text-red-600" : ""}`}
+                  variants={itemVariants}
+                >
                   <div className="font-medium">{item.title}</div>
                   {item.subtitle && <div className="text-sm">{item.subtitle}</div>}
-                </div>
-                <div className="h-12 w-1 bg-[#1e3a8a] mt-2"></div>
+                </motion.div>
+                <motion.div
+                  className="h-12 w-1 bg-[#1e3a8a] mt-2"
+                  variants={itemVariants}
+                ></motion.div>
               </div>
             </div>
 
@@ -108,23 +141,30 @@ function DesktopTimeline({ items }: { items: TimelineItem[] }) {
               <div
                 className={`absolute inset-0 ${item.status === "closed" ? "bg-[#1e3a8a]" : "bg-[#2563eb]"} ${index === 0 ? "rounded-l-full" : ""} ${index === items.length - 1 ? "rounded-r-full" : ""}`}
               >
+                {/* Connector triangles */}
                 {index < items.length - 1 && (
                   <div className="absolute right-0 top-0 bottom-0 w-6 bg-white transform translate-x-3 skew-x-[20deg] z-10"></div>
                 )}
                 {index > 0 && (
                   <div className="absolute left-0 top-0 bottom-0 w-6 bg-white transform -translate-x-3 -skew-x-[20deg] z-10"></div>
                 )}
-                <div className="h-full flex items-center justify-center text-white font-medium">
-                  {item.status === "closed" ? "CLOSED" : item.date}
+
+                {/* Date / CLOSED */}
+                <div className="h-full flex items-center justify-center text-white font-medium relative">
+                 
+                  <span className="z-10">
+                    {item.status === "closed" ? "CLOSED" : item.date}
+                  </span>
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   )
 }
+
 
 function MobileTimeline({ items }: { items: TimelineItem[] }) {
   return (

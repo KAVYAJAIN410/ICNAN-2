@@ -24,7 +24,7 @@ export default function SponsorGrid() {
         </div>
       </div>
       <div className="container mx-auto relative z-10">
-        <h2 className="text-3xl font-bold text-center  mb-10">OUR SPONSORS</h2>
+        <h2 className="text-3xl font-bold text-center  mb-10" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>OUR SPONSORS</h2>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
           {sponsors.map((sponsor, index) => (

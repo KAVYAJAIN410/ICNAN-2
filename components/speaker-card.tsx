@@ -139,7 +139,7 @@ const speakerCard: React.FC = () => {
   return (
     <>
     <section className="min-h-[100vh] flex flex-col justify-center">
-    <h2 className={`text-3xl font-bold text-center mb-10 mt-5 ${inter.className}`}>OUR SPEAKERS</h2>
+    <h2 className={`text-3xl font-bold text-center mb-10 mt-5 ${inter.className}`}style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>OUR SPEAKERS</h2>
       <motion.div
         ref={ref}
         variants={{
