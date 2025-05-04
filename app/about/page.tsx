@@ -33,7 +33,7 @@ export default function AboutPage() {
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-900">About Us</h1>
 
         {/* About ICNAN'25 Section */}
-        <section className="mb-16">
+        <section className="mb-16" id="ICNAN">
           <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-100">
             <div className="p-6 md:p-8">
               <h2 className="text-3xl font-bold mb-6 text-gray-900 border-b border-gray-200 pb-2">
@@ -131,7 +131,7 @@ export default function AboutPage() {
         </section>
 
         {/* About VIT Section */}
-        <section className="mb-16">
+        <section className="mb-16" id="VIT">
           <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-100">
             <div className="p-6 md:p-8">
               <h2 className="text-3xl font-bold mb-6 text-gray-900 border-b border-gray-200 pb-2">
@@ -217,7 +217,7 @@ export default function AboutPage() {
         </section>
 
         {/* About CNR Section */}
-        <section className="mb-16">
+        <section className="mb-16" id="cnr">
           <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-100">
             <div className="p-6 md:p-8">
               <h2 className="text-3xl font-bold mb-6 text-gray-900 border-b border-gray-200 pb-2">

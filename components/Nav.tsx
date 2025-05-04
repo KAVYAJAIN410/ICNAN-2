@@ -45,8 +45,8 @@ const Nav: React.FC = () => {
           <div className="px-3">
             <Dropdown title="Conference Info" items={[
               { label: "Welcome Message", href: "/welcome" },
-              { label: "About ICNAN’25", href: "/about" },
-              { label: "About VIT", href: "/about" },
+              { label: "About ICNAN’25", href: "/about/#ICNAN" },
+              { label: "About VIT", href: "/about/#VIT" },
               { label: "About CNR", href: "/about" },
               { label: "Themes", href: "/themes" },
             //   { label: "Highlights", href: "/conference/highlights" },
@@ -119,21 +119,27 @@ const Nav: React.FC = () => {
           ]} />
 
           <MobileDropdown title="Organisers" items={[
-            { label: "Organising Committee", href: "/organisers/organising-committee" },
+            { label: "Organising Committee", href: "/organisers" },
             { label: "Advisory Committee", href: "/Advisory" }
           ]} />
 
           <MobileDropdown title="Call for Papers" items={[
             { label: "Publications and Proceedings", href: "/callForPapers" },
-            { label: "Research Awards", href: "/papers/research-awards" }
+            { label: "Research Awards", href: "/PresntationAwards" }
           ]} />
 
-          <Link href="/gallery" className="block hover:underline">Gallery</Link>
+<MobileDropdown title="Gallery" items={[
+            
+            { label: "WNCST'21", href: "https://vit.ac.in/WNCST2021/"},
+            { label: "CWST'21", href: "https://vit.ac.in/CWST/"},
+            { label: "VCAN'20", href: "https://vit.ac.in/VCAN2020/"},
+            { label: "ICNAN'19", href: "https://vit.ac.in/ICNAN/"},
+            { label: "ICNAN'16", href: "/gallery/16" },
+          ]} />
 
           <MobileDropdown title="Contact" items={[
-            { label: "How to reach", href: "/contact/how-to-reach" },
             { label: "Accommodation", href: "/accommodation" },
-            { label: "For Enquiry", href: "/contact/enquiry" }
+            { label: "For Enquiry", href: "/Enquiry" }
           ]} />
 
           <Link href="/registration" className="block hover:underline">Registration</Link>

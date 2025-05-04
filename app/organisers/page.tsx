@@ -7,7 +7,7 @@ import partha from "@/public/assets/patrons/partha.png";
 import ramesh from "@/public/assets/patrons/ramesh.png";
 import sankar from "@/public/patrons/parton-pic6.jpg";
 import sekar from "@/public/patrons/parton-pic2.jpg";
-import selvam from "@/public/assets/patrons/selvam.png";
+import selvam from "@/public/patrons/parton-pic5.jpg";
 import pradheep from "@/public/assets/patrons/pradheep.png";
 import barathi from "@/public/assets/patrons/barathi.jpg";
 import sandhya from "@/public/patrons/sandhya.jpg"
