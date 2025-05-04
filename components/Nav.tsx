@@ -47,7 +47,7 @@ const Nav: React.FC = () => {
               { label: "Welcome Message", href: "/welcome" },
               { label: "About ICNAN’25", href: "/about/#ICNAN" },
               { label: "About VIT", href: "/about/#VIT" },
-              { label: "About CNR", href: "/about" },
+              { label: "About CNR", href: "/about/#cnr" },
               { label: "Themes", href: "/themes" },
             //   { label: "Highlights", href: "/conference/highlights" },
               { label: "Speakers", href: "/speakers" },
