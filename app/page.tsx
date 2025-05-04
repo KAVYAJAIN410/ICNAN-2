@@ -271,6 +271,21 @@ export default function Home() {
               delay: 2000,
               disableOnInteraction: false,
             }}
+            breakpoints={{
+              // when window width is >= 0px (mobile)
+              0: {
+                slidesPerView: 1,
+              },
+              // when window width is >= 640px (tablet)
+              640: {
+                slidesPerView: 2,
+              },
+              // when window width is >= 1024px (desktop)
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+        
             loop={true}
             className="mb-8"
           >
