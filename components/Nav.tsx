@@ -138,7 +138,7 @@ const Nav: React.FC = () => {
           ]} />
 
           <MobileDropdown title="Contact" items={[
-            { label: "Accommodation", href: "/accommodation" },
+           { label: "Accommodation", href: "/accomodation" },
             { label: "For Enquiry", href: "/Enquiry" }
           ]} />
 
