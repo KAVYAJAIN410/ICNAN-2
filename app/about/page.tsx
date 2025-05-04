@@ -17,12 +17,7 @@ export default function AboutPage() {
   
   const vitImages = [1,2,3,4,5,6,7,8,9,10,12,13,14,15]
   
-  const cnrImages = [
-    { src: "/placeholder.svg?height=400&width=800", alt: "CNR Laboratory" },
-    { src: "/placeholder.svg?height=400&width=800", alt: "CNR Research Equipment" },
-    { src: "/placeholder.svg?height=400&width=800", alt: "CNR Researchers" },
-    { src: "/placeholder.svg?height=400&width=800", alt: "CNR Nanomaterials" }
-  ]
+  const cnrImages = [1,2,3,4,5,6,7,8,9,10]
 
   return (
     <div className="min-h-screen bg-gray-100 text-gray-900 text-justify">
@@ -287,7 +282,7 @@ export default function AboutPage() {
             loop={true}
             className="mb-8"
           >
-            {icnanImages.map((i) => (
+            {cnrImages.map((i) => (
               <SwiperSlide key={i}>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
@@ -295,7 +290,7 @@ export default function AboutPage() {
                   className="overflow-hidden rounded-lg shadow-lg"
                 >
                   <Image
-                    src={`ICNAN_IMAGES/cnr${i+1}.jpg`}
+                    src={`ICNAN_IMAGES/cnr${i}.jpg`}
                     alt={`Conference Image ${i}`}
                     width={400}
                     height={400}
