@@ -2,7 +2,7 @@ import React from "react";
 
 const Welcome: React.FC = () => {
   return (
-    <div className=" bg-white text-[#0a2240] px-6 py-12 md:px-20 lg:px-40 leading-relaxed">
+    <div className=" bg-white text-[#0a2240] px-6 py-12 md:px-20 lg:px-40 leading-relaxed text-justify">
       <h1 className="text-2xl md:text-3xl font-bold mb-6">
         Welcome Message
       </h1>

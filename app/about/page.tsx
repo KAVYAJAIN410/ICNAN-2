@@ -25,7 +25,7 @@ export default function AboutPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-900">
+    <div className="min-h-screen bg-gray-100 text-gray-900 text-justify">
      
 
       {/* Main Content */}
@@ -55,6 +55,21 @@ export default function AboutPage() {
               delay: 2000,
               disableOnInteraction: false,
             }}
+            breakpoints={{
+              // when window width is >= 0px (mobile)
+              0: {
+                slidesPerView: 1,
+              },
+              // when window width is >= 640px (tablet)
+              640: {
+                slidesPerView: 2,
+              },
+              // when window width is >= 1024px (desktop)
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+        
             loop={true}
             className="mb-8"
           >
@@ -153,6 +168,21 @@ export default function AboutPage() {
               delay: 2000,
               disableOnInteraction: false,
             }}
+            breakpoints={{
+              // when window width is >= 0px (mobile)
+              0: {
+                slidesPerView: 1,
+              },
+              // when window width is >= 640px (tablet)
+              640: {
+                slidesPerView: 2,
+              },
+              // when window width is >= 1024px (desktop)
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+        
             loop={true}
             className="mb-8"
           >
