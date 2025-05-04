@@ -15,6 +15,17 @@ import ResponsiveTimeline from "@/components/timeline"
 import { useRef,useEffect } from "react"
 import { motion, useInView, useAnimation } from "framer-motion";
 
+const textVariant = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+}
+
+const imageVariant = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } },
+}
+
+
 
 export default function Home() {
   const isMobile = useMediaQuery("(max-width: 800px)");
@@ -61,7 +72,7 @@ export default function Home() {
         'Journal of Nanoscience and Nanotechnology Applications',
       ];
     
-   let images=["https://vit.ac.in/ICNAN/images/gallery/3.jpg","https://vit.ac.in/ICNAN/images/icnan-11.jpg","https://vit.ac.in/ICNAN/images/icnan-5.jpg","https://vit.ac.in/ICNAN/images/gallery/4.jpg","https://vit.ac.in/ICNAN/images/icnan-1.jpg","https://vit.ac.in/ICNAN/images/icnan-9.jpg"]
+   let images=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* Navigation Bar */}
@@ -140,22 +151,26 @@ export default function Home() {
       {/* Themes and Journals */}
       
       <section className="py-10 px-4">
-      <div className="container mx-auto grid md:grid-cols-2 gap-8">
+      <div className="container w-[100%]">
 
 {/* Themes Box with Scrolling List */}
-<div>
-  <h3 className="text-xl font-semibold mb-4 text-center">Themes</h3>
+
+<div className="w-[100vw]">
+  <h3 className="text-4xl font-semibold mb-4 text-center" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>Themes</h3>
+  <div className="flex justify-center">
   <div className="border rounded-xl p-4 bg-white shadow h-64 overflow-hidden relative">
     <ul className="animate-verticalScroll space-y-2 text-sm text-gray-700">
       {themes.concat(themes).map((theme, index) => (
-        <li key={index} className="list-disc list-inside">{theme}</li>
+        <li key={index} className="list-disc list-inside text-xl">{theme}</li>
       ))}
     </ul>
   </div>
+  </div>
 </div>
 
+
 {/* Journals Box with Scrolling List */}
-<div>
+{/* <div>
   <h3 className="text-xl font-semibold mb-4 text-center">Journals and Publications</h3>
   <div className="border rounded-xl p-4 bg-white shadow h-64 overflow-hidden relative">
     <ul className="animate-verticalScroll space-y-2 text-sm text-gray-700">
@@ -164,7 +179,7 @@ export default function Home() {
       ))}
     </ul>
   </div>
-</div>
+</div> */}
 
 </div>
 
@@ -226,46 +241,68 @@ export default function Home() {
         </div>
       </section> */}
 
+
  
   {/* Overlay to darken the bg a bit if needed */}
-  <div className="py-10 px-4 text-white">
+  <div className="py-10 px-4 text-white bg-[#0a2240]">
       <div className="container mx-auto">
-        <h2 className="text-5xl font-bold text-center mb-8" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>
-          ABOUT ICNAN '25
-        </h2>
-
-        <Swiper
-          modules={[Autoplay]}
-          spaceBetween={20}
-          slidesPerView={3}
-          
-          autoplay={{
-            delay: 2000, // time between slides (in ms)
-            disableOnInteraction: false, // keeps autoplay even when user interacts
-          }}
-          loop={true} // infinite loop
-          className="mb-8"
+        <motion.h2
+          className="text-5xl font-bold text-center mb-8"
+          style={{ fontFamily: "Gill Sans Ultra Bold, sans-serif" }}
+          variants={textVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
         >
-          {[0,1, 2, 3, 4, 5].map((i) => (
-            <SwiperSlide key={i}>
-              <div className="overflow-hidden rounded-lg">
-                <Image
-                  src={`${images[i]}`}
-                  alt={`Conference Image ${i}`}
-                  width={400}
-                  height={200}
-                  className="w-full h-auto"
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+          ABOUT ICNAN '25
+        </motion.h2>
 
-        <p className="text-sm leading-relaxed">
-        ICNAN 2025 is your portal to the world where the tiniest manipulations lead to the grandest innovations, bringing together a vibrant tapestry of Indian and international minds – students, scientists, engineers, and industry titans – to ignite the next wave of nanoscale breakthroughs.
+        <motion.div
+          variants={imageVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.7 }}
+        >
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={20}
+            slidesPerView={3}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            className="mb-8"
+          >
+            {images.map((src, i) => (
+              <SwiperSlide key={i}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 200 }}
+                  className="overflow-hidden rounded-lg shadow-lg"
+                >
+                  <Image
+                    src={`About/${i+1}.JPG`}
+                    alt={`Conference Image ${i}`}
+                    width={400}
+                    height={400}
+                    className="w-full h-[400px] object-cover" // Consistent size & no compression
+                  />
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </motion.div>
 
-Dive into a dynamic exchange of ideas, where cutting-edge research meets real-world applications. From fundamentals to advanced sustainable solutions, this conference is a global hub for interdisciplinary collaboration. Witness the explosive growth of nanotechnology across every sector, shaping the future of energy, medicine, environmental science, and electronics.
-        </p>
+        <motion.p
+          className="text-xl leading-relaxed  mx-auto text-justify"
+          variants={textVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+         <span className="font-bold text-gray-400">ICNAN 2025</span> is your portal to the world where the tiniest manipulations lead to the grandest innovations, bringing together a vibrant tapestry of Indian and international minds – students, scientists, engineers, and industry titans – to ignite the next wave of nanoscale breakthroughs.
+        </motion.p>
       </div>
     </div>
   {/* Speakers Section */}

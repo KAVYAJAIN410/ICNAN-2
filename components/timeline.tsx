@@ -105,7 +105,8 @@ function DesktopTimeline({ items }: { items: TimelineItem[] }) {
       className="relative"
       variants={containerVariants}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.6 }} // Trigger when 20% of component is visible
     >
       <div className="flex items-center">
         {items.map((item, index) => (
@@ -151,7 +152,6 @@ function DesktopTimeline({ items }: { items: TimelineItem[] }) {
 
                 {/* Date / CLOSED */}
                 <div className="h-full flex items-center justify-center text-white font-medium relative">
-                 
                   <span className="z-10">
                     {item.status === "closed" ? "CLOSED" : item.date}
                   </span>

@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left side - Logo and Title */}
         <div className="flex items-center space-x-4">
-          <Image src="/logo.png" alt="ICNAN Logo" width={80} height={80} />
+          <Image src="Logo.png" alt="ICNAN Logo" width={80} height={80} />
           <div>
             <h3 className="text-xl font-semibold">ICNAN-25</h3>
             <p className="text-sm text-gray-300">

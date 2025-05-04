@@ -2,22 +2,30 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Logo from "@/public/Logo.png"
 import { Menu, X } from "lucide-react";
 
 const Nav: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="bg-[#0a2240] text-white py-2 px-4">
+    <header className="bg-[#0a2240] text-white py-2 px-2">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
+        <Image
+            src={Logo}
+            alt="VIT Logo"
+            width={100}
+            height={100}
+          />
           <Image
             src="https://vit.ac.in/files/VIT-logo.webp"
             alt="VIT Logo"
             width={250}
             height={250}
           />
+         
         </div>
 
         {/* Hamburger Toggle */}
@@ -57,25 +65,27 @@ const Nav: React.FC = () => {
           <div className="px-3">
             <Dropdown title="Call for Papers" items={[
               { label: "Publications and Proceedings", href: "/callForPapers"},
-              { label: "Research Awards", href: "/papers/research-awards" }
+              { label: "Research Awards", href: "/PresntationAwards" }
             ]} />
           </div>
 
-          <div className="px-3">
-            <Link href="/gallery" className="hover:underline">Gallery</Link>
-          </div>
+          
 
           <div className="px-3">
             <Dropdown title="Gallery" items={[
-              { label: "ICNAN'19", href: "/callForPapers"},
-              { label: "ICNAN'16", href: "/papers/research-awards" }
+            
+              { label: "WNCST'21", href: "https://vit.ac.in/WNCST2021/"},
+              { label: "CWST'21", href: "https://vit.ac.in/CWST/"},
+              { label: "VCAN'20", href: "https://vit.ac.in/VCAN2020/"},
+              { label: "ICNAN'19", href: "https://vit.ac.in/ICNAN/"},
+              { label: "ICNAN'16", href: "/gallery/16" },
             ]} />
           </div>
 
           <div className="px-3">
             <Dropdown title="Contact" items={[
             //   { label: "How to reach", href: "/contact/how-to-reach" },
-              { label: "Accommodation", href: "/contact/accommodation" },
+              { label: "Accommodation", href: "/accomodation" },
               { label: "For Enquiry", href: "/Enquiry" }
             ]} />
           </div>
@@ -122,7 +132,7 @@ const Nav: React.FC = () => {
 
           <MobileDropdown title="Contact" items={[
             { label: "How to reach", href: "/contact/how-to-reach" },
-            { label: "Accommodation", href: "/contact/accommodation" },
+            { label: "Accommodation", href: "/accommodation" },
             { label: "For Enquiry", href: "/contact/enquiry" }
           ]} />
 

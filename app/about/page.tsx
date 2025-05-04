@@ -1,23 +1,21 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react'
 import { ImageCarousel } from "../../components/image-carousel"
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { motion, useInView, useAnimation } from "framer-motion";
+
+
 
 export default function AboutPage() {
   // Sample images for each section (replace with your actual images)
-  const icnanImages = [
-    { src: "/placeholder.svg?height=400&width=800", alt: "ICNAN Conference Hall" },
-    { src: "/placeholder.svg?height=400&width=800", alt: "ICNAN Presentation" },
-    { src: "/placeholder.svg?height=400&width=800", alt: "ICNAN Participants" },
-    { src: "/placeholder.svg?height=400&width=800", alt: "ICNAN Exhibition" }
-  ]
+  const icnanImages = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
   
-  const vitImages = [
-    { src: "/placeholder.svg?height=400&width=800", alt: "VIT Campus Main Building" },
-    { src: "/placeholder.svg?height=400&width=800", alt: "VIT Library" },
-    { src: "/placeholder.svg?height=400&width=800", alt: "VIT Research Facilities" },
-    { src: "/placeholder.svg?height=400&width=800", alt: "VIT Students" }
-  ]
+  const vitImages = [1,2,3,4,5,6,7,8,9,10,12,13,14,15]
   
   const cnrImages = [
     { src: "/placeholder.svg?height=400&width=800", alt: "CNR Laboratory" },
@@ -43,7 +41,43 @@ export default function AboutPage() {
               </h2>
 
               <div className="mb-8">
-                <ImageCarousel images={icnanImages} />
+              <motion.div
+          
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.7 }}
+        >
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={20}
+            slidesPerView={3}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            className="mb-8"
+          >
+            {icnanImages.map((i) => (
+              <SwiperSlide key={i}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 200 }}
+                  className="overflow-hidden rounded-lg shadow-lg"
+                >
+                  <Image
+                    src={`ICNAN_IMAGES/ICNAN19-${i}.jpg`}
+                    alt={`Conference Image ${i}`}
+                    width={400}
+                    height={400}
+                    className="w-full h-[400px] object-cover" // Consistent size & no compression
+                  />
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </motion.div>
+
               </div>
 
               <div className="space-y-4">
@@ -105,7 +139,42 @@ export default function AboutPage() {
               </h2>
 
               <div className="mb-8">
-                <ImageCarousel images={vitImages} />
+              <motion.div
+          
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.7 }}
+        >
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={20}
+            slidesPerView={3}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            className="mb-8"
+          >
+            {vitImages.map((i) => (
+              <SwiperSlide key={i}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 200 }}
+                  className="overflow-hidden rounded-lg shadow-lg"
+                >
+                  <Image
+                    src={`VIT/vit-campus${i}.jpg`}
+                    alt={`Conference Image ${i}`}
+                    width={400}
+                    height={400}
+                    className="w-full h-[400px] object-cover" // Consistent size & no compression
+                  />
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </motion.div>
               </div>
 
               <div className="space-y-4">
@@ -156,7 +225,42 @@ export default function AboutPage() {
               </h2>
 
               <div className="mb-8">
-                <ImageCarousel images={cnrImages} />
+              <motion.div
+          
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.7 }}
+        >
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={20}
+            slidesPerView={3}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            className="mb-8"
+          >
+            {icnanImages.map((i) => (
+              <SwiperSlide key={i}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 200 }}
+                  className="overflow-hidden rounded-lg shadow-lg"
+                >
+                  <Image
+                    src={`ICNAN_IMAGES/cnr${i+1}.jpg`}
+                    alt={`Conference Image ${i}`}
+                    width={400}
+                    height={400}
+                    className="w-full h-[400px] object-cover" // Consistent size & no compression
+                  />
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </motion.div>
               </div>
 
               <div className="space-y-4">
