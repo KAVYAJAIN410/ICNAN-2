@@ -190,7 +190,7 @@ export default function Home() {
 
 {/* Themes Box with Scrolling List */}
 
-<div className="w-[90vw]">
+<div className="w-[90vw] md:w-[100vw]">
   <h3 className="text-4xl font-semibold mb-4 text-center" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>Themes</h3>
   <div className="flex justify-center">
   <div className="border rounded-xl p-4 bg-white shadow h-64 overflow-hidden relative">

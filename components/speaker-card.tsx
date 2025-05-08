@@ -191,8 +191,8 @@ Her research interests include the synthesis of functional polymers based novel 
   {
     id: 19,
     name: "Dr. Michael Naguib",
-    institution: "Associate Professor",
-    country: "N/A",
+    institution: "Tulane University.",
+    country: "USA",
     image: "speak/17.jpg",
     description:
       "Dr. Michael Naguib works on advanced materials and nanostructures for energy applications.",
@@ -314,7 +314,7 @@ Prof Singh has supervised 61 PhD students.  His vibrant research group at Monash
     id: 32,
     name: "Dr. Unyong Jeong",
     institution: "Pohang University of Science and Technology",
-    country: "Korea",
+    country: "South Korea",
     image: "speak/29.jpg",
     description:
       "Dr. Unyong Jeong works on nanomaterials and their applications in flexible electronics and energy devices.",
