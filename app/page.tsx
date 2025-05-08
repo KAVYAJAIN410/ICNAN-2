@@ -92,7 +92,7 @@ export default function Home() {
   className="object-cover absolute inset-0 z-10 opacity-80"
 />
      
-        <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-center  relative z-10 md:min-h-[600px]">
+        <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-8 justify-center  relative z-10 md:min-h-[650px]">
           <div className="flex-shrink-0 mb-6 md:mb-0 ">
             
              
@@ -125,7 +125,7 @@ export default function Home() {
 
            
             <p className="text-sm mb-6">
-            Centre for Nanotechnology Research, Vellore Institute of Technology, Vellore, TN, India
+            Centre for Nanotechnology Research<br></br>Vellore Institute of Technology<br></br>Vellore, TN, India
             </p>
             <div className="flex gap-4 justify-center">
               {/* <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded">Schedule</button> */}
@@ -136,6 +136,41 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <center>
+
+       <div className="  overflow-hidden max-w-7xl">
+                            <div className="flex flex-col lg:flex-row justify-center">
+                              <div className="lg:w-2/5 p-6 flex justify-center items-center">
+                                <div className="relative w-80 h-80 overflow-hidden rounded-full  border-4transform transition-transform duration-500 hover:scale-105 items-center">
+                              
+                                  <Image
+                                    src={  "nobel.jpg"}
+                                    alt=""
+                                    fill
+                                    className="object-cover rounded-full border-[#0a2240]
+"
+                                    sizes="(max-width: 740px) 192px, (max-width: 768px) 224px, 256px"
+                                    priority={true}
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-center p-6 lg:p-8 text-center">
+                               
+                                <h3 className="text-2xl sm:text-3xl font-bold mb-2">Dr. Moungi Bawendi</h3>
+                                <p className="text-[#0a2240] text-2xl mb-4">
+                                Massachusetts Institute of Technology, USA
+                                <br></br>
+                                Nobel Laureate in Chemistry (2023)
+                                </p>
+                                <p className="text-slate-300 leading-relaxed">
+
+                                    
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          </center>
 
       {/* Countdown Timer */}
       <CountdownTimer />
@@ -155,7 +190,7 @@ export default function Home() {
 
 {/* Themes Box with Scrolling List */}
 
-<div className="w-[100vw]">
+<div className="w-[90vw]">
   <h3 className="text-4xl font-semibold mb-4 text-center" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>Themes</h3>
   <div className="flex justify-center">
   <div className="border rounded-xl p-4 bg-white shadow h-64 overflow-hidden relative">
