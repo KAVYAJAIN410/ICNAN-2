@@ -92,7 +92,8 @@ export default function Home() {
   className="object-cover absolute inset-0 z-10 opacity-80"
 />
      
-        <div className="   flex flex-col lg:flex-row items-center gap-8 justify-center  relative z-10 min-h-[700px] p-8">
+        <div className=" mt-6  flex flex-col lg:flex-row lg:items-start items-center  gap-8 justify-between  relative z-10 min-h-[600px] p-8">
+
           <div className="flex-shrink-0 mb-6 md:mb-0 ">
             
              

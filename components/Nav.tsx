@@ -10,7 +10,7 @@ const Nav: React.FC = () => {
 
   return (
     <header className="bg-[#0a2240] text-white py-2 px-2">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className=" flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
         <Image
