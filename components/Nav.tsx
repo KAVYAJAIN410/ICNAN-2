@@ -16,14 +16,14 @@ const Nav: React.FC = () => {
         <Image
             src={Logo}
             alt="VIT Logo"
-            width={100}
-            height={100}
+            width={70}
+            height={80}
           />
           <Image
             src="https://vit.ac.in/files/VIT-logo.webp"
             alt="VIT Logo"
-            width={250}
-            height={250}
+            width={190}
+            height={190}
           />
          
         </div>
