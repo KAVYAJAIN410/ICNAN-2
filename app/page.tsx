@@ -92,7 +92,7 @@ export default function Home() {
   className="object-cover absolute inset-0 z-10 opacity-80"
 />
      
-        <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-8 justify-between  relative z-10 min-h-[700px] ">
+        <div className="   flex flex-col lg:flex-row items-center gap-8 justify-between  relative z-10 min-h-[700px] p-8">
           <div className="flex-shrink-0 mb-6 md:mb-0 ">
             
              
@@ -107,7 +107,7 @@ export default function Home() {
            
           </div>
           <div className="text-center h-[500px] lg:h-auto   text-white">
-            <h1 className="text-7xl font-bold mb-2 " style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>ICNAN '25</h1>
+            <h1 className="text-5xl font-bold mb-2 " style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>ICNAN '25</h1>
             <h2 className="text-xl mb-4">
               3<sup>rd</sup> International Conference on
               <br />
