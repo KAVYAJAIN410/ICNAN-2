@@ -92,21 +92,21 @@ export default function Home() {
   className="object-cover absolute inset-0 z-10 opacity-80"
 />
      
-        <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-8 justify-center  relative z-10 md:min-h-[650px]">
+        <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-8 justify-between  relative z-10 min-h-[700px] ">
           <div className="flex-shrink-0 mb-6 md:mb-0 ">
             
              
                   <Image
                     src={`Logo.png`}
                     alt={`Icon `}
-                    width={200}
-                    height={200}
-                    className="lg:w-full lg:h-full object-cover"
+                    width={350}
+                    height={350}
+                    className="cover"
                   />
                 
            
           </div>
-          <div className="text-center  h-[500px] md:h-auto  text-white">
+          <div className="text-center h-[500px] lg:h-auto   text-white">
             <h1 className="text-7xl font-bold mb-2 " style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>ICNAN '25</h1>
             <h2 className="text-xl mb-4">
               3<sup>rd</sup> International Conference on
@@ -134,11 +134,46 @@ export default function Home() {
               </button>
             </div>
           </div>
+          <div className="  lg:inline hidden  overflow-hidden max-w-7xl">
+         <center> <h2 className="text-white font-bold text-2xl mb-2" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>Meet The Nobel Laureate</h2></center>
+                            <div className="flex flex-col  justify-between">
+                              <div>
+                                <div className=" overflow-hidden rounded-full  border-4transform transition-transform duration-500 hover:scale-105 items-center">
+                              <div className="flex justify-center">
+                                
+                                  <Image
+                                    src={  "nobel.jpg"}
+                                    alt=""
+                                    width={200}
+                                    height={200}
+                                    className="object-cover rounded-full border-[#0a2240] mb-2
+"
+                                  
+                                    priority={true}
+                                  />
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="flex flex-col justify-center p-2 text-center bg-white text-black rounded-md">
+                               
+                                <h3 className="text-xl  font-bold mb-2">Dr. Moungi Bawendi</h3>
+                                <p className=" text-md mb-4">
+                                Massachusetts Institute of Technology, USA
+                                <br></br>
+                                Nobel Laureate in Chemistry (2023)
+                                </p>
+                                <p className="text-slate-300 leading-relaxed">
+
+                                    
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
         </div>
       </section>
       <center>
-
-       <div className="  overflow-hidden max-w-7xl">
+      <div className="lg:hidden  overflow-hidden max-w-7xl">
                             <div className="flex flex-col lg:flex-row justify-center">
                               <div className="lg:w-2/5 p-6 flex justify-center items-center">
                                 <div className="relative w-80 h-80 overflow-hidden rounded-full  border-4transform transition-transform duration-500 hover:scale-105 items-center">
@@ -170,6 +205,7 @@ export default function Home() {
                             </div>
                           </div>
 
+      
                           </center>
 
       {/* Countdown Timer */}
