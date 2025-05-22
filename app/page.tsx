@@ -39,17 +39,32 @@ export default function Home() {
       }, [inView, controls]);
       const themes = [
         'Advanced Nanomaterials and Characterization',
-        'Thin Film Deposition Techniques',
-        'Molecular Nanoscience, Catalysis, and Applications',
+        'Carbon and Related Materials',
         'Semiconducting Materials and Devices',
+        'Ceramic Materials and applications',
+        'Molecular Nanoscience, Catalysis, and Applications',
         'Electronic Inks for Flexible and Printed Electronics',
-        'Nanomaterials and Devices for Energy Harvesting (Solar Cells, Nanogenerators & self-powered devices - triboelectric, piezoelectric and thermoelectric)',
-        'Nanomaterials and Devices for Energy Storage (Supercapacitors, Batteries) and Energy Conversion (Fuel Cells)',
-        'Nanomaterials and Devices for Environmental Applications (Water Purification, Adsorbents, CO₂ Remediation)',
+        'Materials Chemistry and Its Properties',
+        'Electrochemical engineering',
+        'Electroactive materials and electrocatalysis',
+        'Electrochemical energy generation, conversion and storage',
+        'Biomaterials',
+        'Green Chemistry',
+        'Alternative Energy',
+        'Surface modification of materials for advanced or engineered applications',
+        'Surface Engineering and properties',
+        'Hydrogen Generation and Storage',
+        'Surface Engineering and properties',
+        'Advanced surface science and catalysis',
+        'Surface nanotechnology and devices',
+        'Nanofluids',
+        'Nanomaterials and Devices for: Energy Harvesting (Solar Cells)',
+        'Nanomaterials and Devices for: Energy Storage (Supercapacitors, Batteries)',
+        'Nanomaterials and Devices for: Energy Conversion (Fuel Cells)',
+        'Nanomaterials and Devices for: Environmental Applications (Water Purification, Adsorbents, CO2 Remediation)',
         'Sensor Technologies',
         'Food, Agriculture, and Healthcare Applications',
         'Automotive Applications',
-        'Hydrogen Energy Solutions',
         'Nano-enabled Biomedical Systems and Devices',
         'Nanophotonics and Plasmonics',
         'Magnetic Nanomaterials and Their Applications',
@@ -59,8 +74,11 @@ export default function Home() {
         'Nanoelectronics: Modelling, Simulation and Fabrication',
         'Artificial Intelligence and Machine Learning Techniques in Nanotechnology',
         'Density Functional Theory and Molecular Dynamics in Nanotechnology',
-        'Quantum Computing Applications in Nanotechnology'
+        'Quantum Computing Applications in Nanotechnology',
+        'AI and ML techniques for Nanotechnology',
+        'Quantum Computing'
       ];
+      
       
     
       const journals = [
@@ -79,7 +97,7 @@ export default function Home() {
 
 
       {/* Hero Section */}
-      <section className="relative w-full h-[90vh] lg:h-[70vh] lg:items-start overflow-hidden">
+      <section className="relative w-full h-[90vh] lg:h-[70vh] lg:items-start overflow-hidden mt-16 ">
   {/* Background layers */}
   <div
     className="absolute inset-0 bg-no-repeat bg-bottom bg-cover"

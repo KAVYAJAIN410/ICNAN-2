@@ -9,7 +9,7 @@ const Nav: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="bg-[#0a2240] text-white py-2 px-2">
+    <header className="bg-[#0a2240] text-white py-2 px-2 fixed z-50 w-full">
       <div className=" flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
