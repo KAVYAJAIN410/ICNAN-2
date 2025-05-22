@@ -161,7 +161,6 @@ export default function ThemesPage() {
   Nanomaterials and Devices for:
 </h3>
 <ul className="list-disc ml-5">
-  <li className="p-2">Energy Harvesting (Solar Cells, Nanogenerators & and self-powered device — triboelectric, piezoelectric and thermoelectric), Energy Storage (Supercapacitors, Batteries) and Energy Conversion (Fuel Cells)</li>
   <li className="p-2">Energy Harvesting (Nanogenerators & and self-powered device — triboelectric, piezoelectric and thermoelectric)</li>
   <li className="p-2">Energy Storage (Supercapacitors, Batteries)</li>
   <li className="p-2">Energy Conversion (Fuel Cells)</li>
