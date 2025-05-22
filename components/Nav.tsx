@@ -163,18 +163,24 @@ const Dropdown = ({ title, items }: { title: string, items: { label: string, hre
           <ul className="py-2 divide-y divide-gray-200">
           {items.map((item, index) => (
   <li key={index}>
-    <Link href={item.href} legacyBehavior passHref>
-      <a 
-        className="block px-4 py-2 hover:bg-gray-100"
-        target="_blank" 
+    {item.href.startsWith('http') ? (
+      <a
+        href={item.href}
+        target="_blank"
         rel="noopener noreferrer"
+        className="block px-4 py-2 hover:bg-gray-100"
       >
         {item.label}
       </a>
-    </Link>
+    ) : (
+      <Link href={item.href}>
+        <span className="block px-4 py-2 hover:bg-gray-100">
+          {item.label}
+        </span>
+      </Link>
+    )}
   </li>
 ))}
-
 
           </ul>
         </div>
@@ -194,18 +200,12 @@ const Dropdown = ({ title, items }: { title: string, items: { label: string, hre
         {open && (
           <ul className="pl-4 space-y-1 mt-1 divide-y divide-white/20">
             {items.map((item, index) => (
-  <li key={index}>
-    <Link href={item.href} legacyBehavior passHref>
-      <a 
-        className="block px-4 py-2 hover:bg-gray-100"
-        target="_blank" 
-        rel="noopener noreferrer"
-      >
-        {item.label}
-      </a>
-    </Link>
-  </li>
-))}
+              <li key={index}>
+                <Link href={item.href} className="block py-1 hover:underline">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         )}
       </div>
