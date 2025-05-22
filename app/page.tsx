@@ -97,7 +97,7 @@ export default function Home() {
 
 
       {/* Hero Section */}
-      <section className="relative w-full h-[90vh] lg:h-[70vh] lg:items-start overflow-hidden mt-16 ">
+      <section className="pl-32  pr-32 relative w-full h-[90vh] lg:h-[70vh] lg:items-start overflow-hidden mt-16 ">
   {/* Background layers */}
   <div
     className="absolute inset-0 bg-no-repeat bg-bottom bg-cover"
@@ -111,7 +111,7 @@ export default function Home() {
   />
 
   {/* Content */}
-  <div className="relative z-20 lg:h-full mt-4 flex flex-col justify-center lg:flex-row items-center lg:items-start  lg:justify-between lg:px-4 lg:py-4 lg:gap-4">
+  <div className="relative z-20 lg:h-full mt-4 flex flex-col  justify-center lg:flex-row items-center lg:items-start  lg:justify-between lg:px-4 lg:py-4 lg:gap-4">
     
     {/* Logo */}
     <div className="lg:h-[90%] ">
