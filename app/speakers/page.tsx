@@ -44,7 +44,7 @@ const speakers: Speaker[] = [
     name: "Dr. Ajay Thakur",
     institution: "IIT Patna",
     country: "India",
-    image: "speak/2.jpg",
+    image: "speak/AjayThakur.jpg",
     description:
       "Dr. Ajay Thakur is an Associate Professor in the Department of Physics, at the Indian Institute of Technology Patna working in the area of condensed matter physics. He has completed his Ph.D from the Department of Condensed Matter Physics and Materials Science, Tata Institute of Fundamental Research, Mumbai and was a Post doctoral researcher at the prestigious National Institute for Materials Science, Tsukuba, Japan. The research activity in his group at IIT Patna focuses on Physics motivated exploration of Sustainable Functional Materials and Technologies. He is also collaborating nationally and internationally towards developing applications in the domains of Energy, Environment, Cell manipulation using Micro-Robotics and Functional Materials.",
   },
