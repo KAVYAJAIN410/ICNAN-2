@@ -74,107 +74,87 @@ export default function Home() {
     
    let images=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-white overflow-hidden m-0 p-0 box-border ">
       {/* Navigation Bar */}
 
 
       {/* Hero Section */}
-      <section className="relative w-full  overflow-hidden">
-      
-      <div
-        className="absolute inset-0 bg-no-repeat bg-bottom bg-cover"
-        style={{ backgroundImage: "url('Ellipse.png')"}}
-      ></div>
+      <section className="relative w-full h-[90vh] lg:h-[70vh] lg:items-start overflow-hidden">
+  {/* Background layers */}
+  <div
+    className="absolute inset-0 bg-no-repeat bg-bottom bg-cover"
+    style={{ backgroundImage: "url('Ellipse.png')" }}
+  ></div>
+  <Image
+    src="/molecule.png"
+    alt="Vector"
+    fill
+    className="object-cover absolute inset-0 z-10 opacity-80"
+  />
+
+  {/* Content */}
+  <div className="relative z-20 lg:h-full mt-4 flex flex-col justify-center lg:flex-row items-center lg:items-start  lg:justify-between lg:px-4 lg:py-4 lg:gap-4">
+    
+    {/* Logo */}
+    <div className="lg:h-[90%] ">
       <Image
-  src="/molecule.png"
-  alt="Vector"
-  fill
-  className="object-cover absolute inset-0 z-10 opacity-80"
-/>
-     
-        <div className=" mt-6  flex flex-col lg:flex-row lg:items-start items-center  gap-8 justify-between  relative z-10 min-h-[600px] p-8">
+        src="Logo.png"
+        alt="Icon"
+        width={300}
+        height={300}
+        className="lg:h-[80%] lg:w-auto lg:object-contain cover"
+      />
+    </div>
 
-          <div className="flex-shrink-0 mb-6 md:mb-0 ">
-            
-             
-                  <Image
-                    src={`Logo.png`}
-                    alt={`Icon `}
-                    width={350}
-                    height={350}
-                    className="cover"
-                  />
-                
-           
-          </div>
-          <div className="text-center h-[500px] lg:h-auto   text-white">
-            <h1 className="text-5xl font-bold mb-2 " style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>ICNAN '25</h1>
-            <h2 className="text-xl mb-4">
-              3<sup>rd</sup> International Conference on
-              <br />
-              Nanoscience and Nanotechnology
-            </h2>
-            <div className="flex items-center justify-center  mb-4">
-              <Clock className="mr-2" />
-              <span>December 16-19, 2025</span>
-            </div>
-            <div className="flex items-center mb-4">
-  <hr className="flex-grow border-t border-gray-300" />
-  <span className="mx-4 text-sm font-semibol">ORGANISED BY</span>
-  <hr className="flex-grow border-t border-gray-300" />
+    {/* Center Text Block */}
+    <div className=" text-white text-center  h-[500px] lg:h-auto ">
+      <h1 className="text-5xl lg:text-[7vh] font-bold leading-tight" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>
+        ICNAN '25
+      </h1>
+      <h2 className=" text-xl lg:text-[3vh] mb-1 leading-snug">
+        3<sup>rd</sup> International Conference on<br />
+        Nanoscience and Nanotechnology
+      </h2>
+      <div className="flex items-center justify-center text-[2vh] mb-1">
+        <Clock className="mr-1" />
+        <span>December 16-19, 2025</span>
+      </div>
+      <div className="flex items-center justify-center text-[0.9vh] mb-2">
+        <hr className="flex-grow border-gray-300" />
+        <span className="mx-2 font-semibold text-[2vh]">ORGANISED BY</span>
+        <hr className="flex-grow border-gray-300" />
+      </div>
+      <p className="text-sm lg:text-[3vh] mb-2 leading-snug">
+        Centre for Nanotechnology Research<br />
+        VIT, Vellore, TN, India
+      </p>
+      <button className="bg-transparent border border-white hover:bg-white/10 text-white px-4 py-1 rounded lg:text-[2vh]">
+        Brochure
+      </button>
+    </div>
+
+    {/* Nobel Section */}
+    <div className=" text-white text-center hidden lg:flex flex-col items-center">
+      <h2 className="font-bold text-[3vh] mb-2" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>
+        Meet The Nobel Laureate
+      </h2>
+      <div className="relative h-[30vh] aspect-square overflow-hidden rounded-full border-4 border-[#0a2240] hover:scale-105 transition-transform duration-300">
+  <Image
+    src="nobel.jpg"
+    alt="Dr. Moungi Bawendi"
+    fill
+    className="object-cover"
+  />
 </div>
-
-           
-            <p className="text-sm mb-6">
-            Centre for Nanotechnology Research<br></br>Vellore Institute of Technology<br></br>Vellore, TN, India
-            </p>
-            <div className="flex gap-4 justify-center">
-              {/* <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded">Schedule</button> */}
-              <button className="bg-transparent border border-white hover:bg-white/10 text-white px-6 py-2 rounded">
-                Brochure
-              </button>
-            </div>
-          </div>
-          <div className="  lg:inline hidden  overflow-hidden max-w-7xl">
-         <center> <h2 className="text-white font-bold text-2xl mb-2" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>Meet The Nobel Laureate</h2></center>
-                            <div className="flex flex-col  justify-between">
-                              <div>
-                                <div className=" overflow-hidden rounded-full  border-4transform transition-transform duration-500 hover:scale-105 items-center">
-                              <div className="flex justify-center">
-                                
-                                  <Image
-                                    src={  "nobel.jpg"}
-                                    alt=""
-                                    width={200}
-                                    height={200}
-                                    className="object-cover rounded-full border-[#0a2240] mb-2
-"
-                                  
-                                    priority={true}
-                                  />
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="flex flex-col justify-center p-2 text-center bg-white text-black rounded-md">
-                               
-                                <h3 className="text-xl  font-bold mb-2">Dr. Moungi Bawendi</h3>
-                                <p className=" text-md mb-4">
-                                Massachusetts Institute of Technology, USA
-                                <br></br>
-                                Nobel Laureate in Chemistry (2023)
-                                </p>
-                                <p className="text-slate-300 leading-relaxed">
-
-                                    
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-
-        </div>
-      </section>
-      <center>
-      <div className="lg:hidden  overflow-hidden max-w-7xl">
+      <div className="bg-white text-black mt-2 p-2 rounded text-[2vh] leading-snug">
+        <h3 className="font-bold">Dr. Moungi Bawendi</h3>
+        <p>MIT, USA<br />Nobel Laureate in Chemistry (2023)</p>
+      </div>
+    </div>
+  </div>
+</section>
+<center>
+<div className="lg:hidden  overflow-hidden max-w-7xl">
                             <div className="flex flex-col lg:flex-row justify-center">
                               <div className="lg:w-2/5 p-6 flex justify-center items-center">
                                 <div className="relative w-80 h-80 overflow-hidden rounded-full  border-4transform transition-transform duration-500 hover:scale-105 items-center">
@@ -209,6 +189,8 @@ export default function Home() {
       
                           </center>
 
+
+
       {/* Countdown Timer */}
       <CountdownTimer />
 
@@ -226,9 +208,9 @@ export default function Home() {
       <div className="container w-[100%]">
 
 {/* Themes Box with Scrolling List */}
-
-<div className="w-[90vw] md:w-[100vw]">
-  <h3 className="text-4xl font-semibold mb-4 text-center" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>Themes</h3>
+<div className="w-full relative flex justify-center">
+<div className="w-">
+  <center><h3 className="text-4xl font-semibold mb-4 " style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>Themes</h3></center>
   <div className="flex justify-center">
   <div className="border rounded-xl p-4 bg-white shadow h-64 overflow-hidden relative">
     <ul className="animate-verticalScroll space-y-2 text-sm text-gray-700">
@@ -238,6 +220,7 @@ export default function Home() {
     </ul>
   </div>
   </div>
+</div>
 </div>
 
 

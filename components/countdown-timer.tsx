@@ -36,7 +36,7 @@ export default function CountdownTimer() {
   }, [])
 
   return (
-    <div className=" py-6 px-4 rounded-lg" >
+    <div className=" py-6 px-4 rounded-lg h-[30vh]" >
       <div className="container mx-auto">
         <div className="flex justify-center gap-4 md:gap-8">
           <TimeCard label="Days" value={timeLeft.days} />
