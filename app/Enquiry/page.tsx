@@ -22,7 +22,8 @@ export default function Enquiry() {
         <p className=" text-lg  leading-tight mt-4 pl-10 font-bold ">General Enquiry</p>
         <p className=" text-lg  leading-tight  pl-10">+91 9994882510</p>
         <p className=" text-lg  leading-tight  pl-10">+91 9791322311</p>
-        <p className=" text-lg  leading-tight  pl-10">Email: icnan25@vit.ac.in</p>
+        <a href="mailto:cnricnan@vit.ac.in" className="text-lg  leading-tight  pl-10 ">Email: cnricnan@vit.ac.in</a>
+
         </div>
       </section>
       </>

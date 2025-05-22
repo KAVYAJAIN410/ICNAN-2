@@ -15,24 +15,39 @@ const themeCategories = [
   {
     id: "materials",
     name: "Materials & Characterization",
-    themes:[
-      "Advanced Nanomaterials and Characterization",
-      "Thin Film Deposition Techniques",
-      "Molecular Nanoscience, Catalysis, and Applications",
-      "Semiconducting Materials and Devices",
-      "Electronic Inks for Flexible and Printed Electronics",
-     
-      "Nano-enabled Biomedical Systems and Devices",
-      "Nanophotonics and Plasmonics",
-      "Magnetic Nanomaterials and Their Applications",
-      "Nanocoatings and Surface Modifications",
-      "Flexible Electronic Devices",
-      "Additive Manufacturing for Energy and Electronic Devices",
-      "Nanoelectronics: Modelling, Simulation and Fabrication",
-      "Artificial Intelligence and Machine Learning Techniques in Nanotechnology",
-      "Density Functional Theory and Molecular Dynamics in Nanotechnology",
-      "Quantum Computing Applications in Nanotechnology",
-      ],
+    themes : [
+      'Advanced Nanomaterials and Characterization',
+      'Carbon and Related Materials',
+      'Semiconducting Materials and Devices',
+      'Ceramic Materials and applications',
+      'Molecular Nanoscience, Catalysis, and Applications',
+      'Electronic Inks for Flexible and Printed Electronics',
+      'Materials Chemistry and Its Properties',
+      'Electrochemical engineering',
+      'Electroactive materials and electrocatalysis',
+      'Electrochemical energy generation, conversion and storage',
+      'Biomaterials',
+      'Green Chemistry',
+      'Alternative Energy',
+      'Surface modification of materials for advanced or engineered applications',
+      'Surface Engineering and properties',
+      'Hydrogen Generation and Storage',
+      'Surface Engineering and properties',
+      'Advanced surface science and catalysis',
+      'Surface nanotechnology and devices',
+      'Nanofluids',
+      'Nano-enabled Biomedical Systems and Devices',
+      'Nanophotonics and Plasmonics',
+      'Magnetic Nanomaterials and Their Applications',
+      'Nanocoatings and Surface Modifications',
+      'Flexible Electronic Devices',
+      'Additive Manufacturing for Energy and Electronic Devices',
+      'Nanoelectronics: Modelling, Simulation and Fabrication',
+      'Artificial Intelligence and Machine Learning Techniques in Nanotechnology',
+      'Density Functional Theory and Molecular Dynamics in Nanotechnology',
+      'Quantum Computing Applications in Nanotechnology',
+      'AI and ML techniques for Nanotechnology',
+    ],
   },
  
 ]
@@ -143,21 +158,19 @@ export default function ThemesPage() {
                       </div>
                       <div>
                         <h3 className="text-lg font-medium mb-2">
-                        Nanomaterials and Devices for:
-                        </h3>
-                        <ul>
-                        <li className="p-2">Energy Harvesting (Solar Cells, Nanogenerators & and self-powered device- triboelectric, piezoelectric and thermoelectric), Energy Storage (Supercapacitors, Batteries) and  Energy Conversion (Fuel Cells)</li>
-                        <li className="p-2">Environmental Applications (Water Purification, Adsorbents, CO2 Remediation)
-                        </li >
-                        <li className="p-2">Sensor Technologies
-                        </li>
-                        <li className="p-2">Food, Agriculture, and Healthcare Applications
-                        </li>
-                        <li className="p-2">Automotive Applications
-                        </li>
-                        <li className="p-2">Hydrogen Energy Solutions
-                        </li>
-                         </ul>
+  Nanomaterials and Devices for:
+</h3>
+<ul className="list-disc ml-5">
+  <li className="p-2">Energy Harvesting (Solar Cells, Nanogenerators & and self-powered device — triboelectric, piezoelectric and thermoelectric), Energy Storage (Supercapacitors, Batteries) and Energy Conversion (Fuel Cells)</li>
+  <li className="p-2">Energy Harvesting (Nanogenerators & and self-powered device — triboelectric, piezoelectric and thermoelectric)</li>
+  <li className="p-2">Energy Storage (Supercapacitors, Batteries)</li>
+  <li className="p-2">Energy Conversion (Fuel Cells)</li>
+  <li className="p-2">Environmental Applications (Water Purification, Adsorbents, CO₂ Remediation)</li>
+  <li className="p-2">Sensor Technologies</li>
+  <li className="p-2">Food, Agriculture, and Healthcare Applications</li>
+  <li className="p-2">Automotive Applications</li>
+</ul>
+
                       </div>
                     </div>
                   </CardContent>

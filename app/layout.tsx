@@ -21,9 +21,13 @@ export default function RootLayout({
       
       <body>
       <Nav></Nav>
+      <div className='pt-16'>
         {children}
+        </div>
         <Footer></Footer>
+        
         </body>
+       
       
     </html>
   )

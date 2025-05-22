@@ -161,13 +161,21 @@ const Dropdown = ({ title, items }: { title: string, items: { label: string, hre
                         opacity-0 peer-hover:opacity-100 hover:opacity-100
                         transition-all duration-200">
           <ul className="py-2 divide-y divide-gray-200">
-            {items.map((item, index) => (
-              <li key={index}>
-                <Link href={item.href} className="block px-4 py-2 hover:bg-gray-100">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+          {items.map((item, index) => (
+  <li key={index}>
+    <Link href={item.href} legacyBehavior passHref>
+      <a 
+        className="block px-4 py-2 hover:bg-gray-100"
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        {item.label}
+      </a>
+    </Link>
+  </li>
+))}
+
+
           </ul>
         </div>
       </div>
@@ -186,12 +194,18 @@ const Dropdown = ({ title, items }: { title: string, items: { label: string, hre
         {open && (
           <ul className="pl-4 space-y-1 mt-1 divide-y divide-white/20">
             {items.map((item, index) => (
-              <li key={index}>
-                <Link href={item.href} className="block py-1 hover:underline">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+  <li key={index}>
+    <Link href={item.href} legacyBehavior passHref>
+      <a 
+        className="block px-4 py-2 hover:bg-gray-100"
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        {item.label}
+      </a>
+    </Link>
+  </li>
+))}
           </ul>
         )}
       </div>

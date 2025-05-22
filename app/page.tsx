@@ -62,9 +62,9 @@ export default function Home() {
         'Nanomaterials and Devices for: Energy Storage (Supercapacitors, Batteries)',
         'Nanomaterials and Devices for: Energy Conversion (Fuel Cells)',
         'Nanomaterials and Devices for: Environmental Applications (Water Purification, Adsorbents, CO2 Remediation)',
-        'Sensor Technologies',
-        'Food, Agriculture, and Healthcare Applications',
-        'Automotive Applications',
+        'Nanomaterials and Devices for: Sensor Technologies',
+        'Nanomaterials and Devices for: Food, Agriculture, and Healthcare Applications',
+        'Nanomaterials and Devices for: Automotive Applications',
         'Nano-enabled Biomedical Systems and Devices',
         'Nanophotonics and Plasmonics',
         'Magnetic Nanomaterials and Their Applications',
@@ -76,7 +76,6 @@ export default function Home() {
         'Density Functional Theory and Molecular Dynamics in Nanotechnology',
         'Quantum Computing Applications in Nanotechnology',
         'AI and ML techniques for Nanotechnology',
-        'Quantum Computing'
       ];
       
       
@@ -97,7 +96,7 @@ export default function Home() {
 
 
       {/* Hero Section */}
-      <section className="pl-32  pr-32 relative w-full h-[90vh] lg:h-[70vh] lg:items-start overflow-hidden mt-16 ">
+      <section className="pl-32  pr-32 relative w-full h-[90vh] lg:h-[70vh] lg:items-start overflow-hidden  ">
   {/* Background layers */}
   <div
     className="absolute inset-0 bg-no-repeat bg-bottom bg-cover"
