@@ -113,6 +113,6 @@ body {
   }
 
   .animate-verticalScroll {
-    animation: verticalScroll 15s linear infinite;
+    animation: verticalScroll 30s linear infinite;
   }
 }
