@@ -164,7 +164,7 @@ export default function SpeakerCard2() {
       },
     {
         id: 12,
-        name: "Dr. Jayam Thomas",
+        name: "Dr. Jayan Thomas",
         institution: "University of Central Florida",
         country: "USA",
         image: "speak/JayanThomas.jpg",
