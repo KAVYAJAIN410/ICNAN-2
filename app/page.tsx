@@ -158,7 +158,7 @@ export default function Home() {
       <div className="w-full flex justify-center">
       <div className="relative h-[25vh] w-[25vh] aspect-square overflow-hidden rounded-full border-4 border-[#0a2240] hover:scale-105 transition-transform duration-300">
   <Image
-    src="nobel.jpg"
+    src="speak/MoungiBawendi.jpg"
     alt="Dr. Moungi Bawendi"
     fill
     className="object-cover"
