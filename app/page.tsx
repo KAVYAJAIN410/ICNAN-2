@@ -91,12 +91,12 @@ export default function Home() {
     
    let images=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
   return (
-    <div className="flex flex-col min-h-screen bg-white overflow-hidden m-0 p-0 box-border ">
+    <div className="flex flex-col  min-h-screen bg-white overflow-hidden m-0 p-0 box-border ">
       {/* Navigation Bar */}
 
 
       {/* Hero Section */}
-      <section className="pl-32  pr-32 relative w-full h-[90vh] lg:h-[70vh] lg:items-start overflow-hidden  ">
+      <section className="lg:pl-32  lg:pr-32 relative w-full h-[90vh] lg:h-[70vh] items-center lg:items-start overflow-hidden  ">
   {/* Background layers */}
   <div
     className="absolute inset-0 bg-no-repeat bg-bottom bg-cover"
@@ -119,13 +119,13 @@ export default function Home() {
         alt="Icon"
         width={300}
         height={300}
-        className="lg:h-[80%] lg:w-auto lg:object-contain cover"
+        className="lg:h-[80%] lg:w-auto lg:object-contain cover "
       />
     </div>
 
     {/* Center Text Block */}
-    <div className=" text-white text-center  h-[500px] lg:h-auto ">
-      <h1 className="text-5xl lg:text-[7vh] font-bold leading-tight" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>
+    <div className=" text-white text-center  h-auto ">
+      <h1 className=" text-[4vh] lg:text-[7vh] font-bold leading-tight" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>
         ICNAN '25
       </h1>
       <h2 className=" text-xl lg:text-[3vh] mb-1 leading-snug">
@@ -151,11 +151,12 @@ export default function Home() {
     </div>
 
     {/* Nobel Section */}
-    <div className=" text-white text-center hidden lg:flex flex-col items-center">
-      <h2 className="font-bold text-[3vh] mb-2" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>
+    <div className=" text-white text-center hidden lg:flex flex-col ">
+      <h2 className="font-bold text-[4vh] mb-2" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>
         Meet The Nobel Laureate
       </h2>
-      <div className="relative h-[30vh] aspect-square overflow-hidden rounded-full border-4 border-[#0a2240] hover:scale-105 transition-transform duration-300">
+      <div className="w-full flex justify-center">
+      <div className="relative h-[25vh] w-[25vh] aspect-square overflow-hidden rounded-full border-4 border-[#0a2240] hover:scale-105 transition-transform duration-300">
   <Image
     src="nobel.jpg"
     alt="Dr. Moungi Bawendi"
@@ -163,9 +164,10 @@ export default function Home() {
     className="object-cover"
   />
 </div>
-      <div className="bg-white text-black mt-2 p-2 rounded text-[2vh] leading-snug">
+</div>
+      <div className="bg-white text-black mt-2 p-2 rounded text-[2vh] leading-snug ">
         <h3 className="font-bold">Dr. Moungi Bawendi</h3>
-        <p>MIT, USA<br />Nobel Laureate in Chemistry (2023)</p>
+        <p> MIT USA<br />Nobel Laureate in Chemistry(Quantum Dots), 2023</p>
       </div>
     </div>
   </div>
@@ -191,7 +193,7 @@ export default function Home() {
                                
                                 <h3 className="text-2xl sm:text-3xl font-bold mb-2">Dr. Moungi Bawendi</h3>
                                 <p className="text-[#0a2240] text-2xl mb-4">
-                                Massachusetts Institute of Technology, USA
+                                Lester Wolfe Professor at the Massachusetts Institute of Technology USA
                                 <br></br>
                                 Nobel Laureate in Chemistry (2023)
                                 </p>

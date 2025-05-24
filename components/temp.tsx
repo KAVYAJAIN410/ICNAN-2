@@ -61,7 +61,7 @@ export default function SpeakerCard2() {
         name: "Dr. Moungi Bawendi",
         institution: "Massachusetts Institute of Technology, USA",
         country: "Nobel Laureate in Chemistry (2023)",
-        image: "nobel.jpg",
+        image: "MoungiBawendi.jpg",
         description:
           "",
       },

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "@/public/Logo.png"
+import Logo from "@/public/CNR.png"
 import { Menu, X } from "lucide-react";
 
 const Nav: React.FC = () => {
@@ -22,8 +22,8 @@ const Nav: React.FC = () => {
           <Image
             src="https://vit.ac.in/files/VIT-logo.webp"
             alt="VIT Logo"
-            width={190}
-            height={190}
+            width={250}
+            height={250}
           />
          
         </div>
@@ -37,7 +37,7 @@ const Nav: React.FC = () => {
         </button>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex text-sm items-center divide-x divide-white/20">
+        <nav className="hidden lg:flex text-md items-center divide-x divide-white/20">
           <div className="px-3">
             <Link href="/" className="hover:underline">Home</Link>
           </div>
@@ -45,12 +45,13 @@ const Nav: React.FC = () => {
           <div className="px-3">
             <Dropdown title="Conference Info" items={[
               { label: "Welcome Message", href: "/welcome" },
+              { label: "Speakers", href: "/speakers" },
               { label: "About ICNAN’25", href: "/about/#ICNAN" },
               { label: "About VIT", href: "/about/#VIT" },
               { label: "About CNR", href: "/about/#cnr" },
               { label: "Themes", href: "/themes" },
             //   { label: "Highlights", href: "/conference/highlights" },
-              { label: "Speakers", href: "/speakers" },
+             
             //   { label: "Conference Schedule", href: "/conference/schedule" }
             ]} />
           </div>
@@ -109,12 +110,13 @@ const Nav: React.FC = () => {
 
           <MobileDropdown title="Conference Info" items={[
             { label: "Welcome Message", href: "/welcome" },
+            { label: "Speakers", href: "/speakers" },
             { label: "About ICNAN’25", href: "/about" },
             { label: "About VIT", href: "/about" },
             { label: "About CNR", href: "/about" },
             { label: "Themes", href: "/themes" },
             // { label: "Highlights", href: "/conference/highlights" },
-            { label: "Speakers", href: "/speakers" },
+           
             // { label: "Conference Schedule", href: "/conference/schedule" }
           ]} />
 
