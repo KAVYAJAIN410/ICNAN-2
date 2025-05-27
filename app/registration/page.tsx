@@ -41,7 +41,7 @@ const RegistrationPage = () => {
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-4 text-[#0a2b52]">Registration</h1>
         <p className="text-center mb-12 max-w-2xl mx-auto text-lg text-[#0a2b52] ">
-          Join ICNAN'25 and be part of an international platform where groundbreaking ideas in nanoscience and nanotechnology are exchanged. Explore the categories below and register early to avail discounted rates.
+          Join ICNAN'25 and be part of an international platform where groundbreaking ideas in Nanoscience and Nanotechnology are exchanged. Explore the categories below and register early to avail discounted rates.
         </p>
 
         <div className="overflow-x-auto">
