@@ -496,13 +496,12 @@ export default function SpeakerGallery() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"
           
           >
-            {positions.map(
-              (pos, index) =>
-                pos !== 0 && (
-                  <motion.div
-                    key={`grid-${speakers[index].id}`}
-                    className="cursor-pointer"
-                    onClick={() => handleCardClick(index)}
+           {positions.map(
+             (pos, index) => (
+               <motion.div
+                 key={`grid-${speakers[index].id}`}
+                 className="cursor-pointer"
+                 onClick={() => handleCardClick(index)}
                     transition={{
                       type: "spring",
                       stiffness: 600,
@@ -544,7 +543,7 @@ export default function SpeakerGallery() {
      
     </section>
      <Dialog open={!!selectedImage} onOpenChange={(open) => !open && setSelectedImage(null)}>
-     <DialogContent className="max-w-4xl p-0 overflow-hidden bg-background">
+     <DialogContent className="max-w-4xl p-0 max-h-[80vh] overflow-scroll bg-background">
        {selectedImage && (
    
            <div className="bg-gradient-to-br from-[#0b1c2f] to-[#1a365d] rounded-2xl shadow-xl overflow-hidden">
