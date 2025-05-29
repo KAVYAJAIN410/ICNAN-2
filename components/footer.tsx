@@ -18,11 +18,11 @@ const Footer: React.FC = () => {
 
         {/* Right side - Contact Info */}
         <div className="text-base md:text-right leading-relaxed">
-          <p className="mb-1">Centre for Nanotechnology Research</p>
-          <p className="mb-1">Vellore Institute of Technology, Vellore, TN, India</p>
-          <p className="mb-1">December 16–19, 2025</p>
-          <p className="mb-1">cnricnan@vit.ac.in</p>
-          <p className="mb-1">📞 +91 9994882510</p>
+          <p className="">Centre for Nanotechnology Research</p>
+          <p className="">Vellore Institute of Technology, Vellore, TN, India</p>
+          <p className="">December 16–19, 2025</p>
+          <p className="">cnricnan@vit.ac.in</p>
+          <p className="">📞 +91 9994882510</p>
           <p>📞 +91 9791322311</p>
         </div>
       </div>

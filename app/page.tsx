@@ -125,7 +125,7 @@ export default function Home() {
 
     {/* Center Text Block */}
     <div className=" text-white text-center  h-auto ">
-      <h1 className=" text-[4vh] lg:text-[7vh] font-bold leading-tight" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>
+      <h1 className=" text-[4vh] lg:text-[8vh] font-bold leading-tight" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>
         ICNAN '25
       </h1>
       <h2 className=" text-xl lg:text-[3vh] mb-1 leading-snug">
@@ -152,8 +152,8 @@ export default function Home() {
 
     {/* Nobel Section */}
     <div className=" text-white text-center hidden lg:flex flex-col ">
-      <h2 className="font-bold text-[4vh] mb-2" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>
-        Meet The Nobel Laureate
+      <h2 className="font-bold text-[3vh] mb-2" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>
+        Meet the Nobel Laureate
       </h2>
       <div className="w-full flex justify-center">
       <div className="relative h-[25vh] w-[25vh] aspect-square overflow-hidden rounded-full border-4 border-[#0a2240] hover:scale-105 transition-transform duration-300">
@@ -167,7 +167,9 @@ export default function Home() {
 </div>
       <div className="bg-white text-black mt-2 p-2 rounded text-[2vh] leading-snug ">
         <h3 className="font-bold">Dr. Moungi Bawendi</h3>
-        <p> MIT USA<br />Nobel Laureate in Chemistry(Quantum Dots), 2023</p>
+        <p>Massachusetts Institute of Technology, USA
+
+<br />Nobel Laureate in Chemistry (Quantum Dots), 2023</p>
       </div>
     </div>
   </div>
