@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "@/public/CNR.png"
+import Logo from "@/public/CNRLogo.png"
 import { Menu, X } from "lucide-react";
 
 const Nav: React.FC = () => {
@@ -13,19 +13,19 @@ const Nav: React.FC = () => {
       <div className=" flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
-        <Image
-            src={Logo}
-            alt="VIT Logo"
-            width={70}
-            height={80}
-          />
+       
           <Image
             src="https://vit.ac.in/files/VIT-logo.webp"
             alt="VIT Logo"
             width={250}
             height={250}
           />
-         
+          <Image
+            src={Logo}
+            alt="VIT Logo"
+            width={70}
+            height={80}
+          />
         </div>
 
         {/* Hamburger Toggle */}

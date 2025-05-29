@@ -155,13 +155,19 @@ export default function Home() {
 
     {/* Nobel Section */}
     <div className=" text-white text-center hidden lg:flex flex-col ">
-      <h2 className="font-bold text-[3vh] mb-2" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>
-        Meet the Nobel Laureate
-      </h2>
+    <h2
+  className="font-bold text-[3vh] mb-2 relative inline-block group text-white animate-softGlow   animate-fadeInUp"
+  style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}
+>
+  Meet the Nobel Laureate
+  <span className="block h-0.5 bg-white scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+</h2>
+
+
       <div className="w-full flex justify-center">
       <div className="relative h-[25vh] w-[25vh] aspect-square overflow-hidden rounded-full border-4 border-[#0a2240] hover:scale-105 transition-transform duration-300">
   <Image
-    src="speak/MoungiBawendi.jpg"
+    src="MoungiBawendi.png"
     alt="Dr. Moungi Bawendi"
     fill
     className="object-cover"
@@ -184,7 +190,7 @@ export default function Home() {
                                 <div className="relative w-80 h-80 overflow-hidden rounded-full  border-4transform transition-transform duration-500 hover:scale-105 items-center">
                               
                                   <Image
-                                    src={  "speak/MoungiBawendi.jpg"}
+                                    src={  "MoungiBawendi.png"}
                                     alt=""
                                     fill
                                     className="object-cover rounded-full border-[#0a2240]

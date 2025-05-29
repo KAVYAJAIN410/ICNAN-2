@@ -87,12 +87,23 @@ const config: Config = {
 			  verticalScroll: {
 				'0%': { transform: 'translateY(0)' },
 				'100%': { transform: 'translateY(-50%)' }
-			  }
+			  },
+			  fadeInUp: {
+				'0%': { opacity: '0', transform: 'translateY(10px)' },
+				'100%': { opacity: '1', transform: 'translateY(0)' },
+			  },
+			  softGlow: {
+				'0%, 100%': { textShadow: '0 0 0px rgba(255, 255, 255, 0.6)' },
+				'50%': { textShadow: '0 0 10px rgba(255, 255, 255, 0.9)' },
+			  },
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
-			verticalScroll: 'verticalScroll 20s linear infinite'
+			'verticalScroll': 'verticalScroll 20s linear infinite',
+			fadeInUp: 'fadeInUp 1s ease-out',
+			softGlow: 'softGlow 3s ease-in-out infinite',
+
   		}
   	}
   },

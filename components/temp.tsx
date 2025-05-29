@@ -19,7 +19,7 @@ const speakers: Speaker[] = [
     name: "Dr. Moungi Bawendi",
     institution: "Massachusetts Institute of Technology, USA",
     country: "Nobel Laureate in Chemistry (2023)",
-    image: "speak/MoungiBawendi.jpg",
+    image: "MoungiBawendi.png",
     description:
       "",
   },
