@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#0a2240] text-white py-1">
+    <footer className="bg-[#0a2240] text-white p-2">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
         {/* Left side - Logo and Title */}
         <div className="flex items-center space-x-4">
