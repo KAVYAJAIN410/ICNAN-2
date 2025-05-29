@@ -318,7 +318,12 @@ export default function Home() {
 
  
   {/* Overlay to darken the bg a bit if needed */}
-  <div className="py-10 px-4 text-white bg-[#0a2240]">
+
+  {/* Speakers Section */}
+  {isMobile ? <SpeakerCard2 /> : <SpeakerCard />}
+
+
+    <div className="py-10 px-4 text-[#0a2240]  bg-gradient-to-b from-slate-50 to-slate-100 ">
       <div className="container mx-auto">
         <motion.h2
           className="text-5xl font-bold text-center mb-8"
@@ -394,8 +399,6 @@ export default function Home() {
         </motion.p>
       </div>
     </div>
-  {/* Speakers Section */}
-  {isMobile ? <SpeakerCard2 /> : <SpeakerCard />}
 
   {/* Sponsors Section */}
   {/* <SponsorGrid /> */}

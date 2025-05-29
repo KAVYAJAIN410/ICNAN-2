@@ -496,12 +496,11 @@ export default function SpeakerGallery() {
           
           >
             {positions.map(
-              (pos, index) =>
-                pos !== 0 && (
-                  <motion.div
-                    key={`grid-${speakers[index].id}`}
-                    className="cursor-pointer"
-                    onClick={() => handleCardClick(index)}
+  (pos, index) => (
+    <motion.div
+      key={`grid-${speakers[index].id}`}
+      className="cursor-pointer"
+      onClick={() => handleCardClick(index)}
                     transition={{
                       type: "spring",
                       stiffness: 600,
