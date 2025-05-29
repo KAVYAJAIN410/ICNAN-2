@@ -184,7 +184,7 @@ export default function Home() {
                                 <div className="relative w-80 h-80 overflow-hidden rounded-full  border-4transform transition-transform duration-500 hover:scale-105 items-center">
                               
                                   <Image
-                                    src={  "nobel.jpg"}
+                                    src={  "speak/MoungiBawendi.jpg"}
                                     alt=""
                                     fill
                                     className="object-cover rounded-full border-[#0a2240]
@@ -233,12 +233,12 @@ export default function Home() {
 
 {/* Themes Box with Scrolling List */}
 
-<div className="lg:w-[100vw] relative flex justify-center" >
+<div className="lg:w-[100vw] relative flex justify-center w-[90vw]" >
 <div className="">
-  <center><h3 className="text-4xl font-semibold mb-4" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>Themes</h3></center>
+  <center><h3 className=" text-4xl font-semibold mb-4" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>Themes</h3></center>
   <div className="flex justify-center">
   <div className="border rounded-xl  bg-white shadow h-64 relative group overflow-hidden">
-  <ul className="animate-verticalScroll group-hover:[animation-play-state:paused]  text-sm text-gray-700">
+  <ul className="animate-verticalScroll group-hover:[animation-play-state:paused] p-2  text-xs md:text-sm text-gray-700">
     {themes.concat(themes).map((theme, index) => (
       <li key={index} className="list-disc list-inside text-xl">{theme}</li>
     ))}
