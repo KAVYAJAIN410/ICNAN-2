@@ -238,7 +238,7 @@ export default function Home() {
   <center><h3 className="text-4xl font-semibold mb-4" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>Themes</h3></center>
   <div className="flex justify-center">
   <div className="border rounded-xl  bg-white shadow h-64 relative group overflow-hidden">
-  <ul className="animate-verticalScroll group-hover:[animation-play-state:paused] space-y-2 text-sm text-gray-700">
+  <ul className="animate-verticalScroll group-hover:[animation-play-state:paused]  text-sm text-gray-700">
     {themes.concat(themes).map((theme, index) => (
       <li key={index} className="list-disc list-inside text-xl">{theme}</li>
     ))}

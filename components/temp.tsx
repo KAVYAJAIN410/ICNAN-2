@@ -390,7 +390,7 @@ export default function SpeakerCard2() {
   }
 
   return (
-    <section className="py-10 px-4">
+    <section className="py-10 px-4 bg-[#0a2240]">
       <h2 className="text-3xl font-bold text-center mb-10">ICNAN '25 SPEAKERS</h2>
 
       <div className="relative max-w-4xl mx-auto">
