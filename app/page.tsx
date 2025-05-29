@@ -12,7 +12,7 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import ResponsiveTimeline from "@/components/timeline"
-import { useRef,useEffect } from "react"
+import { useRef,useEffect, useState } from "react"
 import { motion, useInView, useAnimation } from "framer-motion";
 
 const textVariant = {
@@ -30,9 +30,12 @@ const imageVariant = {
 export default function Home() {
   const isMobile = useMediaQuery("(max-width: 800px)");
     const controls = useAnimation();
+    const [cursor,setCursor]=useState(false)
     const ref = useRef<HTMLDivElement>(null);
     const inView = useInView(ref, { once: true, amount: 0.5 }); // 👈 important
+
       useEffect(() => {
+        
         if (inView) {
           controls.start("visible");
         }
@@ -213,7 +216,7 @@ export default function Home() {
 
 
       {/* Countdown Timer */}
-      <CountdownTimer />
+    
 
       <h2 className="text-5xl font-bold text-center mt-8  bold text-[#0a2240]" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>IMPORTANT DATES</h2>
       <div className=" md:py-12 md:m-10 ">
@@ -226,20 +229,21 @@ export default function Home() {
       {/* Themes and Journals */}
       
       <section className="py-10 px-4">
-      <div className="container w-[100%]">
+      <div className="container w-[100vw]">
 
 {/* Themes Box with Scrolling List */}
-<div className="w-full relative flex justify-center">
-<div className="w-">
-  <center><h3 className="text-4xl font-semibold mb-4 " style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>Themes</h3></center>
+
+<div className="lg:w-[100vw] relative flex justify-center" >
+<div className="">
+  <center><h3 className="text-4xl font-semibold mb-4" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>Themes</h3></center>
   <div className="flex justify-center">
-  <div className="border rounded-xl p-4 bg-white shadow h-64 overflow-hidden relative">
-    <ul className="animate-verticalScroll space-y-2 text-sm text-gray-700">
-      {themes.concat(themes).map((theme, index) => (
-        <li key={index} className="list-disc list-inside text-xl">{theme}</li>
-      ))}
-    </ul>
-  </div>
+  <div className="border rounded-xl  bg-white shadow h-64 relative group overflow-hidden">
+  <ul className="animate-verticalScroll group-hover:[animation-play-state:paused] space-y-2 text-sm text-gray-700">
+    {themes.concat(themes).map((theme, index) => (
+      <li key={index} className="list-disc list-inside text-xl">{theme}</li>
+    ))}
+  </ul>
+</div>
   </div>
 </div>
 </div>
@@ -273,8 +277,8 @@ export default function Home() {
         </div> */}
       </section>
       <section
-  className="relative bg-cover bg-center bg-no-repeat text-white"
-  style={{ backgroundImage: "url('image.png')" }}
+  className="relative bg-cover bg-center bg-no-repeat text-white items-center"
+
 >
 {/* 
       
@@ -402,6 +406,9 @@ export default function Home() {
       </div>
     </div>
 
+
+
+    <CountdownTimer />
   {/* Sponsors Section */}
   {/* <SponsorGrid /> */}
 

@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div className="flex items-center space-x-4">
           <Image src="/Logo.png" alt="ICNAN Logo" width={100} height={100} />
           <div>
-            <h3 className="text-2xl font-bold leading-snug">ICNAN-25</h3>
+            <h3 className="text-4xl font-bold leading-snug">ICNAN-25</h3>
             <p className="text-base text-gray-300 leading-snug">
               International Conference on Nanoscience & Nanotechnology
             </p>
@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Right side - Contact Info */}
-        <div className="text-base md:text-right leading-relaxed">
+        <div className="md:text-right">
           <p className="">Centre for Nanotechnology Research</p>
           <p className="">Vellore Institute of Technology, Vellore, TN, India</p>
           <p className="">December 16–19, 2025</p>
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Bottom note */}
-      <div className="mt-6 border-t border-gray-700 pt-4 text-center text-xs text-gray-400">
+      <div className=" border-t border-gray-700 pt-4 text-center text-xs text-gray-400">
         <p>© 2025 ICNAN. All Rights Reserved.</p>
       </div>
     </footer>

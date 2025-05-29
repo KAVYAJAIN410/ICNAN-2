@@ -16,7 +16,7 @@ export default function CallForPapers() {
         </section>
   
         <section className="space-y-2">
-          <h2 className="text-2xl font-semibold">Publications & Proceedings</h2>
+          <h2 className="text-2xl font-semibold">Publications & Proceedings (will be updated soon)</h2>
           <p>
             ICNAN '25 encourages original and unpublished work. Extended abstracts will be published in digital proceedings with an online ISBN number.
           </p>
