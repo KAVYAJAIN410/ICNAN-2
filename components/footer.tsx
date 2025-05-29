@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Right side - Contact Info */}
-        <div className="md:text-right">
+        <div className="md:text-right text-center">
           <p className="">Centre for Nanotechnology Research</p>
           <p className="">Vellore Institute of Technology, Vellore, TN, India</p>
           <p className="">December 16–19, 2025</p>
