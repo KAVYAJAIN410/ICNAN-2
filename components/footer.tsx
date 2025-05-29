@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#0a2240] text-white py-6 px-4">
+    <footer className="bg-[#0a2240] text-white py-1">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
         {/* Left side - Logo and Title */}
         <div className="flex items-center space-x-4">
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Bottom note */}
-      <div className="mt-6 border-t border-gray-700 pt-4 text-center text-sm text-gray-400">
+      <div className="mt-6 border-t border-gray-700 pt-4 text-center text-xs text-gray-400">
         <p>© 2025 ICNAN. All Rights Reserved.</p>
       </div>
     </footer>
