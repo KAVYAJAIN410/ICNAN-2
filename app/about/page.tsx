@@ -362,14 +362,14 @@ export default function AboutPage() {
         </section>
 
         {/* Call to Action */}
-        <div className="text-center mt-12 mb-8">
+        {/* <div className="text-center mt-12 mb-8">
           <Link
             href="/register"
             className="inline-block bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-800 hover:to-gray-950 text-white font-bold py-3 px-10 rounded-md transition duration-300 shadow-md"
           >
             Register for ICNAN'25
           </Link>
-        </div>
+        </div> */}
       </main>
 
       
