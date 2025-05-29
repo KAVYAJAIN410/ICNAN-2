@@ -5,7 +5,8 @@ export default function Enquiry() {
       <h1 className='m-7'>
           <span className="text-[#0a2240] text-3xl m-4" style={{fontWeight:"bolder"}}>CONTACT DETAILS</span> 
         </h1>
-        <div className="flex">
+        <div></div>
+        <div className="md:flex">
         <div>
         <p className=" text-lg  leading-tight mt-4 pl-10 font-bold">Dr. A Nirmala Grace</p>
         <p className=" text-lg  leading-tight  pl-10">Director, Organising Chair</p>
