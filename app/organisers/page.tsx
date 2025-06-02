@@ -2,9 +2,9 @@ import React from 'react';
 import Card from "@/components/PatronsCard";
 import Image from "next/image";
 import chancellor from "@/public/patrons/chancellor.jpg";
-import naiju from "@/public/assets/patrons/naiju.png";
+
 import partha from "@/public/assets/patrons/partha.png";
-import ramesh from "@/public/assets/patrons/ramesh.png";
+
 import sankar from "@/public/patrons/parton-pic6.jpg";
 import sekar from "@/public/patrons/parton-pic2.jpg";
 import selvam from "@/public/patrons/parton-pic5.jpg";
@@ -28,7 +28,7 @@ const Page: React.FC = () => {
       <div className="flex flex-col items-center pt-6">
         <h2 className='text-2xl text-[#0a2240]' style={{fontWeight:"bolder"}} >Chief Patron</h2>
         <Card
-          name={"Dr. G Vishwanathan"}
+          name={"Dr. G. Vishwanathan"}
           image={chancellor}
           pos={"Chancellor"}
         />
@@ -47,7 +47,7 @@ const Page: React.FC = () => {
           image={sekar}
           pos={"Vice President"}
         />
-        <Card name={"Dr. G.V. Selvam"} image={selvam} pos={"Vice President"} />
+        <Card name={"Dr. G. V. Selvam"} image={selvam} pos={"Vice President"} />
       
       </div>
       <div className="flex flex-wrap justify-center pt-3">
@@ -57,7 +57,7 @@ const Page: React.FC = () => {
           pos={"Executive Director"}
         />
          <Card
-          name={"Ms. Kadhambari S Viswanathan"}
+          name={"Ms. Kadhambari S. Viswanathan"}
           image={AVP}
           pos={"Assistant Vice - President"}
         />
@@ -76,7 +76,7 @@ const Page: React.FC = () => {
         />
        
        <Card
-          name={"Dr. Jayabarathi T"}
+          name={"Dr. Jayabarathi T."}
           image={barathi}
           pos={"Registrar"}
         />
@@ -94,24 +94,25 @@ const Page: React.FC = () => {
      
       <center><h2 className='text-2xl text-[#0a2240] mt-7' style={{fontWeight:"bolder"}} >Conference Chair</h2></center>
      <div className='mb-4'>
-      <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr). R. Vimala</h1>
+      <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr.) R. Vimala</h1>
       
       </div>
 
       <center><h2 className='text-2xl text-[#0a2240] mt-7' style={{fontWeight:"bolder"}} >Conveners</h2></center>
      <div className='mb-4'>
-      <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr). Raja Sellappan</h1>
-      <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr.) Ashutosh Mahajan</h1>
       <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr.) George Jacob</h1>
+      <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr.) Ashutosh Mahajan</h1>
+      
       </div>
 
       <center><h2 className='text-2xl text-[#0a2240] mt-7' style={{fontWeight:"bolder"}} >Co-Conveners</h2></center>
      <div className='mb-4'>
-      <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr). Krishnamoorthi C.</h1>
-      <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr). Niroj kumar sahu</h1>
-      <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr). Anand S</h1>
-      <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr.) R. Mangaiyarkarasi</h1>
-      <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr.) G. Swati</h1>
+      <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr.) Raja Sellappan</h1>
+      <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr.) Krishnamoorthi C.</h1>
+      <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr.) Niroj Kumar Sahu</h1>
+      <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr.) Anand S.</h1>
+      <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr.) Mangaiyarkarasi R.</h1>
+      <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr.) Swati G.</h1>
       </div>
      
     </section>
