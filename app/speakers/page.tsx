@@ -23,7 +23,7 @@ const speakers: Speaker[] = [
     name: "Dr. Moungi Bawendi",
     institution: "Massachusetts Institute of Technology, USA",
     country: "Nobel Laureate in Chemistry (2023)",
-    image: "nobel.jpg",
+    image: "MoungiBawendi.png",
     description:
       `Professor Moungi G. Bawendi is a distinguished Lester Wolfe Professor and Advisor for the Minor in Energy Studies, MIT Energy Initiative at the Massachusetts Institute of Technology (MIT). He is internationally acclaimed for his pioneering contributions to the synthesis and development of quantum dots, a class of nanoscale semiconducting crystals with remarkable optical and electronic properties. For his seminal work in this field, he was awarded the 2023 Nobel Prize in Chemistry, alongside Louis E. Brus and Alexey Ekimov, for the discovery and synthesis of quantum dots.
 Bawendi began his academic journey at Harvard University, earning an A.B. in 1982 and an A.M. in 1983. He went on to complete his Ph.D. in Chemistry at the University of Chicago in 1988, under the mentorship of Karl Freed and Takeshi Oka. His doctoral research encompassed both theoretical polymer physics and experimental studies on the H₃⁺ ion, which played a key role in unravelling the emission spectra of Jupiter.
@@ -61,7 +61,7 @@ Prof. Moungi Bawendi’s trailblazing research continues to inspire a generation
     name: "Dr. Ajay Thakur",
     institution: "IIT Patna",
     country: "India",
-    image: "speak/2.jpg",
+    image: "speak/AjayThakur.jpg",
     description:
       "Dr. Ajay Thakur is an Associate Professor in the Department of Physics, at the Indian Institute of Technology Patna working in the area of condensed matter physics. He has completed his Ph.D from the Department of Condensed Matter Physics and Materials Science, Tata Institute of Fundamental Research, Mumbai and was a Post doctoral researcher at the prestigious National Institute for Materials Science, Tsukuba, Japan. The research activity in his group at IIT Patna focuses on Physics motivated exploration of Sustainable Functional Materials and Technologies. He is also collaborating nationally and internationally towards developing applications in the domains of Energy, Environment, Cell manipulation using Micro-Robotics and Functional Materials.",
   },
@@ -478,163 +478,163 @@ export default function SpeakerGallery() {
     setTimeout(() => setIsAutoRotating(true), 10000)
   }
 
-  return (
-    <>
-    <section className="py-12 sm:py-16 md:py-20 px-4 bg-gradient-to-b from-slate-50 to-slate-100 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    return (
+      <>
+      <section className="py-12 sm:py-16 md:py-20 px-4 bg-gradient-to-b from-slate-50 to-slate-100 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            ref={ref}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={controls}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12 md:mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-[#0b1c2f]">
+              ICNAN '25 SPEAKERS
+            </h2>
+            <p className="text-base sm:text-lg text-slate-700 max-w-3xl mx-auto">
+              Meet our distinguished speakers from leading institutions around the world
+            </p>
+          </motion.div>
+  
+          <div className="speaker-gallery">
+            {/* Featured Speaker (Hero Position) */}
+            <div className="mb-8 sm:mb-12">
+            <AnimatePresence mode="wait">
+    {positions.map((pos, index) =>
+      pos === 0 ? (
         <motion.div
-          ref={ref}
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          initial="hidden"
-          animate={controls}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12 md:mb-16"
+          key={`featured-${speakers[index].id}`}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-[#0b1c2f]">
-            ICNAN '25 SPEAKERS
-          </h2>
-          <p className="text-base sm:text-lg text-slate-700 max-w-3xl mx-auto">
-            Meet our distinguished speakers from leading institutions around the world
-          </p>
-        </motion.div>
-
-        <div className="speaker-gallery">
-          {/* Featured Speaker (Hero Position) */}
-          <div className="mb-8 sm:mb-12">
-          <AnimatePresence mode="wait">
-  {positions.map((pos, index) =>
-    pos === 0 ? (
-      <motion.div
-        key={`featured-${speakers[index].id}`}
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 0.95 }}
-        transition={{ duration: 0.4, ease: "easeInOut" }}
-      >
-                    <div className="bg-gradient-to-br from-[#0b1c2f] to-[#1a365d] rounded-2xl shadow-xl overflow-hidden">
-                      <div className="flex flex-col lg:flex-row">
-                        <div className="lg:w-2/5 p-6 flex justify-center items-center">
-                          <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 overflow-hidden rounded-xl border-4 border-blue-400 shadow-lg transform transition-transform duration-500 hover:scale-105">
-                            <Image
-                              src={speakers[index].image || "/placeholder.svg?height=400&width=400"}
-                              alt={speakers[index].name}
-                              fill
-                              className="object-cover"
-                              sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, 256px"
-                              priority={true}
-                            />
+                      <div className="bg-gradient-to-br from-[#0b1c2f] to-[#1a365d] rounded-2xl shadow-xl overflow-hidden">
+                        <div className="flex flex-col lg:flex-row">
+                          <div className="lg:w-2/5 p-6 flex justify-center items-center">
+                            <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 overflow-hidden rounded-xl border-4 border-blue-400 shadow-lg transform transition-transform duration-500 hover:scale-105">
+                              <Image
+                                src={speakers[index].image || "/placeholder.svg?height=400&width=400"}
+                                alt={speakers[index].name}
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, 256px"
+                                priority={true}
+                              />
+                            </div>
+                          </div>
+                          <div className="lg:w-3/5 p-6 lg:p-8 text-white">
+                           
+                            <h3 className="text-2xl sm:text-3xl font-bold mb-2">{speakers[index].name}</h3>
+                            <p className="text-blue-300 text-lg mb-4">
+                              {speakers[index].institution}
+                              {speakers[index].country !== "N/A" && `, ${speakers[index].country}`}
+                            </p>
+                            <p className="text-slate-300 leading-relaxed text-justify ">
+                              {speakers[index].description ||
+                                "Distinguished speaker with expertise in advanced materials and nanotechnology."}
+                            </p>
                           </div>
                         </div>
-                        <div className="lg:w-3/5 p-6 lg:p-8 text-white">
-                         
-                          <h3 className="text-2xl sm:text-3xl font-bold mb-2">{speakers[index].name}</h3>
-                          <p className="text-blue-300 text-lg mb-4">
-                            {speakers[index].institution}
-                            {speakers[index].country !== "N/A" && `, ${speakers[index].country}`}
-                          </p>
-                          <p className="text-slate-300 leading-relaxed">
-                            {speakers[index].description ||
-                              "Distinguished speaker with expertise in advanced materials and nanotechnology."}
+                      </div>
+                    </motion.div>
+                  ):null
+              )}
+              </AnimatePresence>
+            </div>
+  
+            {/* Grid of Other Speakers */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"
+            
+            >
+              {positions.map(
+    (pos, index) => (
+      <motion.div
+        key={`grid-${speakers[index].id}`}
+        className="cursor-pointer"
+        onClick={() => handleCardClick(index)}
+                      transition={{
+                        type: "spring",
+                        stiffness: 600,
+                        damping: 30,
+                        layout: { duration: 1 },
+                      }}
+                      
+                    >
+                      <div className="bg-gradient-to-br from-[#0b1c2f] to-[#1a365d] rounded-xl shadow-lg h-full border border-blue-500/30 flex flex-col transition-all duration-300 hover:shadow-xl group">
+                        <div className="relative w-full pt-[100%] rounded-t-xl overflow-hidden">
+                          <Image
+                            src={speakers[index].image || "/placeholder.svg?height=400&width=400"}
+                            alt={speakers[index].name}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#0b1c2f]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div className="p-4 flex-grow">
+                          <h3 className="text-lg font-semibold text-white mb-1 line-clamp-1">{speakers[index].name}</h3>
+                          <p className="text-sm text-blue-300 line-clamp-1">{speakers[index].institution}</p>
+                          <p className="text-xs text-slate-400 mt-1">
+                            {speakers[index].country !== "N/A" ? speakers[index].country : ""}
                           </p>
                         </div>
+                        <div className="p-4 pt-0">
+                          <span className="inline-flex items-center justify-center rounded-full bg-blue-900/30 px-3 py-1 text-xs font-medium text-blue-200">
+                            View Details
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  </motion.div>
-                ):null
-            )}
-            </AnimatePresence>
-          </div>
-
-          {/* Grid of Other Speakers */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"
-          
-          >
-            {positions.map(
-              (pos, index) =>
-                pos !== 0 && (
-                  <motion.div
-                    key={`grid-${speakers[index].id}`}
-                    className="cursor-pointer"
-                    onClick={() => handleCardClick(index)}
-                    transition={{
-                      type: "spring",
-                      stiffness: 600,
-                      damping: 30,
-                      layout: { duration: 1 },
-                    }}
-                    
-                  >
-                    <div className="bg-gradient-to-br from-[#0b1c2f] to-[#1a365d] rounded-xl shadow-lg h-full border border-blue-500/30 flex flex-col transition-all duration-300 hover:shadow-xl group">
-                      <div className="relative w-full pt-[100%] rounded-t-xl overflow-hidden">
-                        <Image
-                          src={speakers[index].image || "/placeholder.svg?height=400&width=400"}
-                          alt={speakers[index].name}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-500"
-                          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#0b1c2f]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      </div>
-                      <div className="p-4 flex-grow">
-                        <h3 className="text-lg font-semibold text-white mb-1 line-clamp-1">{speakers[index].name}</h3>
-                        <p className="text-sm text-blue-300 line-clamp-1">{speakers[index].institution}</p>
-                        <p className="text-xs text-slate-400 mt-1">
-                          {speakers[index].country !== "N/A" ? speakers[index].country : ""}
-                        </p>
-                      </div>
-                      <div className="p-4 pt-0">
-                        <span className="inline-flex items-center justify-center rounded-full bg-blue-900/30 px-3 py-1 text-xs font-medium text-blue-200">
-                          View Details
-                        </span>
-                      </div>
-                    </div>
-                  </motion.div>
-                ),
-            )}
+                    </motion.div>
+                  ),
+              )}
+            </div>
           </div>
         </div>
-      </div>
+       
+      </section>
+       <Dialog open={!!selectedImage} onOpenChange={(open) => !open && setSelectedImage(null)}>
+       <DialogContent className="max-w-4xl p-0 overflow-hidden bg-background">
+         {selectedImage && (
      
-    </section>
-     <Dialog open={!!selectedImage} onOpenChange={(open) => !open && setSelectedImage(null)}>
-     <DialogContent className="max-w-4xl p-0 overflow-hidden bg-background">
-       {selectedImage && (
-   
-           <div className="bg-gradient-to-br from-[#0b1c2f] to-[#1a365d] rounded-2xl shadow-xl overflow-hidden">
-                      <div className="flex flex-col lg:flex-row">
-                        <div className="lg:w-2/5 p-6 flex justify-center items-center">
-                          <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 overflow-hidden rounded-xl border-4 border-blue-400 shadow-lg transform transition-transform duration-500 hover:scale-105">
-                            <Image
-                              src={selectedImage.image || "/placeholder.svg?height=400&width=400"}
-                              alt={selectedImage.name}
-                              fill
-                              className="object-cover"
-                              sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, 256px"
-                              priority={true}
-                            />
+             <div className="bg-gradient-to-br from-[#0b1c2f] to-[#1a365d] rounded-2xl shadow-xl ">
+                        <div className="flex flex-col lg:flex-row">
+                          <div className="lg:w-2/5 p-6 flex justify-center items-center">
+                            <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 overflow-hidden rounded-xl border-4 border-blue-400 shadow-lg transform transition-transform duration-500 hover:scale-105">
+                              <Image
+                                src={selectedImage.image || "/placeholder.svg?height=400&width=400"}
+                                alt={selectedImage.name}
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, 256px"
+                                priority={true}
+                              />
+                            </div>
+                          </div>
+                          <div className="lg:w-3/5 p-6 lg:p-8 text-white ">
+                           
+                            <h3 className="text-2xl sm:text-3xl font-bold mb-2">{selectedImage.name}</h3>
+                            <p className="text-blue-300 text-lg mb-4">
+                              {selectedImage.institution}
+                              {selectedImage.country !== "N/A" && `, ${selectedImage.country}`}
+                            </p>
+                            <p className="text-slate-300 leading-relaxed overflow-scroll max-h-[80vh] pr-4 text-justify ">
+                              {selectedImage.description ||
+                                "Distinguished speaker with expertise in advanced materials and nanotechnology."}
+                            </p>
                           </div>
                         </div>
-                        <div className="lg:w-3/5 p-6 lg:p-8 text-white">
-                         
-                          <h3 className="text-2xl sm:text-3xl font-bold mb-2">{selectedImage.name}</h3>
-                          <p className="text-blue-300 text-lg mb-4">
-                            {selectedImage.institution}
-                            {selectedImage.country !== "N/A" && `, ${selectedImage.country}`}
-                          </p>
-                          <p className="text-slate-300 leading-relaxed overflow-scroll text-justify pr-4 max-h-[80vh]">
-                            {selectedImage.description ||
-                              "Distinguished speaker with expertise in advanced materials and nanotechnology."}
-                          </p>
-                        </div>
                       </div>
-                    </div>
- 
-       )}
-     </DialogContent>
-   </Dialog>
-   </>
-  )
-}
+   
+         )}
+       </DialogContent>
+     </Dialog>
+     </>
+    )
+  }
+  

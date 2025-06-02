@@ -24,7 +24,7 @@ const speakers: Speaker[] = [
     name: "Dr. Moungi Bawendi",
     institution: "Massachusetts Institute of Technology, USA",
     country: "Nobel Laureate in Chemistry (2023)",
-    image: "nobel.jpg",
+    image: "MoungiBawendi.png",
     description:
       `Professor Moungi G. Bawendi is a distinguished Lester Wolfe Professor and Advisor for the Minor in Energy Studies, MIT Energy Initiative at the Massachusetts Institute of Technology (MIT). He is internationally acclaimed for his pioneering contributions to the synthesis and development of quantum dots, a class of nanoscale semiconducting crystals with remarkable optical and electronic properties. For his seminal work in this field, he was awarded the 2023 Nobel Prize in Chemistry, alongside Louis E. Brus and Alexey Ekimov, for the discovery and synthesis of quantum dots.
 Bawendi began his academic journey at Harvard University, earning an A.B. in 1982 and an A.M. in 1983. He went on to complete his Ph.D. in Chemistry at the University of Chicago in 1988, under the mentorship of Karl Freed and Takeshi Oka. His doctoral research encompassed both theoretical polymer physics and experimental studies on the H₃⁺ ion, which played a key role in unravelling the emission spectra of Jupiter.
@@ -62,7 +62,7 @@ Prof. Moungi Bawendi’s trailblazing research continues to inspire a generation
     name: "Dr. Ajay Thakur",
     institution: "IIT Patna",
     country: "India",
-    image: "speak/2.jpg",
+    image: "speak/AjayThakur.jpg",
     description:
       "Dr. Ajay Thakur is an Associate Professor in the Department of Physics, at the Indian Institute of Technology Patna working in the area of condensed matter physics. He has completed his Ph.D from the Department of Condensed Matter Physics and Materials Science, Tata Institute of Fundamental Research, Mumbai and was a Post doctoral researcher at the prestigious National Institute for Materials Science, Tsukuba, Japan. The research activity in his group at IIT Patna focuses on Physics motivated exploration of Sustainable Functional Materials and Technologies. He is also collaborating nationally and internationally towards developing applications in the domains of Energy, Environment, Cell manipulation using Micro-Robotics and Functional Materials.",
   },
