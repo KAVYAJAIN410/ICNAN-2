@@ -481,7 +481,7 @@ export default function SpeakerGallery() {
 
   return (
     <>
-    <section className="py-12 sm:py-16 md:py-20 px-4 bg-gradient-to-b from-slate-50 to-slate-100 overflow-hidden">
+    <section className="py-6 sm:py-6 md:py-6 px-4 bg-gradient-to-b from-slate-50 to-slate-100 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <motion.div
           ref={ref}
@@ -494,7 +494,7 @@ export default function SpeakerGallery() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-[#0b1c2f]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold  tracking-tight text-[#0b1c2f]">
             ICNAN '25 SPEAKERS
           </h2>
           <p className="text-base sm:text-lg text-slate-700 max-w-3xl mx-auto">
