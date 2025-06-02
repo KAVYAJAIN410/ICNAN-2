@@ -118,9 +118,13 @@ function DesktopTimeline({ items }: { items: TimelineItem[] }) {
           >
             {/* Label */}
             <div
-              className={`absolute ${item.position === "top" ? "-top-24" : "bottom-[-6.5rem]"} ${index === 0 ? "left-0" : index === items.length - 1 ? "right-0" : "left-1/2 transform -translate-x-1/2"} w-48 text-center`}
+              className={`absolute ${item.position === "top" ? "-top-24" : "bottom-[-4.5rem]"} ${index === 0 ? "left-0" : index === items.length - 1 ? "right-0" : "left-1/2 transform -translate-x-1/2"} w-48 text-center`}
             >
               <div className="flex flex-col items-center">
+              <motion.div
+                  className={`h-12 w-1 bg-[#1e3a8a] mt-2  ${item.position === "top" ? "hidden" : ""}`}
+                  variants={itemVariants}
+                ></motion.div>
                 <motion.div
                   className={`text-center ${item.status === "closed" ? "text-red-600" : ""}`}
                   variants={itemVariants}
@@ -129,7 +133,7 @@ function DesktopTimeline({ items }: { items: TimelineItem[] }) {
                   {item.subtitle && <div className="text-sm">{item.subtitle}</div>}
                 </motion.div>
                 <motion.div
-                  className="h-12 w-1 bg-[#1e3a8a] mt-2"
+                  className={`h-12 w-1 bg-[#1e3a8a] mt-2  ${item.position === "bottom" ? "hidden" : ""}`}
                   variants={itemVariants}
                 ></motion.div>
               </div>
