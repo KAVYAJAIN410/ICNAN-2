@@ -14,6 +14,9 @@ try {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export', // 🔥 Key line to enable static HTML export
+  basePath: "/ICNAN",
+  assetPrefix: "/ICNAN/",
+  output: 'export', // if you use next export
   eslint: {
     ignoreDuringBuilds: true,
   },

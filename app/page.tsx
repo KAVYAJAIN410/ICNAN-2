@@ -113,10 +113,10 @@ export default function Home() {
   />
 
   {/* Content */}
-  <div className="relative z-20 lg:h-full mt-4 flex flex-col  justify-center lg:flex-row items-center lg:items-start  lg:justify-between lg:px-4 lg:py-4 lg:gap-4">
+  <div className="relative z-20 lg:h-full mt-4 flex flex-col  justify-center lg:flex-row items-center lg:items-start   lg:px-4 lg:py-4 lg:gap-4">
     
     {/* Logo */}
-    <div className="lg:h-[90%] ">
+    <div className="">
       <Image
         src="Logo.png"
         alt="Icon"
@@ -127,11 +127,11 @@ export default function Home() {
     </div>
 
     {/* Center Text Block */}
-    <div className=" text-white text-center  h-auto ">
+    <div className=" text-white text-center  items-center">
       <h1 className=" text-[4vh] lg:text-[8vh] font-bold leading-tight" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>
         ICNAN '25
       </h1>
-      <h2 className=" text-xl lg:text-[3vh] mb-1 leading-snug">
+      <h2 className=" text-xl lg:text-[3vh] mb-1 whitespace-nowrap">
         3<sup>rd</sup> International Conference on<br />
         Nanoscience and Nanotechnology
       </h2>
