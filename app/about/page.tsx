@@ -203,39 +203,13 @@ export default function AboutPage() {
               </div>
 
               <div className="space-y-4">
-                <p className="text-lg font-semibold">Discover Vellore Institute of Technology (VIT)</p>
+               
+               
                 <p>
-                  VIT stands as a testament to the transformative power of visionary education, a journey that began
-                  in 1984 with Dr. G. Viswanathan's unwavering commitment to providing world-class higher education.
-                  From its humble origin as Vellore Engineering College, VIT has evolved into a global educational
-                  hub, drawing a vibrant community of more than 40,000 students from across India's diverse states and
-                  union territories, and extending its reach to encompass 50 nations worldwide.
+                  The Vellore Institute of Technology (VIT), India, stands as a testament to academic excellence and visionary leadership, founded by its esteemed Chancellor, Dr. G. Viswanathan. Established with a commitment to providing quality education, VIT has steadily risen to prominence on both the national and international stages. Its dedication to pioneering education in engineering and technology has been consistently recognized, culminating in its ranking of 142nd globally and 9th in India in the QS World University Rankings by Subject 2025. This prestigious recognition further highlights the strength of four key disciplines—Computer Science & IT, Data Science & AI, Electrical & Electronics Engineering (EEE), and Material Science—all of which were ranked among the top 200 worldwide in the same assessment. VIT's consistent high performance is also reflected in the National Institutional Ranking Framework (NIRF) by the Government of India. In 2024, VIT was recognized as the 10th best University, 13th best research institution, and 11th best engineering institution in the country. Further solidifying its global standing, the Shanghai ARWU ranking 2024 placed VIT 2nd in India and within the 501-600 band globally. Moreover, VIT's commitment to sustainable practices has been acknowledged with a rank of 396th in the world and 8th in India in the QS World University Rankings: Sustainability 2025. The institution also holds the highest NAAC Accreditation with an A++ grade, scoring 3.66 out of 4, attesting to its rigorous quality standards.  VIT offers a comprehensive array of academic programs including 71 Undergraduate, 58 Postgraduate, 15 Integrated, 2 Research, and 2 M.Tech Industrial Programmes with robust research opportunities through full-time Ph.D. programs in Engineering and Management, Ph.D. in Science and Languages, and Direct Ph.D. programs in engineering disciplines. VIT's global outlook is evidenced by its strong international presence and partnerships with over 500 foreign universities. This extensive network provides invaluable platforms for students and faculty to engage with international experts, fostering collaboration on cutting-edge technologies.
+For further details, please visit <a href="https://vit.ac.in/" className="text-blue-500">https://vit.ac.in/</a>
                 </p>
-                <p>
-                  This cosmopolitan atmosphere fosters a unique environment where cultures converge, and global
-                  perspectives are cultivated. VIT's expansion across four campuses—Vellore, Chennai, Amaravati, and
-                  Bhopal—underscores its dedication to accessibility and growth.
-                </p>
-                <p>
-                  The institution's commitment to excellence is consistently validated by its impressive rankings and
-                  accreditations. Notably, VIT has been recognized as a premier private engineering institution in India
-                  by the National Institutional Ranking Framework (NIRF), and it holds the distinction of being the
-                  first and only Indian university to achieve a 4-Star rating from QS, the world universities ranking
-                  organization.
-                </p>
-                <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-gray-400 my-4">
-                  <p className="italic text-gray-700">
-                    "VIT is more than just an educational institution; it is a dynamic ecosystem where global ambition
-                    intersects with nano-scale innovation, where cutting-edge research fuels real-world solutions, and
-                    students are empowered to become leaders in an interconnected world."
-                  </p>
-                </div>
-                <p>
-                  VIT's research ecosystem is a powerhouse, driven by a strong faculty, ambitious research scholars, and
-                  state-of-the-art facilities. This commitment to innovation is reflected in its diverse network of
-                  research centres, integrated within academic schools, empowering students to engage in groundbreaking
-                  research, fostering a culture of creative thinking and problem-solving.
-                </p>
+                
               </div>
             </div>
           </div>
