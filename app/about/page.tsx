@@ -203,15 +203,25 @@ export default function AboutPage() {
               </div>
 
               <div className="space-y-4">
-                <p className="text-lg font-semibold">Discover Vellore Institute of Technology (VIT)</p>
-               
-                <p>
-                  The Vellore Institute of Technology (VIT), India, stands as a testament to academic excellence and visionary leadership, founded by its esteemed Chancellor, Dr. G. Viswanathan. Established with a commitment to providing quality education, VIT has steadily risen to prominence on both the national and international stages. Its dedication to pioneering education in engineering and technology has been consistently recognized, culminating in its ranking of 142nd globally and 9th in India in the QS World University Rankings by Subject 2025. This prestigious recognition further highlights the strength of four key disciplines—Computer Science & IT, Data Science & AI, Electrical & Electronics Engineering (EEE), and Material Science—all of which were ranked among the top 200 worldwide in the same assessment. VIT's consistent high performance is also reflected in the National Institutional Ranking Framework (NIRF) by the Government of India. In 2024, VIT was recognized as the 10th best University, 13th best research institution, and 11th best engineering institution in the country. Further solidifying its global standing, the Shanghai ARWU ranking 2024 placed VIT 2nd in India and within the 501-600 band globally. Moreover, VIT's commitment to sustainable practices has been acknowledged with a rank of 396th in the world and 8th in India in the QS World University Rankings: Sustainability 2025. The institution also holds the highest NAAC Accreditation with an A++ grade, scoring 3.66 out of 4, attesting to its rigorous quality standards.  VIT offers a comprehensive array of academic programs including 71 Undergraduate, 58 Postgraduate, 15 Integrated, 2 Research, and 2 M.Tech Industrial Programmes with robust research opportunities through full-time Ph.D. programs in Engineering and Management, Ph.D. in Science and Languages, and Direct Ph.D. programs in engineering disciplines. VIT's global outlook is evidenced by its strong international presence and partnerships with over 500 foreign universities. This extensive network provides invaluable platforms for students and faculty to engage with international experts, fostering collaboration on cutting-edge technologies.
+              <p>The Vellore Institute of Technology (VIT), India, stands as a testament to academic excellence and visionary leadership, founded by its esteemed Chancellor, Dr. G. Viswanathan. Established with a commitment to providing quality education, VIT has steadily risen to prominence on both the national and international stages. Its dedication to pioneering education in engineering and technology has been consistently recognized, culminating in its ranking of 142nd globally and 9th in India in the QS World University Rankings by Subject 2025. This prestigious recognition further highlights the strength of four key disciplines—Computer Science & IT, Data Science & AI, Electrical & Electronics Engineering (EEE), and Material Science—all of which were ranked among the top 200 worldwide in the same assessment.</p>
+                <p>VIT's consistent high performance is also reflected in the National Institutional Ranking Framework (NIRF) by the Government of India. In 2024, VIT was recognized as the 10th best University, 13th best research institution, and 11th best engineering institution in the country. Further solidifying its global standing, the Shanghai ARWU ranking 2024 placed VIT 2nd in India and within the 501-600 band globally. Moreover, VIT's commitment to sustainable practices has been acknowledged with a rank of 396th in the world and 8th in India in the QS World University Rankings: Sustainability 2025. The institution also holds the highest NAAC Accreditation with an A++ grade, scoring 3.66 out of 4, attesting to its rigorous quality standards.</p>
+                 <p>VIT offers a comprehensive array of academic programs including 71 Undergraduate, 58 Postgraduate, 15 Integrated, 2 Research, and 2 M.Tech Industrial Programmes with robust research opportunities through full-time Ph.D. programs in Engineering and Management, Ph.D. in Science and Languages, and Direct Ph.D. programs in engineering disciplines.</p>
+                 <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-gray-400 my-4">
+                  <p className="italic text-gray-700">
+                    "VIT is more than just an educational institution; it is a dynamic ecosystem where global ambition
+                    intersects with nano-scale innovation, where cutting-edge research fuels real-world solutions, and
+                    students are empowered to become leaders in an interconnected world."
+                  </p>
+                </div>
+                  <p> VIT's global outlook is evidenced by its strong international presence and partnerships with over 500 foreign universities. This extensive network provides invaluable platforms for students and faculty to engage with international experts, fostering collaboration on cutting-edge technologies.</p>
 
-                </p>
+         
                 <p>
-                For further details, please visit <a href="https://vit.ac.in/" className="text-blue-500">https://vit.ac.in/</a>
+                  For further details, please visit <a href="https://vit.ac.in/" className="text-blue-500">https://vit.ac.in/</a>
                 </p>
+                  
+           
+                
                 
               </div>
             </div>
