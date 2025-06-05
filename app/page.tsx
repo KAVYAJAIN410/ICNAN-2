@@ -116,7 +116,7 @@ export default function Home() {
   <div className="relative z-20 lg:h-full mt-4 flex flex-col  justify-center lg:flex-row items-center lg:items-start   lg:px-4 lg:py-4 lg:gap-4">
     
     {/* Logo */}
-    <div className="">
+    <div className="lg:h-[90%] ">
       <Image
         src="Logo.png"
         alt="Icon"
