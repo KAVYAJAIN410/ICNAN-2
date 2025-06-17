@@ -39,15 +39,15 @@ const Page: React.FC = () => {
       <Card
           name={"Mr. Sankar Viswanathan"}
           image={sankar}
-          pos={"Vice President"}
+          pos={"Vice-President"}
         />
         
         <Card
           name={"Dr. Sekar Viswanathan"}
           image={sekar}
-          pos={"Vice President"}
+          pos={"Vice-President"}
         />
-        <Card name={"Dr. G V Selvam"} image={selvam} pos={"Vice President"} />
+        <Card name={"Dr. G V Selvam"} image={selvam} pos={"Vice-President"} />
       
       </div>
       <div className="flex flex-wrap justify-center pt-3">
@@ -67,7 +67,7 @@ const Page: React.FC = () => {
       <center><h2 className='text-2xl text-[#0a2240] mt-4' style={{fontWeight:"bolder"}} >Advisor</h2></center>
       <div className="flex flex-wrap justify-center pt-3">
       
-      <Card name={"Dr. V. S. Kanchana Bhaaskaran"} image={kanchana} pos={"Vice Chancellor"} />
+      <Card name={"Dr. V. S. Kanchana Bhaaskaran"} image={kanchana} pos={"Vice-Chancellor"} />
    
          <Card
           name={"Dr. Partha Sharathi Mallick"}
