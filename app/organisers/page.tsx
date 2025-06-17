@@ -28,7 +28,7 @@ const Page: React.FC = () => {
       <div className="flex flex-col items-center pt-6">
         <h2 className='text-2xl text-[#0a2240]' style={{fontWeight:"bolder"}} >Chief Patron</h2>
         <Card
-          name={"Dr. G. Vishwanathan"}
+          name={"Dr. G. Viswanathan"}
           image={chancellor}
           pos={"Chancellor"}
         />
@@ -37,7 +37,7 @@ const Page: React.FC = () => {
       <center><h2 className='text-2xl text-[#0a2240] mt-4' style={{fontWeight:"bolder"}} >Patrons</h2></center>
       <div className="flex flex-wrap justify-center pt-3">
       <Card
-          name={"Shri. Sankar Viswanathan"}
+          name={"Mr. Sankar Viswanathan"}
           image={sankar}
           pos={"Vice President"}
         />
@@ -47,7 +47,7 @@ const Page: React.FC = () => {
           image={sekar}
           pos={"Vice President"}
         />
-        <Card name={"Dr. G. V. Selvam"} image={selvam} pos={"Vice President"} />
+        <Card name={"Dr. G V Selvam"} image={selvam} pos={"Vice President"} />
       
       </div>
       <div className="flex flex-wrap justify-center pt-3">
@@ -57,7 +57,7 @@ const Page: React.FC = () => {
           pos={"Executive Director"}
         />
          <Card
-          name={"Ms. Kadhambari S. Viswanathan"}
+          name={"Ms. Kadhambari S Viswanathan"}
           image={AVP}
           pos={"Assistant Vice - President"}
         />
@@ -67,7 +67,7 @@ const Page: React.FC = () => {
       <center><h2 className='text-2xl text-[#0a2240] mt-4' style={{fontWeight:"bolder"}} >Advisor</h2></center>
       <div className="flex flex-wrap justify-center pt-3">
       
-      <Card name={"Dr. V. S. Kanchana Bhaaskaran"} image={kanchana} pos={"Vice President"} />
+      <Card name={"Dr. V. S. Kanchana Bhaaskaran"} image={kanchana} pos={"Vice Chancellor"} />
    
          <Card
           name={"Dr. Partha Sharathi Mallick"}
