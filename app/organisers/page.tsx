@@ -11,7 +11,7 @@ import selvam from "@/public/patrons/parton-pic5.jpg";
 import pradheep from "@/public/assets/patrons/pradheep.png";
 import barathi from "@/public/assets/patrons/barathi.jpg";
 import sandhya from "@/public/patrons/sandhya.jpg"
-import AVP from "Kadhambari S. Viswanathan.jpg"
+import AVP from "@/public/Kadhambari S. Viswanathan.jpg"
 import kanchana from "@/public/assets/patrons/kanchana.png"
 
 const Page: React.FC = () => {
