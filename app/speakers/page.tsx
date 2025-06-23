@@ -487,7 +487,7 @@ Prof Singh has supervised 61 PhD students.  His vibrant research group at Monash
     name: "Dr. Tiju Thomas",
     institution: "IIT Madras",
     country: "India",
-    image: "Tiju Thomas",
+    image: "Tiju Thomas.JPG",
     description:
       `
    Dr. Tiju Thomas is a Professor in the Department of Metallurgical and Materials Engineering at IIT Madras, celebrated for his interdisciplinary research at the nexus of materials science, chemistry, and physics. He holds an MS and PhD from Cornell University and an MS (Engg.) from Jawaharlal Nehru Centre for Advanced Scientific Research, reflecting expertise in both experimental and theoretical solid-state sciences. His research stints have been in University of Toronto, Memorial University of Newfoundland, Lumentra Inc (tech start-up) and Indian Institute of Science Bangalore (as a Faculty Fellow). His research has yielded several high-impact results including:
