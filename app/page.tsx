@@ -50,14 +50,12 @@ export default function Home() {
         'Materials Chemistry and Its Properties',
         'Electrochemical engineering',
         'Electroactive materials and electrocatalysis',
-        'Electrochemical energy generation, conversion and storage',
         'Biomaterials',
         'Green Chemistry',
         'Alternative Energy',
         'Surface modification of materials for advanced or engineered applications',
         'Surface Engineering and properties',
         'Hydrogen Generation and Storage',
-        'Surface Engineering and properties',
         'Advanced surface science and catalysis',
         'Surface nanotechnology and devices',
         'Nanofluids',
@@ -79,6 +77,7 @@ export default function Home() {
         'Density Functional Theory and Molecular Dynamics in Nanotechnology',
         'Quantum Computing Applications in Nanotechnology',
         'AI and ML techniques for Nanotechnology',
+        " "
       ];
       
       
@@ -246,7 +245,7 @@ export default function Home() {
   <div className="border rounded-xl  bg-white shadow h-64 relative group overflow-hidden">
   <ul className="animate-verticalScroll group-hover:[animation-play-state:paused] p-2  text-xs md:text-sm text-gray-700">
     {themes.concat(themes).map((theme, index) => (
-      <li key={index} className="list-disc list-inside text-xl">{theme}</li>
+      <li key={index} className="list-decimal list-inside text-xl">{theme}</li>
     ))}
   </ul>
 </div>
