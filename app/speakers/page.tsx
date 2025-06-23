@@ -160,8 +160,17 @@ Prof. Moungi Bawendi’s trailblazing research continues to inspire a generation
     description:
       "Dr. David Jenkins is an Associate Professor at the Wolfson Nanomaterials and Devices Laboratory, School of Engineering, Computing and Mathematics, University of Plymouth, UK. He holds a B.Sc. (Hons) in Physics from the University of Salford (1983), an M.Sc. in Lasers and their Applications from the University of Essex (1985) and completed his Ph.D. at Cranfield Institute of Technology in 1991, focusing on Photothermal Deflection Spectroscopy and its Application in Remote Sensing. His research interests include microsensors, MEMS, surface plasmon resonance sensors, and graphene-based sensors.  Throughout his career, Dr. Jenkins has made significant contributions to the field, with over 120 publications and conference presentations. His work is always targeted to serve the Unted Nations Sustainable Development Goals. He is a member of prestigious professional bodies such as MIET, MInstP, and CPhys, demonstrating his commitment to advancing the field of nanomaterials and devices.",
   },
-  {
+   {
     id: 14,
+    name: "Dr. Deepa Khushalani",
+    institution: "TIFR,Mumbai",
+    country: "India",
+    image: "Deepa Khushalani.png",
+    description:
+      "Dr. David Jenkins is an Associate Professor at the Wolfson Nanomaterials and Devices Laboratory, School of Engineering, Computing and Mathematics, University of Plymouth, UK. He holds a B.Sc. (Hons) in Physics from the University of Salford (1983), an M.Sc. in Lasers and their Applications from the University of Essex (1985) and completed his Ph.D. at Cranfield Institute of Technology in 1991, focusing on Photothermal Deflection Spectroscopy and its Application in Remote Sensing. His research interests include microsensors, MEMS, surface plasmon resonance sensors, and graphene-based sensors.  Throughout his career, Dr. Jenkins has made significant contributions to the field, with over 120 publications and conference presentations. His work is always targeted to serve the Unted Nations Sustainable Development Goals. He is a member of prestigious professional bodies such as MIET, MInstP, and CPhys, demonstrating his commitment to advancing the field of nanomaterials and devices.",
+  },
+  {
+    id: 15,
     name: "Dr Garima Agarwal",
     institution: "IIT Mandi",
     country: "India",
@@ -170,9 +179,20 @@ Prof. Moungi Bawendi’s trailblazing research continues to inspire a generation
 She is the recipient of several prestigious awards including NASI Platinum Jubilee Young Scientist Award (2022) from National Academy of Sciences, India and DST Inspire Faculty Award (2016) from Government of India and Young Achiever’s Award (2023) from IIT Mandi.
 Her research interests include the synthesis of functional polymers based novel micro/nanomaterials and using them for designing interactive materials with active properties for targeted applications.`
   },
+    {
+    id: 40,
+    name: "Dr. Ganapathy V., ARCI, Hyderabad, India ",
+    institution: "Griffith University",
+    country: "Australia",
+    image: "Dr. Ganapathy Veerappan.jpeg",
+    description:` 
+Dr. James Chapman is a Senior Lecturer at Griffith University and a leading expert in analytical and environmental chemistry, with a specialisation in antimicrobial materials. With over 15 years of experience, James has led research groups and science degree programmes, contributing significantly to both academia and industry. His research, which integrates artificial intelligence with spectroscopy and chemometrics, focuses on engineering advanced sensors and diagnostics for applications in health, environmental monitoring, and food safety—all aligned with UN Sustainable Development Goals. James has a proven track record in securing research funding, producing high-quality publications, and commercialising research through patents. With over 100 peer-reviewed articles, an h-index of 40, and more than 6,000 citations (google Scholar), James’s work is recognised internationally. He has mentored numerous doctoral students and early-career scientists and serves as Division Chair for the Royal Australian Chemical Institute's Analytical and Environmental Chemistry Division. He is a Fellow of both the Royal Australian Chemical Institute and the Royal Society of Chemistry and holds the title of Chartered Chemist.
+ `
+  },
+  
   
 {
-    id: 15,
+    id: 16,
     name: "Dr. Jayan Thomas",
     institution: "University of Central Florida",
     country: "USA",
@@ -181,7 +201,7 @@ Her research interests include the synthesis of functional polymers based novel 
       "Dr. Jayan Thomas is currently a Professor of Nanotechnology, Engineering, and Photonics at the University of Central Florida (UCF). He earned his Ph. D. in Chemistry/Material Science from Cochin University of Science and Technology. He was awarded one of the most prestigious fellowships in India, Dr. K.S. Krishnan fellowship, by the Department of Atomic Energy for doing his Ph.D. After his post-doctoral fellowship (CSIR) in the International School of Photonics, he was offered a Research Scientist position in the College of Optical Sciences at the University of Arizona (USA) in 2001 and promoted to a Research faculty in 2005. He moved to the University of Central Florida (UCF) in 2011 and currently directs the Nano Energy-Photonics research labs. He has published more than 130 scientific publications, including multiple papers in prestigious journals like Nature, Science Advances, Energy and Environmental Sciences and Advanced Materials. Also, many national and international media including Reuters, Nature news, National Geography magazine, Huffington Post, USA Today, The Guardian, Foreign Policy, Fox News, The Telegraph, and Times of India have featured his research. He is a recipient of the R&D100 award (also known as “Oscar for Inventions”) in 2015. He is also a recipient of the National Science Foundation’s prestigious CAREER award (2014), the Veeco award for nanotechnology innovations (2010) and one of the five finalists for the World Technology Network award sponsored by TIME and FORTUNE magazines (2014). In addition, he has been awarded UCF's Excellence in Research award in 2014, and 2018, Reach for the Stars Award in 2016. He has more than ten issued/pending US patents and a co-founder of two companies.",
   },
   {
-    id: 16,
+    id: 17,
     name: "Dr. John V. Kennedy",
     institution: "GNS Science",
     country: "New Zealand",
@@ -189,8 +209,17 @@ Her research interests include the synthesis of functional polymers based novel 
     description:
       "Dr John V. Kennedy is a Principal Scientist, Group Leader, Advanced Materials and Nanotechnology at National Isotope Centre, GNS Science (Institute of Geological and Nuclear Science), New Zealand Govt owned crown research institute.   Dr. Kennedy is a Physicist who works on the new materials development for low carbon energy technologies. He uses ion beam technologies pioneered by Lord Rutherford to develop functional materials and to provide key information about the materials structure-property relationship. The results are used across the materials science community for the design of a new product, surface engineering, catalytic materials for hydrogen production and storage, Thermoelectric materials for waste heat to energy conversion, energy storage materials, magnetic materials and energy efficient systems. He has published more than 250 journal papers (h-index of 65) demonstrating ion implantation into polymers, semiconductors, superconductors, nanostructures and 20 international patents. John is programme director. Aotearoa: Green Hydrogen Technology Platform.  He is an Adjunct Professor, Victoria University of Wellington and Honorary Professor, Faculty of Science and Engineering, University of Waikato. He is a Fellow of Royal Society of Chemistry, UK and a Fellow of Royal Society New Zealand.",
   },
+    {
+    id: 41,
+    name: "Dr. Johnson Goh Kuan Eng, Singapore",
+    institution: "IMRE, A*STAR",
+    country: "Singapore",
+    image: "Johnson Goh Kuan Eng .jpg" ,
+    description:
+      "Dr John V. Kennedy is a Principal Scientist, Group Leader, Advanced Materials and Nanotechnology at National Isotope Centre, GNS Science (Institute of Geological and Nuclear Science), New Zealand Govt owned crown research institute.   Dr. Kennedy is a Physicist who works on the new materials development for low carbon energy technologies. He uses ion beam technologies pioneered by Lord Rutherford to develop functional materials and to provide key information about the materials structure-property relationship. The results are used across the materials science community for the design of a new product, surface engineering, catalytic materials for hydrogen production and storage, Thermoelectric materials for waste heat to energy conversion, energy storage materials, magnetic materials and energy efficient systems. He has published more than 250 journal papers (h-index of 65) demonstrating ion implantation into polymers, semiconductors, superconductors, nanostructures and 20 international patents. John is programme director. Aotearoa: Green Hydrogen Technology Platform.  He is an Adjunct Professor, Victoria University of Wellington and Honorary Professor, Faculty of Science and Engineering, University of Waikato. He is a Fellow of Royal Society of Chemistry, UK and a Fellow of Royal Society New Zealand.",
+  },
   {
-    id: 17,
+    id: 18,
     name: "Dr. Karen Wilson",
     institution: "Griffith University",
     country: "Australia",
@@ -201,7 +230,7 @@ Her research interests include the synthesis of functional polymers based novel 
 
   
   {
-    id: 18,
+    id: 19,
     name: "Dr. Kornelius Nielsch",
     institution: "Technische Universität Dresden (TUD)",
     country: "Germany",
@@ -211,7 +240,7 @@ Her research interests include the synthesis of functional polymers based novel 
   },
 
 {
-    id: 19,
+    id: 20,
     name: "Dr. R. Kothandaraman",
     institution: "IIT Madras",
     country: "India",
@@ -221,7 +250,7 @@ Her research interests include the synthesis of functional polymers based novel 
   },
 
   {
-    id: 20,
+    id: 21,
     name: "Dr. Lorenzo Pavesi",
     institution: "University of Trento",
     country: "Italy",
@@ -231,7 +260,7 @@ Her research interests include the synthesis of functional polymers based novel 
   },
 
 {
-    id: 21,
+    id: 22,
     name: "Dr. Manish Chhowalla",
     institution: "University of Cambridge",
     country: "UK",
@@ -242,7 +271,7 @@ Her research interests include the synthesis of functional polymers based novel 
 
 
   {
-    id: 22,
+    id: 23,
     name: "Dr. Manoj Gupta",
     institution: "National University of Singapore",
     country: "Singapore",
@@ -250,8 +279,20 @@ Her research interests include the synthesis of functional polymers based novel 
     description:
       "Provost Chair Professor Manoj Gupta was a former Head of Materials Division of the Mechanical Engineering Department. He did his Ph.D. from University of California, Irvine, USA (1992), and postdoctoral research at University of Alberta, Canada (1992). He has worked for about 40 years in the area of metallic materials with particular focus on metallic composites of different types. He has taken multiple consultancy work related to failure of materials besides teaching many people in corporate sectors on the same topic. He is currently among top 1% researchers as per Stanford’ List, The Universal Scientific Education and Research Network and ResearchGate. He has published over 730 peer reviewed journal papers and owns two US patents and two Trade Secrets.  His h-index is 89 and citations over 29500. He has also co-authored eight books, published by John Wiley, Springer and MRF - USA. A multiple award winner, he actively collaborate/visit Japan, France, Saudi Arabia, Qatar, China, USA and India as a visiting researcher, professor and chair professor.",
   },
+
   {
-    id: 23,
+    id: 42,
+    name: "Dr. A. Manuel Stephan",
+    institution: "CECRI, Karaikudi",
+    country: "India",
+    image: "A. Manuel Stephan.jpeg",
+    description:
+      `Dr. A. Manuel Stephan is a Senior Principal Scientist in the Electrochemical Power Sources Division at CSIR-Central Electrochemical Research Institute (CECRI) in Karaikudi, India. With 24 years of extensive research experience, Dr. Stephan is a leading expert in the development and characterization of advanced materials for various energy storage applications. He earned his Ph.D. in Physics from Alagappa University, Karaikudi, in 1997, following his M.Phil. and M.Sc. in Physics from St. Joseph's College, Trichy, in 1990 and 1989, respectively. His international postdoctoral research includes stints as a JSPS Postdoctoral Researcher at Osaka National Research Institute, Japan (2000-2001), and as a Postdoctoral Researcher in the Department of Chemistry at The University of Tulsa, USA (2001-2002). He also served as a Brain Pool Visiting Scientist at Chonbuk National University, S. Korea (2005-2006). Dr. Stephan's primary research interests lie in the realm of advanced materials for electrochemical power sources, with a particular focus on lithium-ion and lithium-sulfur batteries. His work encompasses the application of nanostructured materials, laser plasma, and phase transitions to enhance battery performance. He is actively involved in developing novel electrodes for high-capacity lithium-ion batteries, as well as exploring alternative battery technologies such as Na/Mg-ion and lithium-air batteries, and battery-hybrid supercapacitor electrodes. His prolific research has resulted in over 150 publications in peer-reviewed journals, and he has co-edited nine books of scientific interest and authored numerous book chapters. His significant contributions to the field have been recognized with awards such as the "most cited article award" from the European Polymer Journal and the "Best Paper Award" from "Energy Storage Materials" in 2017. Dr. Stephan has extensive collaborations with national and international scientific institutions across India, South Africa, Slovenia, Canada, France, Germany, Malaysia, Australia, and the United States, fostering a global approach to scientific advancements. He is also a recipient of prestigious research fellowships and associateships from government organizations in India, including the Department of Science and Technology and the Council of Scientific and Industrial Research.
+      `,
+  },
+
+  {
+    id: 24,
     name: "Dr. Marc-Olivier Coppen",
     institution: "University College London",
     country: "UK",
@@ -260,7 +301,7 @@ Her research interests include the synthesis of functional polymers based novel 
       "Marc-Olivier Coppens is the Ramsay Memorial Professor in Chemical Engineering at University College London (UCL), where he directs the Centre for Nature-Inspired Engineering (CNIE). He previously served as Head of Department and Vice-Dean Engineering. Professor Coppens is recognised for pioneering Nature-Inspired Chemical Engineering (NICE), with applications in process intensification, functional materials and devices for sustainable manufacturing, energy, water, and health. He is Fellow of RSC, IChemE, AIChE, and member of the Saxon Academy of Sciences (Germany).",
   },
   {
-    id: 24,
+    id: 25,
     name: "Dr. Michael Naguib",
     institution: "Tulane University",
     country: "USA",
@@ -268,9 +309,22 @@ Her research interests include the synthesis of functional polymers based novel 
     description:
       "Dr. Michael Naguib is an associate professor in the Department of Physics and Engineering Physics at Tulane University. Prior to joining Tulane in 2018, he was a Wigner Fellow (2014-2017) and Research Staff (2017-2018) at Oak Ridge National Laboratory. He received his PhD in Materials Science and Engineering at Drexel University in 2014. He was one among the few members in Prof. Yury Gogotsi’s Team to have discovered a new class of 2D materials called MXenes. He has published more than 100 papers (with > 41,000 citations and h-index of 60) in international journals and presented many plenary, keynote and invited lectures and seminars at international conferences and universities. He completed his undergraduate and master’s degrees at Cairo University, Egypt. He has been listed as a Highly Cited Researcher by Clarivate Analytics three times and has received many awards such as NSF CAREER Award, Robert L. Coble Award, Kroto Award, Ross Coffin Purdy Award, Rising Star Award by Tulane University, Young Alumni Emerging Leader Award and listed as Forty-Under-Forty by Drexel University. He is an Associate Editor of Energy Advances. His research group works on the synthesis and characterization of novel nanomaterials with a focus on 2D materials for electrochemical energy storage and conversion.",
   },
+{
+    id: 43,
+    name: "Dr. Muthu Senthil Pandian",
+    institution: "SSN, Chennai",
+    country: "India",
+    image: "Muthu Senthil Pandian.png",
+    description:
+      `
+      Dr. Muthu Senthil Pandian is a highly accomplished Research Scientist, currently holding the position of Senior Grade-III and Research Coordinator at the SSN Research Centre within SSN Institutions (Autonomous) in Chennai, Tamil Nadu, India. With 16 years of extensive research experience and 11 years dedicated to teaching, Dr. Pandian has made profound contributions to the field of crystal growth and materials science. Dr. Pandian's academic foundation was laid at The American College, Madurai, where he earned both his B.Sc. and M.Sc. in Physics. He went on to complete his Ph.D. from Anna University, Chennai, in 2013, solidifying his expertise in the nuances of materials science A testament to his hands-on research prowess, Dr. Pandian was a key member of the team that successfully grew a remarkable 1350 mm length and 55 mm diameter longest NLO single crystal, a significant achievement in the field. His prolific research output is evident in his extensive publication record, which includes 163 papers in international peer-reviewed journals and 35 papers in American Institute of Physics (AIP) and Materials Today Proceedings. These publications have garnered an impressive 2368 citations, an h-index of 27, and an i10-index of 66, underscoring the impact and recognition of his work. Dr. Pandian has successfully secured substantial funding for his research, including 7 external projects from prestigious agencies like DST, SERB, and DAE-BRNS, totaling an impressive Rs. 285.48 lakhs. Additionally, he has championed 17 internally funded faculty and student projects supported by the SSN Trust, with a budget of Rs. 33.31 lakhs, fostering a vibrant research environment. A dedicated mentor and educator, Dr. Pandian is a recognized supervisor at Anna University, Chennai. Under his guidance, 6 full-time Ph.D. scholars have successfully completed their doctoral studies, and 5 full-time Ph.D. scholars are currently pursuing their research. His mentorship extends to a large cohort of emerging researchers, with 14 Postdoctoral Fellows (PDFs), 4 Senior Research Fellows (SRFs), and 11 Junior Research Assistants (JRAs) having completed their research under his expert supervision. Dr. Pandian is a highly sought-after speaker, having delivered 133 invited lectures at international and national conferences, seminars, and workshops. His commitment to disseminating knowledge is further exemplified by the more than 250 papers presented by his Ph.D. students at various national and international conferences. He is also a published author, with 12 books, book chapters, and newsletters to his credit. His organizational skills are evident in the 23 international and national conferences, seminars, workshops, and summer schools he has successfully organized. His significant contributions have not gone unnoticed. The Asia Scientist Ranking recognized Dr. Muthu Senthil Pandian as one of the World Scientists in Physical Sciences for both 2021 and 2022. He has been honored with 30 prestigious awards, including the Sir C.V. Raman Young Scientist Award, The Academy of Sciences-Young Scientist Award, IACG – Prof. P. Ramasamy National Award, ISPA-Prof. S. Gunasekaran National Award, Shri. P.K. Das Memorial Best Young Faculty Award, and numerous Young Scientist and Young Researcher Awards. He has also received accolades such as the SSN Best Faculty Researcher Awards, Best Outgoing Project Award, Best Innovative Researcher Award, SSN Best Research Scholar Awards, Best Crystal Display Awards, Best Indigenous Product Presentation Award, and DAE-Best Poster Awards. In 2019, he received a Certificate of Appreciation for being a Highly Cited Author from the Royal Society of Chemistry (RSC), UK.
+
+      `,
+  },
+
 
   {
-    id: 25,
+    id: 26,
     name: "Dr. Nanasaheb Devappa Thorat",
     institution: "University of Limerick",
     country: "Ireland",
@@ -279,8 +333,9 @@ Her research interests include the synthesis of functional polymers based novel 
       "Dr. Nanasaheb Devappa Thorat is a Science Foundation Ireland and Irish Research Council funded Principal Investigator at the Department of Physics, University of Limerick, Ireland. He is a three-time winner of the prestigious Marie Curie Fellowships: Politechnika Wrocławska (2018-2020), University of Oxford (2020-2022) and Harvard Medical School (2022) and the first Indian awardee of the European Commission’s Innovation Radar “Grand Prix of the Innovation Radar Prize 2020.” Dr. Thorat has 100 publications to his credit including 70 peer-reviewed SCI journal research papers, 7 Books, 25 book chapters, 1 European patent filled, 2 European innovations/inventions registered in European Union’s Innovation Radar Project, presented 5 Keynote Speech, 25 invited talks at prestigious scientific peer-conferences in Singapore, France, Germany, USA, Ireland, Poland, South Korea, and India, received international acclaims and awards for research contribution, generated research fund in excess of > €1.5 M, supervised students/junior researchers and actively participated in outreach and scientific dissemination for the service of the wider community. He received a Ph.D with Gold Medal in Physics from Centre for Interdisciplinary Research D. Y. Patil University Kolhapur, India. . He completed his B.Sc. and M.Sc. degrees from Shivaji University Kolhapur, India. His areas of research are Nanomedicine, targeted drug delivery and, Cancer therapeutics and Nanotechnology.",
   },
 
+
 {
-    id: 26,
+    id: 27,
     name: "Dr. K. S. Narayan",
     institution: "JNCASR, Bangalore",
     country: "India",
@@ -289,8 +344,33 @@ Her research interests include the synthesis of functional polymers based novel 
       "Dr. K S Narayan is a Professor and Sir J. C. Bose National Fellow at Jawaharlal Nehru Centre for Advanced Scientific Research (JNCASR), Bangalore. He is an academic researcher and has been active in the general field of molecular/organic/polymer/bioelectronics. He is a co-founder of a startup hbaromega (ℏw) - A Photovoltaic diagnostic Company- winner of Elevate-100 startup grant 2023 by Karnataka State Govt., selected for seed grant IIT(M) Pravartak. He is a hands-on experimentalist, who has contributed to many research problems in applied sciences spreading across physics, chemistry, and biology and translating this knowledge into engineering solutions. His laboratory has come out with many unique findings including the first demonstration of polymer optical-field effect transistors in 2001. His lab actively pursues frontier problems in device physics, photophysics of solution processible semiconductors, solar cells, LEDs, transistors, and circuits.  He has also contributed to the area of soft-electronic polymers in the biomedical arena of tissue engineering and for vision prosthetic elements. His present laboratory theme also explores advanced materials for integrating seamlessly the connected world with human sensory systems for a variety of biomedical applications and understanding it from a device physics perspective. His other current pursuits include developing noise measurement and scanning techniques to predict the full life cycle of photovoltaic modules. His work has received international coverage (Physics World, Laser Focus World, Printed Electronics World, Materials Research Society Bulletin, Nature India). Besides research, he has taken up the administrative mantle of Dean (R&D) (2011-2018) and was President-In Charge of JNCASR for a two and half years.",
   },
 
+
   {
-    id: 27,
+    id: 44,
+    name: "Dr. Pau Loke Show",
+    institution: "Khalifa University",
+    country: "UAE",
+    image: "Pau Loke Show.jpg",
+    description:
+    `
+     
+Professor Ir. Ts. Dr. Pau-Loke Show is currently a Full Professor in the Department of Chemical Engineering at Khalifa University, Abu Dhabi, United Arab Emirates. He is also affiliated with the University of Nottingham Malaysia, where he is the Professor of Biochemical Engineering, Director of the Sustainable Food Processing Research Centre and Co-Director of Future Food Malaysia, Beacon of Excellence. He is also the former President and Founder of the International Bioprocessing Society based in Malaysia. Prof Ir. Ts. Dr. Show has successfully obtained his PhD in two years’ time after obtaining his bachelor’s degree from Universiti Putra Malaysia. In the year of 2022, he was elected as a Fellow of the Institution of Chemical Engineers IChemE (FIChemE). He is currently a Professional Engineer (PEng) registered with the Board of Engineers Malaysia (BEM), Chartered Engineer of the Engineering Council UK (CEng), Corporate Member of The Institution of Engineers, Malaysia (MIEM), and Professional Technologist (PTech) registered with the Malaysia Board of Technologists (MBOT). Prof Ir. Ts. Dr. Show obtained the Post Graduate Certificate of Higher Education (PGCHE) in 2014 and is now a Fellow of the Higher Education Academy (FHEA) UK.
+ 
+According to Research.com, Prof Show ranked #1 in the Best Rising Stars of Science in Malaysia 2023 and ranked #51 in the world ranking. Since he started his career in 2012, he has received numerous prestigious academic awards, including the recent Young Asian Biotechnologist Prize 2023, Biology and Biochemistry in Malaysia Leader Award, Highly Cited Researcher, World’s Rising Stars of Science, Ten Outstanding Young Malaysian, Tan Sri Emeritus Professor Augustine SH Ong International Special Award on Innovations and Inventions in Palm Oil, APEC Science Prize for Innovation, Research and Education (“ASPIRE”) Malaysia Award, Malaysian Young Scientist Award, The DaSilva Award, JSPS Fellowship Award, Top 100 Asian Scientists, Asia’s Rising Scientists Award and Winner of Young Researcher in IChemE Award. He has graduated more than 35 PhD and MSc students and is leading a team of 30 members consisting of Postdoctoral, PhD and MSc research students. Up to today, he has published more than 850 journal papers in less than 10 years of his career. His publications have been cited over 40,000 times over the past 5 years. His current h-index is 98, placing him among the top leaders in his chosen field (Microalgae Technology). He is also the Primary Project leader for more than 35 projects from International, National, and Industry Projects, with a total amount of more than 5.0 million.
+    `
+  },
+  {
+    id: 45,
+    name: "Dr. N. Ponpandian",
+    institution: "Bharathiar University, Coimbatore",
+    country: "India",
+    image: "Ponpandian.png",
+    description:
+      "Dr. K S Narayan is a Professor and Sir J. C. Bose National Fellow at Jawaharlal Nehru Centre for Advanced Scientific Research (JNCASR), Bangalore. He is an academic researcher and has been active in the general field of molecular/organic/polymer/bioelectronics. He is a co-founder of a startup hbaromega (ℏw) - A Photovoltaic diagnostic Company- winner of Elevate-100 startup grant 2023 by Karnataka State Govt., selected for seed grant IIT(M) Pravartak. He is a hands-on experimentalist, who has contributed to many research problems in applied sciences spreading across physics, chemistry, and biology and translating this knowledge into engineering solutions. His laboratory has come out with many unique findings including the first demonstration of polymer optical-field effect transistors in 2001. His lab actively pursues frontier problems in device physics, photophysics of solution processible semiconductors, solar cells, LEDs, transistors, and circuits.  He has also contributed to the area of soft-electronic polymers in the biomedical arena of tissue engineering and for vision prosthetic elements. His present laboratory theme also explores advanced materials for integrating seamlessly the connected world with human sensory systems for a variety of biomedical applications and understanding it from a device physics perspective. His other current pursuits include developing noise measurement and scanning techniques to predict the full life cycle of photovoltaic modules. His work has received international coverage (Physics World, Laser Focus World, Printed Electronics World, Materials Research Society Bulletin, Nature India). Besides research, he has taken up the administrative mantle of Dean (R&D) (2011-2018) and was President-In Charge of JNCASR for a two and half years.",
+  },
+
+  {
+    id: 28,
     name: "Dr. Pranab Goswami",
     institution: "IIT Guwahati",
     country: "India",
@@ -298,8 +378,12 @@ Her research interests include the synthesis of functional polymers based novel 
     description:
       "Prof. Pranab Goswami received a Ph.D. degree in 1994 in chemical biology from Gauhati University. He was a BOYSCAST fellow of DST, India, at the University of Massachusetts Boston. He joined as a scientist at NEIST, CSIR India, in 1990, moved to IIT Guwahati, India, in 2002, attained the level of Professor in 2009, and then HAG Professor in 2015. Prof. Goswami also served as Head of the Department of Biosciences and Bioengineering from 2006-2009, Head of the Centre for Energy from 2014-2017, and Founder Head of the Central Instrument Facility from 2004-2006 at IIT Guwahati. He was a visiting Professor at the University of Alberta, Canada, in 2018. Prof. Goswami received many accolades, served as an editorial board member of many international scientific journals, and was chairman and expert member in many academic, research, and administrative bodies in India. He served as Senate nominee to the BoG, IIT Guwahati. The primary research area of Prof. Goswami is the biosensors and biofuel cells, focusing on developing novel biorecognition systems and signal transduction platforms for malaria, myocardial infarction, Shiga toxin, and alcohols. His group explores biofuel cells as biosensing platforms and green power-generating devices. A couple of proofs-of-concept developed in his lab have already been translated into portable kits, and two of these prototype kits were dedicated to the nation by the honorable HRD minister of India. Prof. Goswami has published over 135 peer-reviewed scientific papers, filed 11 patent applications, edited one book in biosensors, supervised more than 40 research students in Ph.D. and MTech programs, and 25 students have received Ph.D. degrees",
   },
+
+
+  
+
   {
-    id: 28,
+    id: 29,
     name: "Dr. Pratap Kollu",
     institution: "University of Hyderabad",
     country: "India",
@@ -309,7 +393,7 @@ Her research interests include the synthesis of functional polymers based novel 
   },
 
   {
-    id: 29,
+    id: 30,
     name: "Dr. Raghumani Singh Ningthoujam",
     institution: "BARC, Mumbai",
     country: "India",
@@ -318,7 +402,7 @@ Her research interests include the synthesis of functional polymers based novel 
       "Dr. Ningthoujam Raghumani Singh is a Scientific Officer at the Chemistry Division, Bhabha Atomic Research Centre, Mumbai, INDIA. He is recognized for Guideship of Ph.D. at Homi Bhabha National Institute (HBNI), Mumbai and Mumbai University, Mumbai. In recognition of his significant contributions to the chemical science, he has been awarded DAE-Scientific & Technical Excellence Award in 2012 and Young Achiever Award, SSPS 2010. He has been elected as a Fellow, The National Academy of Sciences, India (FNASc) in 2016 and Fellow, Maharashtra Academy of Sciences (FMASc) in 2013. He has been selected for the prestigious Chemical Research Society of India (CRSI) Bronze Medal Award for the year 2022. Dr. Raghumani S. Ningthoujam obtained M.Sc. in Chemistry from Manipur University, Imphal, Manipur, India in 1994. He was awarded Ph.D. in Chemistry from IIT Kanpur in the area of superconductivity, electron transport and magnetic properties of nanostructured transition metal nitrides in 2004. His area of expertise lies in luminescence and magnetic nanoparticles targeting on hypothermia applications.",
   },
   {
-    id: 30,
+    id: 31,
     name: "Dr. Raman Singh",
     institution: "Monash University",
     country: "Australia",
@@ -329,7 +413,7 @@ Prof Singh’s professional distinctions and recognitions include: Guest Profess
 Prof Singh has supervised 61 PhD students.  His vibrant research group at Monash University comprises of PhD students from different disciplines (Mechanical, Chemical, Materials and Mining Engineering, and Science) as well as from different cultural backgrounds (Australian, Middle-eastern, Chinese, Malaysian, Indian, African, North American and Israeli).`,
   },
   {
-    id: 31,
+    id: 32,
     name: "Dr. Roland Kádár",
     institution: "Chalmers University of Technology",
     country: "Sweden",
@@ -341,7 +425,7 @@ Prof Singh has supervised 61 PhD students.  His vibrant research group at Monash
 
   
   {
-    id: 32,
+    id: 33,
     name: "Dr. Saikat Talapatra",
     institution: "Southern Illinois University, Carbondale",
     country: "USA",
@@ -349,8 +433,30 @@ Prof Singh has supervised 61 PhD students.  His vibrant research group at Monash
     description:
       "Dr. Saikat Talapatra is currently a professor in the Department of Physics, where he earned his Ph.D. degree in engineering science from Southern Illinois University, Carbondale. His expertise includes low-temperature and condensed-matter physics, and his present research interests include a broad variety of nanomaterial synthesis and characterization pertaining to advanced energy solutions. Dr. Saikat Talapatra, received his B.Sc. in Physics and B.Ed degree from Regional College of Education Bhubaneswar. Thereafter he finished his M.Sc. in Physics form Jadavpur University, Kolkata and his MS and Ph.D. from Southern Illinois University Carbondale (SIUC), Illinois, USA. After spending some time at Rensselaer Nanotechnology Center, Troy NY as a Post-Doctoral Research Associate with Prof. P. M. Ajayan's group, he returned to SIUC as a faculty.",
   },
+   {
+    id: 47,
+    name: "Dr. M. Sathish",
+    institution: "CSIR-CERI, Karaikudi",
+    country: "India",
+    image: "",
+    description:
+    `
+    Dr. M. Sathish is a distinguished Principal Scientist in the Electrochemical Power Sources Division at CSIR-Central Electrochemical Research Institute (CECRI) in Karaikudi, Tamil Nadu, India. With an impressive background in materials chemistry and a focus on advanced electrochemical systems, Dr. Sathish has made significant contributions to the field of energy storage. Dr. Sathish's academic journey began with a B.Sc. in Chemistry from Kandasamy Kandar's College (Madras University) in 1998, followed by an M.Sc. in Chemistry from Gandhigram Rural Institute (Deemed University) in 2000. He earned his Ph.D. from the Department of Chemistry at the Indian Institute of Technology Madras, Chennai, in 2006, where he laid the foundation for his expertise in cutting-edge materials research. His postdoctoral research experience is extensive and international, beginning with a period at the National Institute for Materials Science (NIMS), Japan, from August 2006 to July 2009, where he worked with Prof. Katsuhiko Ariga and Prof. Kunichi Miyazawa in the Fullerene Engineering Group & Supermolecules Group. He then moved to the National Institute of Advanced Industrial Science and Technology (AIST), Japan, from August 2009 to February 2010, joining Prof. Itaru Honma's Nano Energy Materials Group. His association with Prof. Itaru Honma continued as a JSPS Fellow at the Institute of Multidisciplinary Research for Advanced Materials, Tohoku University, Japan, from April 2010 to March 2012. Dr. Sathish joined CSIR-CECRI as a Scientist in the Functional Materials Division in April 2012, transitioning to the Electrochemical Power Sources Division in April 2016 as a Senior Scientist. He was promoted to Principal Scientist in April 2019, a position he holds to date. His research interests are broad and impactful, primarily cantered on the development of innovative electrode materials for high-energy supercapacitors and lithium-ion batteries. He also specializes in fullerene-based nanomaterials for various energy conversion and storage applications, as well as photocatalytic and electrochemical generation of hydrogen and water decontamination. His expertise extends to materials chemistry, nanomaterials, catalysis, and self-assembly. Dr. Sathish's prolific research output includes an impressive 195 publications in refereed international journals, including prominent journals like JACS, Chemistry of Materials, Chemical Communications, and Advanced Functional Materials. He has also presented over 220 papers at conferences and workshops, contributed to 8 books/book chapters, and holds 2 patents. His work is highly cited, with over 11,500 citations, an h-index of 57, and an i10-index of 160. His significant contributions have been recognized with several prestigious awards and honors, including the MRSI-2024 Medal by the Materials Research Society of India, the JSPS-Bridge Fellowship in 2018, and the JSPS Postdoctoral Research Fellowship (2010-2012). He was elected as a Fellow of the Academy of Sciences, Chennai, in December 2020. Dr. Sathish is a dedicated mentor, guiding 8 Ph.D. scholars to completion and currently supervising 6 ongoing Ph.D. students. He has also mentored numerous project assistants, postdoctoral fellows, and M.Phil./M.Sc. and B.Tech students. He is actively involved in professional societies, holding life memberships in the Chemical Research Society of India, Catalysis Society of India, The Society for Advancement of Electrochemical Science and Technology (SAEST), Electron Microscopy Society of India, Indian JSPS Alumni Association, and Materials Research Society of India, and is also a member of the Electrochemical Society (ECS).
+    `
+  },
+   {
+    id: 46,
+    name: "Dr. P. Saravanan",
+    institution: " DRDO - DMRL, Hyderabad",
+    country: "India",
+    image: "P Saravanan.jpg",
+    description:
+    `
+    Dr. P. Saravanan currently holds a position of Scientist 'G' at the Advanced Magnetics Group, Defence Metallurgical Research Laboratory (DMRL), Ministry of Defence, DRDO, Hyderabad. With over 25 years of dedicated research experience in DRDO since 1999, he has made significant contributions to the fields of nano-magnetic materials, nanocomposites, thin films, and MEMS devices. Dr. Saravanan earned his Ph.D. in Physics from Bharathiar University, Coimbatore (1994-1999), following his M.Sc. in Physics from Bharathidasan University, Tiruchirappalli (1992-1994). His commitment to scientific advancement is further highlighted by a Postdoctoral Fellowship at National Taiwan University (2012-2013), awarded by the National Science Council of Taiwan. He also held visiting positions at the Jawaharlal Nehru Centre for Advanced Scientific Research (JNCASR), Bangalore (2001-2003), and the International Advanced Research Centre for Powder Metallurgy & New Materials (ARC-I), Hyderabad (1997-1999). A recipient of numerous accolades, Dr. Saravanan's honors include being a Fellow of the Telangana Academy of Sciences (2020) and the Academy of Sciences, Chennai (2018). He has been recognized with the DAE Young Achiever Award (2011), the DRDO Technology Award (2008) for the development of Sm2Co17 Magnets, the DRDO National Science Day Silicon Medal (2005), and the DRDO Young Scientist Award (2003). His early career was marked by the ISCA Young Scientist Award in Material Science (2000) and the ICTP-Invited Delegate Award (2000) from the Abdus Salam International Centre for Theoretical Physics, Trieste, Italy. Dr. Saravanan is a prolific researcher with over 175 papers published in international refereed journals and more than 125 conference presentations. He holds two patents granted for the development of Rare Earth Free Permanent Magnets. His editorial contributions include serving as Managing Guest Editor for special issues of the Journal of Magnetism and Magnetic Materials. He is also a respected reviewer for several prominent journals. Demonstrating his dedication to nurturing new talent, he has guided 4 Ph.D. students, 14 M.Tech students, 4 M.Phil students, and 16 M.Sc students.
+    `
+  },
   {
-    id: 33,
+    id: 34,
     name: "Dr. Santanu Das",
     institution: "IIT BHU",
     country: "India",
@@ -359,7 +465,7 @@ Prof Singh has supervised 61 PhD students.  His vibrant research group at Monash
       `Dr. Santanu Das is an Associate Professor in the Department of Ceramic Engineering, Indian Institute of Technology (BHU), Varanasi, since 2024. He worked as Research Scientist at the Department of Materials Science and Engineering, University of North Texas, USA.  Dr. Das did his Ph.D. from Florida International University, USA, in Materials Science and Engineering and did his Master degree from Banaras Hindu University in Ceramic Engineering, respectively. His research areas include the engineering of various nanostructured materials and nanoarchetypes for various applications, including energy storage, electrochemical sensors, energy-harvesting, electrocatalysis, transistors, photo-sensors, photodetectors, and several other thin-film photonics, electronics, and optoelectronics. Dr. Das is a recipient of numerous prestigious awards, including a National award on “Best Innovation 2022, 11th National Petrochemicals Awards, Ministry of Petroleum and Natural Gas, Govt. of India”; “IIT(BHU) Best Teacher Award 2022”; "Outstanding Ph.D. dissertation award FIU, USA; “IT-gold Medal” IT(BHU); "The American Ceramic society's McCARE Award" ACerS, USA; "MRS poster Award" Materials Research Society, USA; "Early Career Awards" SERB; “MoE-STARs awards”, Ministry of Education; and many more. He got the honor of becoming Fellow, Indian Chemical Society, 2022; MRSC, Royal Society of Chemistry, UK; 2021, "IEEE Senior Member" 2017; for his outstanding research contribution over the last twelve years. Dr. Das published ~ 1 book, ~ 6 book chapters, a total of more than 137 SCI-indexed peer-reviewed high-impact research articles, and holds 14 patents (including two (02) US patents granted, ten (10) Indian patents granted). He has total more than ~4200 citations, h-index of ~35 and i-10 index of ~83. Recently, he has also transferred a few technologies from lab-scale to start-up industrial scale for developing indigenous products in India.`,
   },
   {
-    id: 34,
+    id: 35,
     name: "Dr. Seiichi Takamatsu",
     institution: "State University of New York at Binghamton",
     country: "USA",
@@ -368,7 +474,7 @@ Prof Singh has supervised 61 PhD students.  His vibrant research group at Monash
       "Dr. Seiichi Takamatsu is a Professor at the School of Systems Science and Industrial Engineering, State University of New York, Binghamton. He received the BE, ME, and PhD degrees in mechanical informatics from the University of Tokyo, Japan, in 2003, 2005 and 2009, respectively. He joined the National Institute of Advanced Industrial Science and Technology (AIST) in 2009, where he was a researcher with the Research Center for Ubiquitous MEMS and Micro Engineering (UMEMSME), AIST. until 2016. Before joining Binghamton University, he was an associate professor with The University of Tokyo. His international experience includes time as a visiting graduate student at Cornell University from 2005 to 2006 and a visiting scientist at Ecole Nationale Supérieure des Mines de Saint-Etienne in France from 2014 to 2015. His research interests include hybrid electronics, wearable MEMS technologies and meter-scale electronic textiles. He has published over 120 journal and conference papers on hybrid electronics and electronic textiles, and he has received the Excellent Researcher Award from the University of Tokyo, the Satomi Prize, and the Young investigator Award of Japan Institute of Electronics Packaging.",
   },
   {
-    id: 35,
+    id: 36,
     name: "Dr. Sudhagar Pitchaimuthu",
     institution: "Heriott Watt University",
     country: "UK",
@@ -376,8 +482,29 @@ Prof Singh has supervised 61 PhD students.  His vibrant research group at Monash
     description:
       `Dr. Sudhagar Pitchaimuthu is an Associate Professor at IMPEE, School of Engineering and Physical Sciences, Heriot Watt University, UK and he holds the role of Associate Director for the Energy Materials and Technology theme at the Research Centre for Carbon Solutions (RCCS). With a distinguished career spanning over 15 years in materials science, Dr Pitchaimuthu is renowned for his pioneering work in the development of multi-functional nanomaterials, particularly in the realm of solar energy applications, such as solar cells, solar hydrogen fuel generation, environmental remediation (water and air pollutant cleanup), artificial CO2 recycling, electrolysis, supercapacitors, and biosensor technologies. His standing as a world-class researcher is underlined by the two prestigious international research fellowships he has earned in Japan (JSPS Post Doctoroal Fellowship) and the UK (Ser Cymru Rising Star Fellowship).  He is a recipient of both the Newton International Fellowship and the Marie Curie Fellowship as a Host Supervisor. He is also the Fellow of Royal Society of Chemistry. Beyond academia, he excels in conveying the impact of his research to diverse audiences through extensive engagement in outreach activities, including media coverage (BBC News, Nature Outlook, The Independent UK, etc.), the organization of over seven international conferences, and STEM ambassador initiatives. He served as a review panel member for the Scottish Industrial Energy Transformation Fund (SIETF) and assumed the role of an expert panellist at the 15th Pravasi Bharatiya Divas, hosted by the Ministry for External Affairs, Government of India, where he shared profound insights on the "Role of Indian Diaspora in Capacity Building for Affordable Solar Power." Furthermore, he provided expert opinions during the Co-Funded Brain Circulation Scheme 2 Kick-off meeting at the Scientific and Technological Research Council of Turkey (TUBITAK) headquarters in Ankara, Turkey. Furthermore, he has been recognised by the Ministry of Education, Croatia, and invited to share his opinion on “Challenges and advantages in research mobility across the continents” at the “Young researchers in a highly skilled landscape” conference, which was organised by European Commission, Horizon 2020. His extensive expertise and dedication to research excellence have left an indelible mark on the global stage.`,
   },
+   {
+    id: 48,
+    name: "Dr. Tiju Thomas",
+    institution: "IIT Madras",
+    country: "India",
+    image: "Tiju Thomas",
+    description:
+      `
+   Dr. Tiju Thomas is a Professor in the Department of Metallurgical and Materials Engineering at IIT Madras, celebrated for his interdisciplinary research at the nexus of materials science, chemistry, and physics. He holds an MS and PhD from Cornell University and an MS (Engg.) from Jawaharlal Nehru Centre for Advanced Scientific Research, reflecting expertise in both experimental and theoretical solid-state sciences. His research stints have been in University of Toronto, Memorial University of Newfoundland, Lumentra Inc (tech start-up) and Indian Institute of Science Bangalore (as a Faculty Fellow). His research has yielded several high-impact results including:
+(i) Innovations in Energy Storage: Dr. Thomas’s group has pioneered the development of next-generation supercapacitors and hybrid energy storage systems, advancing materials for high-performance and sustainable energy storage.
+(ii) Clean Hydrogen Production: Internationally recognized for work in on-demand hydrogen production, his team leverages novel catalysts and green engineering approaches to enable scalable, eco-friendly hydrogen technologies.
+(iii) Solar Energy Harvesting: The group has made significant contributions to nanotech-enabled solar energy harnessing, including plasmon-enhanced solar distillation and the use of earth-abundant plasmonic metals for light-trapping in thin-film solar cells (as demonstrated in publications such as Sustainable Materials and Technologies, 2021).
+(iv) Solar-Driven Water Treatment: Dr. Thomas’s research has led to breakthroughs in solar-driven water purification, including non-noble plasmonic-enhanced solar distillation, with practical implications for low-cost, sustainable water remediation.
+(v) Computational Materials Design: His work integrates advanced computational methods and machine learning to discover and optimize materials—such as direct band gap perovskites for light harvesting—accelerating the development of new functional materials for energy and environmental applications.
+(vi) Patented Synthesis Techniques: He holds patents for rapid, high-yield synthesis methods of monodispersed ceramic and compound semiconductor nanoparticles, which are critical for scalable materials manufacturing.
+
+Dr. Thomas has published over 250 journal articles, ~19 patents (several granted, some underway), has spun off start ups from his lab, maintains a strong citation record and is an elected member of the Royal Society of Chemistry (London) as well as recipient of the Young Scientist Award in Engineering Sciences from the Academy of Sciences (Chennai), of which he is a Fellow. He is also a Fellow of the International Academy of Advanced Materials (Sweden). He consistently aims at bridging fundamental science and applied engineering, driving tangible advances in sustainability and clean technology.
+
+      `
+  },
+
   {
-    id: 36,
+    id: 37,
     name: "Dr. Unyong Jeong",
     institution: "Pohang University of Science and Technology",
     country: "Korea",
@@ -386,7 +513,7 @@ Prof Singh has supervised 61 PhD students.  His vibrant research group at Monash
       "Dr. Unyong Jeong is a distinguished figure in the field of Materials Science and Engineering, currently serving as a Professor at Pohang University of Science and Technology (POSTECH) in South Korea since March 2016. His academic journey includes a strong foundation in Chemical Engineering, culminating in a Ph.D. from POSTECH in 2003 with a thesis focused on the control of self-assembled nanostructures of block copolymer thin films. He also holds M.S. and B.S. degrees in Chemical Engineering from the same institution. Prior to his tenure at POSTECH, Professor Jeong held faculty positions at Yonsei University from 2006 to 2016, progressing from Assistant to Associate Professor. His postdoctoral research was conducted at the University of Washington, Seattle, under the guidance of Professor Younan Xia. Professor Jeong's research interests are broad and impactful, encompassing inorganic, organic, and hybrid organic/inorganic nanostructured materials. His work includes the synthesis and application of nanoparticles, nanowires, and nanotubes in areas such as optoelectronics, thermoelectronics, biomedical and gas sensing, and nanoelectronics. His significant contributions to the field are recognized through numerous awards, including the Nano Korea Revolutionary Research Award (Korean Minister Award) in 2020, the Young Scientist Award by the Korean President in 2011, and the Asia Outstanding Lectureship Award by the Japanese Chemical Society in 2013. He is an elected member of the Young Korean Academy of Science and Technology (Y-KAST) and an Associate Member of the Korean Academy of Science and Technology (KAST). Beyond his research and teaching, Professor Jeong is actively engaged with the scientific community, serving as an Associate Editor for Materials Advances and the Journal of Materials Chemistry C since 2019. He is also a member of the Samsung Future Technology Meeting Committee. His professional affiliations include memberships in esteemed societies such as the Material Research Society, the American Chemical Society, the American Physical Society, and various Korean scientific organizations.",
   },
   {
-    id: 37,
+    id: 38,
     name: "Dr Venkata Krishnan",
     institution: "IIT Mandi",
     country: "India",
@@ -396,7 +523,7 @@ Prof Singh has supervised 61 PhD students.  His vibrant research group at Monash
   },
   
   {
-    id: 38,
+    id: 39,
     name: "Dr. Wim Deferme",
     institution: "Hasselt University",
     country: "Belgium",
