@@ -77,7 +77,7 @@ export default function Home() {
         'Density Functional Theory and Molecular Dynamics in Nanotechnology',
         'Quantum Computing Applications in Nanotechnology',
         'AI and ML techniques for Nanotechnology',
-        " "
+    
       ];
       
       
