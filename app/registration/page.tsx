@@ -65,6 +65,20 @@ const RegistrationPage = () => {
           </table>
         </div>
 
+        <div className="bg-[#e0f0ff] text-[#0a2b52] mt-8 p-6 rounded-md shadow-md text-center text-sm md:text-base">
+  <p>
+    
+    <a
+      href="https://cmt3.research.microsoft.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-700 underline hover:text-blue-900"
+    >
+      Microsoft CMT service
+    </a> was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+  </p>
+</div>
+
         <div className="text-center mt-10">
           <button className="bg-[#0a2b52] text-white px-6 py-3 rounded font-semibold transition">
             Register Now
