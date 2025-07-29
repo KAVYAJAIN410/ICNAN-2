@@ -80,7 +80,7 @@ const RegistrationPage = () => {
        
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
   <a
-    href="/IOP NANO Nanotechnology.jpg"
+    href="/abstract.docx"
     download
     className="bg-[#0a2b52] text-white px-6 py-3 rounded font-semibold text-center transition hover:bg-[#143a6e]"
   >
@@ -88,7 +88,7 @@ const RegistrationPage = () => {
   </a>
 
   <a
-    href="#"
+    href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FICNAN2025"
     target="_blank"
     rel="noopener noreferrer"
     className="bg-[#0a2b52] text-white px-6 py-3 rounded font-semibold text-center transition hover:bg-[#143a6e]"
