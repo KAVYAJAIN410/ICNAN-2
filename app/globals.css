@@ -107,12 +107,16 @@ body {
   }
 }
 @layer utilities {
-  @keyframes verticalScroll {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-50%); }
+ @keyframes verticalScroll {
+  0% {
+    transform: translateY(0%);
   }
+  100% {
+    transform: translateY(-50%);
+  }
+}
 
-  .animate-verticalScroll {
-    animation: verticalScroll 30s linear infinite;
-  }
+.animate-verticalScroll {
+  animation: verticalScroll 30s linear infinite;
+}
 }

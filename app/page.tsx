@@ -8,6 +8,7 @@ import SpeakerCard2 from "@/components/temp"
 import SpeakerCard from "@/components/speaker-card"
 import SponsorGrid from "@/components/sponsor-grid"
 import { Swiper, SwiperSlide } from 'swiper/react';
+import ThemeScroller from "@/components/themeScroll"
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
@@ -77,7 +78,6 @@ export default function Home() {
         'Density Functional Theory and Molecular Dynamics in Nanotechnology',
         'Quantum Computing Applications in Nanotechnology',
         'AI and ML techniques for Nanotechnology',
-    
       ];
       
       
@@ -147,8 +147,13 @@ export default function Home() {
         Centre for Nanotechnology Research<br />
         VIT, Vellore, TN, India
       </p>
-      <button className="bg-transparent border border-white hover:bg-white/10 text-white px-4 py-1 rounded lg:text-[2vh]">
-        Brochure
+      <button className="bg-transparent border border-white hover:bg-white/10 text-white px-4 py-1 rounded lg:text-[vh]">
+       <a
+  href="/brochure.pdf"
+  download
+>
+  Brochure
+</a>
       </button>
     </div>
 
@@ -238,20 +243,8 @@ export default function Home() {
 
 {/* Themes Box with Scrolling List */}
 
-<div className="lg:w-[100vw] relative flex justify-center w-[90vw]" >
-<div className="">
-  <center><h3 className=" text-4xl font-semibold mb-4" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>Themes</h3></center>
-  <div className="flex justify-center">
-  <div className="border rounded-xl  bg-white shadow h-64 relative group overflow-hidden">
-  <ul className="animate-verticalScroll group-hover:[animation-play-state:paused] p-2  text-xs md:text-sm text-gray-700">
-    {themes.concat(themes).map((theme, index) => (
-      <li key={index} className="list-decimal list-inside text-xl">{theme}</li>
-    ))}
-  </ul>
-</div>
-  </div>
-</div>
-</div>
+<ThemeScroller themes={themes} />
+
 
 
 {/* Journals Box with Scrolling List */}

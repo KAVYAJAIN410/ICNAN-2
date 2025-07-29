@@ -47,7 +47,7 @@ Prof. Moungi Bawendi’s trailblazing research continues to inspire a generation
 
   {
     id: 2,
-    name: "Dr. Adam Lee",
+    name: "Dr. Adam F. Lee",
     institution: "Griffith University",
     country: "Australia",
     image: "speak/1.jpg",
@@ -310,7 +310,7 @@ Prof Johnson Goh is a Director at the A*STAR Quantum Innovation Centre (QInC). H
 
   {
     id: 29,
-    name: "Dr. Marc-Olivier Coppen",
+    name: "Dr. Marc-Olivier Coppens",
     institution: "University College London",
     country: "UK",
     image: "speak/Olivier.jpg",

@@ -26,12 +26,12 @@ const awards = [
     details:
       'Winners from IOP Nanotechnology will receive a journal certificate.',
   },
-  {
-    org: 'Cell Press – iScience',
-    title: 'iScience Best Presentation Awards',
-    details:
-      'Winners from iScience (Cell Press) will receive a journal certificate.',
-  },
+  // {
+  //   org: 'Cell Press – iScience',
+  //   title: 'iScience Best Presentation Awards',
+  //   details:
+  //     'Winners from iScience (Cell Press) will receive a journal certificate.',
+  // },
   {
     org: 'ICNAN',
     title: 'Young Researcher Awards',
@@ -51,9 +51,10 @@ const Presentation = () => {
   return (
 
     <>
+    <center><h2 className="text-4xl font-bold mt-8">ICNAN Presentation Awards</h2></center>
         <div className="px-4 py-8 max-w-6xl mx-auto">
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-6">
         {awards.map((award, index) => (
           <div
             key={index}
@@ -66,7 +67,7 @@ const Presentation = () => {
           </div>
         ))}
       </div>
-       <p className='p-11 text-justify'>American Chemical Society Best Presentation Awards - ACS Energy Letters, ACS Applied Nano Materials, ACS Applied Energy Materials, ACS Materials Au, ACS Nanoscience Au, ACS Omega . These awards includes ACS journal certificate, INR 3000</p>
+      
           </div>
 
    
