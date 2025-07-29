@@ -47,21 +47,24 @@ export default function ThemeScroller({ themes }: ThemeScrollerProps) {
       <div className="flex justify-center mr-6" ref={containerRef}>
         <div className="w-full max-w-md md:max-w-lg lg:max-w-xl xl:max-w-3xl border rounded-xl bg-white shadow h-64 relative overflow-hidden group">
           <ul
-            className={`p-2 md:p-4 text-xs md:text-base text-gray-700 leading-[2.5rem] ${startScroll ? 'animate-verticalScroll' : ''} group-hover:[animation-play-state:paused]`}
-          >
-            {paddedThemes.map((theme, index) => {
-              const isTheme = theme !== '';
-              const serial = isTheme ? (themeCount % themes.length) + 1 : '';
+  className={`p-2 md:p-4 text-xs md:text-base text-gray-700 group-hover:[animation-play-state:paused] ${startScroll ? 'animate-verticalScroll' : ''}`}
+>
+  {paddedThemes.map((theme, index) => {
+    const isTheme = theme !== '';
+    const serial = isTheme ? (themeCount % themes.length) + 1 : '';
 
-              if (isTheme) themeCount++;
+    if (isTheme) themeCount++;
 
-              return (
-                <li key={index} className="text-xl truncate">
-                  {isTheme && `${serial}. ${theme}`}
-                </li>
-              );
-            })}
-          </ul>
+    return (
+      <li
+        key={index}
+        className="text-base md:text-xl break-words px-2 py-3 md:py-2 leading-snug md:leading-[2.5rem] border-b border-gray-100"
+      >
+        {isTheme && `${serial}. ${theme}`}
+      </li>
+    );
+  })}
+</ul>
         </div>
       </div>
     </div>
