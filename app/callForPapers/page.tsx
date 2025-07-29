@@ -76,32 +76,36 @@ export default function CallForPapers() {
         img: "/ELSEVIER.jpg"
       },
     ].map((journal, idx) => (
-      <div
-        key={idx}
-        className="flex flex-col sm:flex-row items-center border p-6 rounded-xl shadow-md bg-white hover:shadow-lg transition duration-300"
-      >
-        <img
-          src={journal.img}
-          alt={journal.title}
-          className="w-36 h-36 object-contain mb-4 sm:mb-0 sm:mr-6"
-        />
-        <div className="text-center sm:text-left overflow-hidden">
-        {[3, 4, 5, 6,7].includes(journal.id) && (
-  <h3 className="font-bold text-lg " style={{ fontFamily: 'Times New Roman, Times' }}>Wiley</h3>
-)}
+       <div
+    key={idx}
+    className="flex flex-col sm:flex-row items-center border p-4 sm:p-6 rounded-xl shadow-md bg-white hover:shadow-lg transition duration-300 w-full max-w-3xl mx-auto"
+  >
+    <img
+      src={journal.img}
+      alt={journal.title}
+      className="w-32 h-32 sm:w-36 sm:h-36 object-contain mb-4 sm:mb-0 sm:mr-6"
+    />
 
-  
-          <h3 className="font-semibold text-lg mb-2">{journal.title}</h3>
-          <a
-            href={journal.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 underline break-words"
-          >
-            {journal.link}
-          </a>
-        </div>
-      </div>
+    <div className="text-center sm:text-left w-full overflow-hidden">
+      {[3, 4, 5, 6, 7].includes(journal.id) && (
+        <h3 className="font-bold text-lg mb-1" style={{ fontFamily: 'Times New Roman, Times' }}>
+          Wiley
+        </h3>
+      )}
+
+      <h3 className="font-semibold text-lg mb-2">{journal.title}</h3>
+
+      <a
+        href={journal.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-600 underline break-words break-all text-sm sm:text-base"
+        style={{ wordWrap: 'break-word' }}
+      >
+        {journal.link}
+      </a>
+    </div>
+  </div>
     ))}
     More Journals will be updated soon
   </div>
