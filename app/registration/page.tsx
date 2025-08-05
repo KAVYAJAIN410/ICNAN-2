@@ -97,7 +97,11 @@ const RegistrationPage = () => {
   </a>
 
   <button className="bg-[#0a2b52] text-white px-6 py-3 rounded font-semibold transition hover:bg-[#143a6e]">
+    <a href='https://events.vit.ac.in/events/ICNAN/'>
+
+    
     Fee payment
+    </a>
   </button>
 </div>
 
