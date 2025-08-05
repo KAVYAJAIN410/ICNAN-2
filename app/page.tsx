@@ -149,7 +149,7 @@ export default function Home() {
       </p>
       <button className="bg-transparent border border-white hover:bg-white/10 text-white px-4 py-1 rounded lg:text-[vh]">
        <a
-  href="/brochure.pdf"
+  href="/ICNAN'25 Brochure.pdf"
   download
 >
   Brochure
