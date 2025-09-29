@@ -50,6 +50,7 @@ const Nav: React.FC = () => {
               { label: "About VIT", href: "/about/#VIT" },
               { label: "About CNR", href: "/about/#cnr" },
               { label: "Themes", href: "/themes" },
+              { label: "Important Dates", href: "/Important_Dates" },
             //   { label: "Highlights", href: "/conference/highlights" },
              
             //   { label: "Conference Schedule", href: "/conference/schedule" }

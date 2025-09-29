@@ -48,21 +48,21 @@ export default function ResponsiveTimeline() {
   const timelineItems: TimelineItem[] = [
     {
       id: 1,
-      title: "Abstract Submission",
+      title: "Last Date for Abstract Submission",
       subtitle: "Extended Abstract (2 pages, 1000 words)",
       date: "01.10.2025",
       position: "top",
     },
     {
       id: 2,
-      title: "Acceptance",
+      title: "Acceptance Of Abstract(onwards)",
       subtitle: "",
       date: "15.10.2025",
       position: "bottom",
     },
     {
       id: 3,
-      title: "Early Bird",
+      title: "Last Date for Early Bird",
       subtitle: "Registration",
       date: "01.10.2025",
       position: "top",
@@ -70,7 +70,7 @@ export default function ResponsiveTimeline() {
     {
       id: 4,
       title: "Last date",
-      subtitle: "For Registration",
+      subtitle: "For Conference Registration",
       date: "15.11.2025",
       position: "bottom",
     },

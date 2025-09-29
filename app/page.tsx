@@ -227,7 +227,7 @@ export default function Home() {
 
       {/* Countdown Timer */}
     
-
+<a href="/Important_Dates">
       <h2 className="text-5xl font-bold text-center mt-8  bold text-[#0a2240]" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>IMPORTANT DATES</h2>
       <div className=" md:py-12 md:m-10 ">
       <div className="container mx-auto">
@@ -235,6 +235,31 @@ export default function Home() {
         <ResponsiveTimeline />
       </div>
     </div>
+</a>
+         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+  <a
+    href="/ICNAN'25 Abstract.docx"
+    download
+    className="bg-[#0a2b52] text-white px-6 py-3 rounded font-semibold text-center transition hover:bg-[#143a6e]"
+  >
+    Template for Extended Abstract
+  </a>
+
+  <a
+    href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FICNAN2025"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#0a2b52] text-white px-6 py-3 rounded font-semibold text-center transition hover:bg-[#143a6e]"
+  >
+    Submit Your Abstract
+  </a>
+
+  <button className="bg-[#0a2b52] text-white px-6 py-3 rounded font-semibold transition hover:bg-[#143a6e]">
+    <a href='https://events.vit.ac.in/events/ICNAN/'>
+    Conference Registration
+    </a>
+  </button>
+</div>
 
       {/* Themes and Journals */}
       
@@ -408,7 +433,7 @@ export default function Home() {
 
     <CountdownTimer />
   {/* Sponsors Section */}
-  {/* <SponsorGrid /> */}
+  <SponsorGrid />
 
 
 </section>
