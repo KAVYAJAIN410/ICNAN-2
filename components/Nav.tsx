@@ -88,7 +88,9 @@ const Nav: React.FC = () => {
             <Dropdown title="Contact" items={[
             //   { label: "How to reach", href: "/contact/how-to-reach" },
               { label: "Accommodation", href: "/accomodation" },
-              { label: "For Enquiry", href: "/Enquiry" }
+              { label: "For Enquiry", href: "/Enquiry" },
+               { label: "How to Reach", href: "/how-to-reach" }
+              
             ]} />
           </div>
 
@@ -99,7 +101,7 @@ const Nav: React.FC = () => {
           </div>
 
           <div className="px-3">
-            {/* <Link href="/faq" className="hover:underline">FAQ</Link> */}
+            <Link href="/FAQ" className="hover:underline">FAQ</Link>
           </div>
         </nav>
       </div>
@@ -116,6 +118,7 @@ const Nav: React.FC = () => {
             { label: "About VIT", href: "/about" },
             { label: "About CNR", href: "/about" },
             { label: "Themes", href: "/themes" },
+            { label: "Important Dates", href: "/Important_Dates" },
             // { label: "Highlights", href: "/conference/highlights" },
            
             // { label: "Conference Schedule", href: "/conference/schedule" }
@@ -142,7 +145,8 @@ const Nav: React.FC = () => {
 
           <MobileDropdown title="Contact" items={[
            { label: "Accommodation", href: "/accomodation" },
-            { label: "For Enquiry", href: "/Enquiry" }
+            { label: "For Enquiry", href: "/Enquiry" },
+             { label: "How to Reach", href: "/how-to-reach" }
           ]} />
 
           <Link href="/registration" className="block hover:underline">Registration</Link>

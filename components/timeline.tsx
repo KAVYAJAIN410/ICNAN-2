@@ -77,7 +77,7 @@ export default function ResponsiveTimeline() {
     {
       id: 5,
       title: "Last Date ",
-      subtitle: "For Full paper submission",
+      subtitle: "for Full paper submission",
       date: "20.11.2025",
       position: "top",
     },

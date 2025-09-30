@@ -8,23 +8,44 @@ export default function CallForPapers() {
         <section className="space-y-2">
           <h2 className="text-2xl font-semibold">Submission Guidelines</h2>
           <p>
-            Participants are requested to submit extended abstracts including the manuscript title, author(s), affiliation(s), and contact details.
-            The abstract should clearly indicate the research work, methodology, major results, and conclusion.
+           Participants are required to submit an extended abstract of no more than two pages (or 1000 words). The submission must include Manuscript title, Author(s), affiliation(s), and Contact details. The abstract should clearly outline the research, methodology, major results, and conclusions.
+
           </p>
           <p>
-            The committee will evaluate the full paper and decide whether the paper will be presented as an oral or poster presentation.
-            The mode of presentation will be updated in the first week of December 2025 on the website.
+            The conference committee will evaluate all submitted abstracts and assign each paper to either an oral or a poster presentation format. Authors will be notified of their assigned presentation mode via the conference website during the first week of December 2025.
           </p>
+            <div className="flex flex-col sm:flex-row gap-4  mt-14">
+  <a
+    href="/ICNAN'25 Abstract.docx"
+    download
+    className="bg-[#0a2b52] text-white px-6 py-3 rounded font-semibold text-center transition hover:bg-[#143a6e]"
+  >
+    Template for Extended Abstract
+  </a>
+
+  <a
+    href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FICNAN2025"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#0a2b52] text-white px-6 py-3 rounded font-semibold text-center transition hover:bg-[#143a6e]"
+  >
+    Submit Your Abstract
+  </a>
+
+  
+</div>
         </section>
   
+
+        
         <section className="space-y-2">
           <h2 className="text-2xl font-semibold">Publications & Proceedings </h2>
           <p>
-            ICNAN '25 encourages original and unpublished work. Extended abstracts will be published in digital proceedings with an online ISBN number.
+           ICNAN '25 encourages the submission of original and unpublished research. All accepted extended abstracts will be published in the digital conference proceedings, titled the Book of Abstracts, which will be assigned an online ISBN.
+
           </p>
           <p>
-            Based on the scope and quality of the work, the accepted full papers will be assigned to Scopus Indexed Journals.
-            The timely submitted full papers to ICNAN '25 will be evaluated by the committee for originality and subjected to the regular peer-review process by the assigned journals.
+            For authors who choose to submit a full paper, accepted manuscripts may be assigned to affiliated Scopus-indexed journals, based on the scope and quality of the work. Full papers submitted to ICNAN '25 by the deadline will be evaluated for originality by the committee and will undergo the standard peer-review process of the respective journals.
           </p>
         </section>
 
@@ -75,6 +96,20 @@ export default function CallForPapers() {
         link: "https://www.sciencedirect.com/journal/materials-today-chemistry",
         img: "/ELSEVIER.jpg"
       },
+      {
+        id:8,
+        title:"Applied Surface Science Advances (IF: 8.7)",
+        link:"https://www.sciencedirect.com/journal/applied-surface-science-advances",
+        img:"https://ars.els-cdn.com/content/image/X26665239.jpg",
+        
+      },
+         {
+        id:9,
+        title:"RSC Sustainable Energy and Fuels (IF: 4.1)",
+        link:"https://www.rsc.org/publishing/journals/sustainable-energy-and-fuels",
+        img:"https://www.rsc.org/getContentAsset/c651c47d-77da-4f61-869e-c5a7e855a32b/97c19dfb-06fc-4638-b657-b9d8300eab48/sustainable-energy-fuels-journal-cover.jpg?language=en&width=768&resizemode=force&format=webp",
+        
+      }
     ].map((journal, idx) => (
        <div
     key={idx}

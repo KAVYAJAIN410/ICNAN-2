@@ -34,7 +34,7 @@ export default function SponsorGrid() {
         <h2 className="text-xl font-bold text-center  text-[#0a2240]  mb-10 mt-10" style={{ fontFamily: 'Gill Sans Ultra Bold, sans-serif' }}>MEDIA PARTNER</h2>
      
           <div className="flex gap-8 justify-center">
-          <img src="Media.png" className="w-36"></img>
+          <img src="Media.png" className="w-44"></img>
         </div>
       </div>
     </section>
