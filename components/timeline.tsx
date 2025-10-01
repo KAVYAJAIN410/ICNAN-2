@@ -50,7 +50,7 @@ export default function ResponsiveTimeline() {
       id: 1,
       title: "Last Date for Abstract Submission",
       subtitle: "Extended Abstract (2 pages, 1000 words)",
-      date: "01.10.2025",
+      date: "30.10.2025",
       position: "top",
     },
     {
@@ -64,7 +64,7 @@ export default function ResponsiveTimeline() {
       id: 3,
       title: "Last Date for Early Bird",
       subtitle: "Registration",
-      date: "01.10.2025",
+      date: "30.10.2025",
       position: "top",
     },
     {
