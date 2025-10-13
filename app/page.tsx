@@ -253,10 +253,16 @@ export default function Home() {
   >
     Submit Your Abstract
   </a>
+  
 
   <button className="bg-[#0a2b52] text-white px-6 py-3 rounded font-semibold transition hover:bg-[#143a6e]">
     <a href='https://events.vit.ac.in/events/ICNAN/'>
     Conference Registration
+    </a>
+  </button>
+    <button className="bg-[#0a2b52] text-white px-6 py-3 rounded font-semibold transition hover:bg-[#143a6e]">
+    <a href='accomodation'>
+    Accomodation
     </a>
   </button>
 </div>

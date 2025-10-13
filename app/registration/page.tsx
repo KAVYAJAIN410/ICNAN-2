@@ -84,7 +84,7 @@ const RegistrationPage = () => {
     download
     className="bg-[#0a2b52] text-white px-6 py-3 rounded font-semibold text-center transition hover:bg-[#143a6e]"
   >
-    Download Template
+    Template for Extended Abstract
   </a>
 
   <a
@@ -93,14 +93,53 @@ const RegistrationPage = () => {
     rel="noopener noreferrer"
     className="bg-[#0a2b52] text-white px-6 py-3 rounded font-semibold text-center transition hover:bg-[#143a6e]"
   >
-    Submit Paper
+    Submit Your Abstract
   </a>
 
   <button className="bg-[#0a2b52] text-white px-6 py-3 rounded font-semibold transition hover:bg-[#143a6e]">
     <a href='https://events.vit.ac.in/events/ICNAN/'>
-    Fee payment
+Conference Registration
     </a>
   </button>
+</div>
+<div className='text-black'>
+  <section className='m-4 mt-8'>
+  <h3 className='text-lg font-bold'>Steps to Register in ICNAN '25</h3>
+ 
+  <p>There are two ways to participate in the ICNAN '25 conference, held at VIT Vellore, Tamil Nadu, India:</p>
+  <ul className='list-disc list-inside'>
+    <li>As a Presenter: Submit a paper for an oral or poster presentation.</li>
+    <li>As an Attendee: Participate without submitting a paper.</li>
+  </ul>
+  <p>Follow these steps to register for the conference, whether you are submitting a paper or attending as a participant only.</p>
+  
+  <h3>Abstract Submission and Registration</h3>
+  <ul className='list-disc list-inside'>
+    <li><strong>For Presenters (Optional):</strong> If you wish to present your work, begin by submitting your extended abstract online via the Microsoft Conference Management Toolkit (CMT) portal. This step is not required for participate in the conference (without present a work).</li>
+    <li><strong>For All Participants:</strong> Complete the online registration form and pay the required registration fee. The early bird registration deadline is <strong>October 30, 2025</strong>.</li>
+  </ul>
+  </section>
+ <section className='m-4'>
+    <h3 className='text-lg font-bold'>Registration Steps</h3>
+    <ul className='list-disc list-inside'>
+      <li>Access the Portal registration portal for ICNAN '25.</li>
+      <li>Provide Information: Fill in the required basic information to create your registration profile.</li>
+      <li>Provide your paper ID from the Microsoft Conference Management Toolkit (CMT) portal, if you are submitting a abstract to the conference. Otherwise, choose No.</li>
+      <li>Receive Reference Number: Upon successful registration, you will receive a unique registration reference number. This number is essential for the next step.</li>
+      <li>Complete Payment: Proceed to the payment gateway and enter your registration reference number to finalize the payment process.</li>
+      <li>Download Receipt: After your payment is successfully completed, you can download the e-receipt from the portal at any time using your registration reference number.</li>
+    </ul>
+  </section>
+  <section className='m-4'>
+    <h2 className='text-lg font-bold'>Important Notes</h2>
+    <ul className='list-disc list-inside'>
+      <li>It is not mandatory to submit an abstract or a full paper to participate in ICNAN '25. To attend without presenting, simply complete the online registration and payment.</li>
+      <li>Registration fees must be paid online via Credit/Debit Card or Net Banking. Payments by Cash, Check, Demand Draft (DD), or UPI will not be accepted.</li>
+      <li>Spot registration will not be available. All participants must register online in advance.</li>
+      <li>Hotel or dormitory accommodation is not included in the registration fee and must be arranged and paid for separately.</li>
+    </ul>
+  </section>
+
 </div>
 
       </div>

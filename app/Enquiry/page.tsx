@@ -2,8 +2,26 @@ export default function Enquiry() {
     return (
       <>
       <section>
-      <h1 className='m-7'>
-          <span className="text-[#0a2240] text-3xl m-4" style={{fontWeight:"bolder"}}>CONTACT DETAILS</span> 
+         <h1 className=' mt-12'>
+          <span className="text-[#0a2240] text-2xl m-4" style={{fontWeight:"bolder"}}>CONFERENCE VENUE</span> 
+        </h1>
+        <div>
+
+          <div>
+        <p className=" text-lg  leading-tight mt-4 pl-10 font-bold">Vellore Institute of Technology (VIT)</p>
+        <p className=" text-lg  leading-tight  pl-10">Katpadi – Tiruvalam Road.</p>
+        <p className=" text-lg  leading-tight  pl-10">Vellore District, Tamil Nadu - 632014</p>
+        <p className=" text-lg  leading-tight  pl-10">India</p>
+        </div>
+
+
+
+
+
+
+        </div>
+      <h1 className=' mt-12'>
+          <span className="text-[#0a2240] text-2xl m-4" style={{fontWeight:"bolder"}}>CONTACT DETAILS</span> 
         </h1>
         <div></div>
         <div className="md:flex">

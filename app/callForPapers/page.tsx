@@ -3,7 +3,7 @@ import { title } from "process";
 export default function CallForPapers() {
     return (
       <div className="max-w-4xl mx-auto p-6 space-y-6 text-justify">
-        <h1 className="text-3xl font-bold text-center">Call for Papers – ICNAN '25</h1>
+        <h1 className="text-3xl font-bold text-center mt-6">Call for Papers – ICNAN '25</h1>
   
         <section className="space-y-2">
           <h2 className="text-2xl font-semibold">Submission Guidelines</h2>
@@ -14,6 +14,17 @@ export default function CallForPapers() {
           <p>
             The conference committee will evaluate all submitted abstracts and assign each paper to either an oral or a poster presentation format. Authors will be notified of their assigned presentation mode via the conference website during the first week of December 2025.
           </p>
+              <div className="bg-[#e0f0ff] text-[#0a2b52] mt-8 p-6 rounded-md shadow-md text-center text-sm md:text-base">
+  <p>
+    
+    <p
+      
+    
+    >
+     Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+    </p>  
+  </p>
+</div>
             <div className="flex flex-col sm:flex-row gap-4  mt-14">
   <a
     href="/ICNAN'25 Abstract.docx"
@@ -46,6 +57,9 @@ export default function CallForPapers() {
           </p>
           <p>
             For authors who choose to submit a full paper, accepted manuscripts may be assigned to affiliated Scopus-indexed journals, based on the scope and quality of the work. Full papers submitted to ICNAN '25 by the deadline will be evaluated for originality by the committee and will undergo the standard peer-review process of the respective journals.
+          </p>
+          <p className="font-bold">
+            The full paper can be uploaded as a new submission through your Extended Abstract Submission portal.
           </p>
         </section>
 

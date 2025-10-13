@@ -67,7 +67,8 @@ const Nav: React.FC = () => {
           <div className="px-3">
             <Dropdown title="Call for Papers" items={[
               { label: "Publications and Proceedings", href: "/callForPapers"},
-              { label: "Research Awards", href: "/PresntationAwards" }
+              { label: "Research Awards", href: "/PresntationAwards" },
+              { label: "Virtual Presentation", href: "/VirtualPresentation" }
             ]} />
           </div>
 
