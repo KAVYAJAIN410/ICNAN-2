@@ -20,13 +20,13 @@ return (
       <ul className="list-disc list-inside space-y-1 text-gray-700">
         <li>
           <span className="font-medium">For Presenters (Optional):</span> If
-          you wish to present your work, begin by submitting your extended
-          abstract online. This step is not required for general attendance.
+          you wish to present your work, begin by submitting your <a className="text-blue-400" href='https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FICNAN2025'>extended
+          abstract online </a>. This step is not required for general attendance.
         </li>
         <li>
-          <span className="font-medium">For All Participants:</span> Complete
-          the online registration form and pay the required registration fee.
-          The early bird registration deadline is September 30, 2025.
+          <span className="font-medium">For All Participants:</span> <a className="text-blue-500" href="https://events.vit.ac.in/events/ICNAN/">  Complete
+          the online registration</a> form and pay the required registration fee.
+          The early bird registration deadline is October 30, 2025.
         </li>
       </ul>
 
@@ -103,7 +103,7 @@ return (
         <p className="text-gray-700 mt-2">
           The ICNAN '25 organizing committee invites the submission of
           original, unpublished research as a two-page extended abstract via
-          the Microsoft CMT portal.
+          the.  <a className="text-blue-400" href='https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FICNAN2025'>Microsoft CMT portal.</a> 
         </p>
         <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
           <li>Prepare your abstract using the official template.</li>
@@ -154,6 +154,40 @@ The submission of a full paper is an optional step for authors who wish to have 
           <li>Certificate of participation</li>
         </ul>
       </div>
+       <div>
+        <h3 className="text-2xl font-bold text-red-600 mb-3">
+          Is it possible to present a work without submitting a full paper?
+        </h3>
+        <p className="text-gray-700 mt-2">
+         Yes, you can present your work at ICNAN '25 without submitting a full paper. Your presentation (Oral/Poster) eligibility  is based on the acceptance of your extended abstract.
+        </p>
+        <p className="text-gray-700 mt-2">
+         The submission of a full paper is an optional step for authors who wish to have their work considered for publication in an affiliated, Scopus-indexed journal.
+        </p>
+         <p className="text-gray-700 mt-2">
+          If your extended abstract is accepted, you may then choose to submit a full paper for evaluation. The full paper can be uploaded as a new submission (use Create New Submission option) through your  <a className="text-blue-400" href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FICNAN2025">Extended Abstract Submission portal</a>. A committee will assess the paper's scope and quality to determine its suitability for assignment to a journal. Final acceptance for publication is then subject to the standard peer-review process conducted by that journal.
+        </p>
+
+       
+      </div>
+      <div>
+        <h3 className="text-2xl font-bold text-red-600 mb-3">
+         What is the process for submitting a full paper for publication through ICNAN’25?
+        </h3>
+        <p className="text-gray-700 mt-2">
+          Submitting a full paper is an optional step for authors who wish to have their work considered for publication in an affiliated, Scopus-indexed journal. Submission is not mandatory. 
+        </p>
+        <p className="text-gray-700 mt-2">
+         If your extended abstract is accepted, you may then submit a full paper for evaluation by uploading it as a new submission through your Extended Abstract Submission portal. A committee will assess the paper's scope and quality to determine its suitability for a partner journal. 
+        </p>
+         <p className="text-gray-700 mt-2">
+         If you have paid the registration fee and your full paper meets the required quality standards, it will be assigned to a relevant journal. Notification of this assignment will be provided after the conference, likely in the second week of January 2026. 
+        </p>
+        <p className="text-gray-700 mt-2">
+          Once your paper is assigned, a camera-ready version must be submitted directly to the journal, following its specific guidelines. Final acceptance for publication is subject to the journal's standard peer-review process.
+        </p>
+       
+      </div>
 
       <div>
         <h3 className="text-2xl font-bold text-red-600 mb-3">
@@ -166,7 +200,7 @@ The submission of a full paper is an optional step for authors who wish to have 
          Registration Steps
         </p>
         <ol className="list-decimal list-inside text-gray-700 mt-2 space-y-1">
-          <li>Access the Portal: Go to the official VIT Events registration portal for ICNAN '25.</li>
+          <li>Access the Portal: Go to the official  <a className="text-blue-500" href="https://events.vit.ac.in/events/ICNAN/">VIT Events registration portal</a> for ICNAN '25.</li>
           <li>Provide Information: Fill in the required basic information to create your registration profile.</li>
           <li>Receive Reference Number: Upon successful registration, you will receive a unique registration reference number. This number is essential for the next step.</li>
           <li>
