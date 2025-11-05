@@ -2,7 +2,7 @@
 import React from 'react';
 const awards = [
   {
-    Date: ' 30.10.2025',
+    Date: ' 15.11.2025',
     title: 'Abstract Submission',
     details:
       'The deadline to submit the extended abstract. Submissions are limited to a maximum of 2 pages (1000 words). For formatting, please refer to the provided template for the Extended Abstract.',
@@ -16,13 +16,13 @@ const awards = [
       '',
   },
   {
-    Date: ' 30.10.2025',
+    Date: ' 15.11.2025',
     title: 'Early Bird Registration',
     details:
       'Last date for avail the discounted rates for Registration',
   },
   {
-    Date: ' 15.11.2025',
+    Date: ' 30.11.2025',
     title: 'Date for Registration',
     details:
       'Last Date for Conference registration and  fee payment',
@@ -34,7 +34,7 @@ const awards = [
   //     'Winners from iScience (Cell Press) will receive a journal certificate.',
   // },
   {
-    Date: ' 20.11.2025',
+    Date: ' 20.01.2026',
     title: 'Last Date for Full Paper Submission',
     details:
       'Full paper submission is optional and is intended for authors who wish to have their work considered for journal publication. The full paper can be uploaded as a new submission through your author login portal.',
