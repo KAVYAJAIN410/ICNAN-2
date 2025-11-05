@@ -186,6 +186,26 @@ Bruno D’Aguanno is well recognized for his contributions to science and techno
     description:
       "Dr. Dipankar Das Sarma is an Indian scientist and structural chemist. Presently, He is serving as the J.N. Tata Chair Professor at the Solid State and Structural Chemistry Unit of the Indian Institute of Science, Bangalore, Inda. Among many other accolades, he is well known for his research in the fields of Solid-State Chemistry, Spectroscopy, Condensed Matter Physics, Materials Science, and Nanoscience. He is a former MLS Chair Professor of Physics and Chairman of the Centre for Advanced Materials and the GAST Professor of Uppsala University, Sweden. A recipient of TWAS Physics Prize and the UNESCO Biennial Javed Husain Prize, Dr. Sarma was honoured with the Shanti Swarup Bhatnagar Prize for Science and Technology by the CSIR, Government of India, in 1994. His research is broadly classified into areas of strongly correlated electronic systems, semiconducting nanoparticles, energy science, electronic structure calculations, and conjugated polymers.",
   },
+    {
+    id: 66,
+    name: "Dr. Dhanalakshmi Sathishkumar",
+    institution: "CVRDE, Chennai",
+    country: "India",
+    image: "Dhanalakshmi Sathishkumar.jpg",
+    description:
+    `Dr. S. Dhanalakshmi, Scientist G is the Additional Director in CVRDE, Avadi, Chennai.  With a solid academic foundation, she holds a B.E. in Metallurgy from P.S.G. College of Technology, Coimbatore and an M.S. (Engg.) from IIT Madras, Chennai and completed her Doctorate in the field of Metal Matrix Composites from Anna University, Chennai.
+
+With over 28 years of extensive experience in Research and Development, Dr. S. Dhanalakshmi has made significant contributions to the field of advanced materials and processing techniques. Her area of specializations includes Development of Light Weight-High Strength Materials, Metal Matrix Composites and Nano Fluids & Nano Coatings for Armoured Fighting Vehicles. 
+
+Dr. S. Dhanalakshmi has developed Several Material Technologies viz., light weight wear resistant clutch housing using Aluminium matrix composites,  Sintered bronze brake pads for automatic transmission, Indigenous Carbon-Carbon composite brake rotors & stators for Main Brake of MBT Arjun,  Hydraulic subsystems namely primary pump, secondary pump and hydraulic filters of automatic transmission, Friction clutch plates using powder metallurgy technique, Nano coolant and Nano lubricant for AFV engine, Nano structured Tribological Coatings for High speed Bearings using magnetron sputtering technique, Nano structured thermoelectric material for waste heat recovery applications, Composite Road wheel and Composite top roller for running gear system of AFV. 
+
+She holds 7 Patents and has presented more than 45 Papers in various Journals and National & International Conferences and Seminars. Dr. S. Dhanalakshmi is a recipient of Technology Group   Award in the year 2007 & 2023 and Scientist of the year Award in the year 2024.
+
+Being a Strong believer of R&D Industry-Academia relationship, she has been instrumental in executing more than 20 Research Projects under CARS, ERIPR & Research Board Scheme.  She is also an active member of several professional societies including FPSI, MMS, MRSI, IEI, IIPE, MMA. She is the Research Advisory Council Member of PMC Tech, Hosur. She has guided more than 40 Batches of Students Project and Internship in the field of Composites and Special Materials. 
+
+Presently she is heading the Planning, Coordination and Human Resource Division, involved in the planning & management of futuristic and ongoing projects of CVRDE. She is also heading the Knowledge Resource Centre. `
+  },
+  
   {
     id: 14,
     name: "Dr. David Jenkins",
@@ -207,13 +227,21 @@ Bruno D’Aguanno is well recognized for his contributions to science and techno
 "Dr. Deepa Khushalani, TIFR, Mumbai, India (Dr. Deepa Khushalani is a distinguished Materials Chemist currently serving currently as Chair and is a Professor in the Department of Chemical Sciences at the Tata Institute of Fundamental Research (TIFR), Mumbai. Her career spans over two decades, marked by significant contributions to both cutting-edge research and dedicated science outreach. Prof. Khushalani did her Ph.D. in Inorganic Chemistry at the University of Toronto, Canada. Her postdoctoral research was conducted at the University of Bristol, UK, followed by a tenure as a Lecturer in Inorganic Chemistry at the University of Kent at Canterbury, UK, from 2001 to 2003. Her research expertise lies in the synthesis, characterization, and application of a diverse range of inorganic structures. These meticulously engineered materials are then applied in crucial areas, particularly those exploiting alternate sources of clean energy, such as photovoltaics and energy storage devices. Beyond energy applications, her group also actively engages in research on drug delivery devices, photocatalysis, and electrocatalysis. Prof. Khushalani's significant contributions to the field have been widely recognized. She was awarded the CRSI Bronze Medal in Chemistry in 2018 and the DST (Nanomission) Young Career Award in Nanoscience and Technology in 2016. She is a Fellow of the Royal Society of Chemistry (FRSC). Beyond her research, Prof. Khushalani is deeply committed to fostering scientific engagement and promoting diversity within the scientific community. She currently serves as a member of the RSC West India Section and is an Editorial Board Member of ACS Energy & Fuels, and Scientific Reports. Her dedication to inclusivity is evident through her roles as a Member of the Indian Academy of Sciences – Women in Science Panel and a Member of the Royal Society of Chemistry, UK – Inclusion and Diversity Committee. Prof. Khushalani is also extensively involved in science outreach, particularly in promoting basic sciences within rural and economically deprived areas of India. She has conducted numerous workshops, lectures, and mentoring sessions, actively inspiring the next generation of scientists and making a tangible impact on scientific literacy and accessibility.", },
   {
     id: 16,
-    name: "Dr. Garima Agarwal",
+    name: "Dr. Garima Agrawal",
     institution: "IIT Mandi",
     country: "India",
     image: "speak/garima.JPG",
     description:`Garima Agrawal did her M.Tech. in polymer science & technology at the Indian Institute of Technology Delhi, India. During her M.Tech., she received the DAAD Fellowship to carry out a research project at RWTH-Aachen University in Germany. After completing her Ph.D. at DWI Leibniz Institute for Interactive Materials - RWTH Aachen University, Germany in 2015, she joined postdoc at the University of Ghent, Belgium. In 2016, she was appointed as DST Inspire Faculty at Indian Institute of Technology Roorkee, India. Currently, she is working as an associate professor at School of Chemical Sciences, Indian Institute of Technology Mandi, India.
 She is the recipient of several prestigious awards including NASI Platinum Jubilee Young Scientist Award (2022) from National Academy of Sciences, India and DST Inspire Faculty Award (2016) from Government of India and Young Achiever’s Award (2023) from IIT Mandi.
 Her research interests include the synthesis of functional polymers based novel micro/nanomaterials and using them for designing interactive materials with active properties for targeted applications.`,
+  },
+  {
+    id: 67,
+    name: "Dr. R. Ilangovan",
+    institution: "University of Madras",
+    country: "India",
+    image: "Ilangovan.jpg",
+    description:`Dr. R. Ilangovan is a Professor and Director at the National Centre for Nanosciences and Nanotechnology, University of Madras. He has published 43 research papers in Indian and international journals and presented at numerous national and international seminars. He has also organized and participated in eight workshops and seminars. His area of specialization includes nanoelectronics, contributing significantly to advanced research and education in this field. Dr. Ilangovan’s academic and research leadership at the University of Madras highlights his commitment to advancing nanoscience and nanotechnology in India.`,
   },
     {
     id: 17,
@@ -241,7 +269,7 @@ Her research interests include the synthesis of functional polymers based novel 
     name: "Dr. Jayan Thomas",
     institution: "University of Central Florida",
     country: "USA",
-    image: "speak/JayanThomas.jpg",
+    image: "Jayan Thomas.jpg",
     description:
       "Dr. Jayan Thomas is currently a Professor of Nanotechnology, Engineering, and Photonics at the University of Central Florida (UCF). He earned his Ph. D. in Chemistry/Material Science from Cochin University of Science and Technology. He was awarded one of the most prestigious fellowships in India, Dr. K.S. Krishnan fellowship, by the Department of Atomic Energy for doing his Ph.D. After his post-doctoral fellowship (CSIR) in the International School of Photonics, he was offered a Research Scientist position in the College of Optical Sciences at the University of Arizona (USA) in 2001 and promoted to a Research faculty in 2005. He moved to the University of Central Florida (UCF) in 2011 and currently directs the Nano Energy-Photonics research labs. He has published more than 130 scientific publications, including multiple papers in prestigious journals like Nature, Science Advances, Energy and Environmental Sciences and Advanced Materials. Also, many national and international media including Reuters, Nature news, National Geography magazine, Huffington Post, USA Today, The Guardian, Foreign Policy, Fox News, The Telegraph, and Times of India have featured his research. He is a recipient of the R&D100 award (also known as “Oscar for Inventions”) in 2015. He is also a recipient of the National Science Foundation’s prestigious CAREER award (2014), the Veeco award for nanotechnology innovations (2010) and one of the five finalists for the World Technology Network award sponsored by TIME and FORTUNE magazines (2014). In addition, he has been awarded UCF's Excellence in Research award in 2014, and 2018, Reach for the Stars Award in 2016. He has more than ten issued/pending US patents and a co-founder of two companies.",
   },
@@ -273,6 +301,16 @@ Her research interests include the synthesis of functional polymers based novel 
     image: "Johnson Goh Kuan Eng .jpg" ,
     description:`
 Prof Johnson Goh is a Director at the A*STAR Quantum Innovation Centre (QInC). He is also a Division Director and Principal Scientist at A*STAR's Institute of Materials Research and Engineering (IMRE).  Trained as Physicist (VUW, New Zealand), Engineer (Sheffield, UK) and Educator (NIE/NTU, Singapore), he went on to obtain his PhD in 2007 from the Centre of Excellence for Quantum Computer Technology in the University of New South Wales (Sydney). He joined A*STAR in 2006 and contributed to materials science and engineering research ranging from atomic-scale 3D printing with silicon atoms, to highly conductive 3D printable thermoplastics, to 2D semiconductors, and to quantum devices. His current endeavour is to meld his multidisciplinary research expertise in quantum information technologies, nanoelectronics, machine learning, and additive manufacturing toward disruptive quantum technologies. To that end, he helped to establish the department of Quantum Technologies for Engineering (QTE) at IMRE in 2021 and served as programme director for A*STAR’s quantum technologies programme since 2022. He headed the QTE department from 2021 to 2022. Prior to this, he served in various management positions as deputy Head of Materials Analysis and Characterisation department from 2012 – 2014, Head of SERC Nano-fabrication, Processing and Characterisation (SnFPC) from 2014 – 2016, and Head of Materials Processing and Characterisation from 2016 – 2017. He was programme manager for the SERC Pharos Programme in 2D Semiconductor Electronics from 2016 – 2020. He holds adjunct professor positions in both the National University of Singapore and Nanyang Technological University and is a current council member of the Institute of Physics Singapore and its treasurer.
+    `,
+  },
+  {
+    id: 68,
+    name: "Dr. Kanchana J.",
+    institution: " PSG Institute of Advanced Studies",
+    country: "India",
+    image: "Dr Kanchana Jeganathan.jpg" ,
+    description:`
+    Dr Kanchana Jeganathan, Director - Global Engagement / Professor in Mechanical Engineering, 35 years of teaching and research experience in PSG Institutions, Coimbatore India and in Kings College London, UK. Supervised more than 100 UG and 60 PG student projects and 5 PhD. doctoral research in Engineering/Manufacturing and has published more than 60 technical papers in International/National journals and conferences in India and UK. Successful with government-funded research projects and acted as principal investigator and co-investigator for Indian Space Research Organization (ISRO), Aeronautical Development Agency (ADA) and Department of Science and Technology (DST) projects and Defence Research and Development Laboratory (DRDL) Successfully completed the development of clinical database software for NHS patients with severe complex disabilities, with the focus of System Study, Design and Application development on Client/Server environment and Data Base Administration (DBA) Director-Global Engagement - responsible for International credit transfer programs offered at PSG Institute of Advanced studies, in collaboration with Universities in USA, Germany, Australia and UK and Research collaborations with South Korea, Singapore and South Africa. Additional responsibilities IUCEE - Indo US Consortium for Engineering Education - Academic Leader and student mentor. In UK, also served as Subject Learning Coach - Engineering, Learning Skills Council, South East region, UK External Quality Nominee for Engineering Education, QIP, South East Region, UK Assessment Associate, Manufacturing Engineering, Edexcel, London, UK Fellow and member in IMECH, UK, IE, India, Women in Engineering Society, UK.
     `,
   },
   {
@@ -316,15 +354,7 @@ Prof Johnson Goh is a Director at the A*STAR Quantum Innovation Centre (QInC). H
       "Lorenzo Pavesi is a Professor of Experimental Physics at the Department of Physics of the University of Trento (Italy). Born on the 21st of November 1961, he received his PhD in Physics in 1990 at the Ecole Polytechnique Federale of Lausanne (Switzerland). In 1990 he became an Assistant Professor, an Associate Professor in 1999 and Full Professor in 2002 at the University of Trento. He leads the Nanoscience Laboratory (25 people), and teaches several classes at the Department of Physics of the University of Trento. He founded the research activity in semiconductor optoelectronics at the University of Trento and started several laboratories of photonics, growth and advanced treatment of materials. He was the first president and founder of the IEEE Italian chapter on Nanotechnology. He was the head of the Department in Physics and the first director of the quantum at Trento Q@TN joint lab. He has directed 42 PhD students and more than 48 Master thesis students. His research activity concerned the optical properties of semiconductors. During the last years, he concentrated on Silicon-based photonics where he looks for the convergence between photonics and electronics. He is interested in active photonic devices which can be integrated into silicon by using optical nonlinearities and modified material properties. His interests encompass also optical sensors or biosensors and solar cells. A recent development is toward integrated quantum photonics and neuromorphic photonics. In silicon photonics, he is one of the worldwide recognized experts, he organized several international conferences, workshops and schools and is a frequently invited speaker. He manages several research projects, both national and international. He is an ERC grantee. He is a frequently invited reviewer, monitor or referee for photonics projects by several grant agencies. He is an author or co-author of more than 500 papers, author of several reviews, editor of more than 15 books, author of 2 books and holds 9 patents. He is chief speciality editor of the section Optics and Photonics of Frontiers in Physics and founding editor of the series Photonic Materials and Applications, a joint initiative of SPIE and Elsevier. Moreover, he sits on the editorial board of the ETRI Journal. He is in the advisory board of Glass-to-Power, an Italian start-up. In 2001 he was awarded the title of Cavaliere by the Italian President for scientific merit. In 2010 and 2011 he was elected distinguished speaker of the IEEE- Photonics society. He is a fellow of the IEEE, of SPIE, of AAIA and of the SIF. He holds an H-number of 65 according to Scopus and of 63 for Web of Science, and of 79 according to Google Scholar.",
   },
    
-   {
-    id: 61,
-    name: "Dr. Luis De Los Santos Valladares",
-    institution: "University of Cambridge",
-    country: "UK",
-    image: "Luis.jpg",
-    description:
-    "Dr. Luis De Los Santos Valladares is a condensed matter physicist and Research Associate at the University of Cambridge, UK, specializing in the preparation and characterization of nanomaterials for their applications. He is a Research Associate at the University of Cambridge (UK) and a Visiting Fellow in the Tokyo Institute of Technology (Japan). During 2013 and 2014 he was a consultant for the Czech Science Foundation for evaluating projects. His fellowships have being mainly funded by the European Commission, the Cambridge Overseas Trust, the JSPS (Japan), the EPSRC (UK) and the CAPES (Brazil)."
-  },
+  
 
 {
     id: 26,
@@ -375,6 +405,18 @@ Prof Johnson Goh is a Director at the A*STAR Quantum Innovation Centre (QInC). H
     description:
       "Dr. Michael Naguib is an associate professor in the Department of Physics and Engineering Physics at Tulane University. Prior to joining Tulane in 2018, he was a Wigner Fellow (2014-2017) and Research Staff (2017-2018) at Oak Ridge National Laboratory. He received his PhD in Materials Science and Engineering at Drexel University in 2014. He was one among the few members in Prof. Yury Gogotsi’s Team to have discovered a new class of 2D materials called MXenes. He has published more than 100 papers (with > 41,000 citations and h-index of 60) in international journals and presented many plenary, keynote and invited lectures and seminars at international conferences and universities. He completed his undergraduate and master’s degrees at Cairo University, Egypt. He has been listed as a Highly Cited Researcher by Clarivate Analytics three times and has received many awards such as NSF CAREER Award, Robert L. Coble Award, Kroto Award, Ross Coffin Purdy Award, Rising Star Award by Tulane University, Young Alumni Emerging Leader Award and listed as Forty-Under-Forty by Drexel University. He is an Associate Editor of Energy Advances. His research group works on the synthesis and characterization of novel nanomaterials with a focus on 2D materials for electrochemical energy storage and conversion.",
   },
+
+    {
+    id: 69,
+    name: "Dr. Murali Banavoth",
+    institution: "University of Hyderabad",
+    country: "India",
+    image: "Murali Banavoth.jpg",
+    description:
+    `
+    Dr. Murali Banavoth is an accomplished Associate Professor at the School of Chemistry, University of Hyderabad, specializing in solar energy materials and photovoltaics. After earning his PhD from the Indian Institute of Science (IISc), Bangalore, in 2013, he undertook a post-doctoral fellowship at King Abdullah University of Science and Technology (KAUST) and served as a Research Associate at IISc. His research focuses on developing low-cost, high-efficiency solar cells, including perovskites, quantum dots, and organic photovoltaics. A highly decorated academic, Dr. Banavoth has received numerous prestigious accolades, including the NASI Young Scientist Platinum Jubilee Award (2019), the National Young Research Award (2019), and the BRICS Young Scientist Award (2017). His significant contributions to the field are evidenced by his extensive publication record of over 80 articles, several patents, and active membership in prominent scientific societies.
+    `
+  },
 {
     id: 31,
     name: "Dr. Muthu Senthil Pandian",
@@ -384,7 +426,17 @@ Prof Johnson Goh is a Director at the A*STAR Quantum Innovation Centre (QInC). H
     description:
       "Dr. Muthu Senthil Pandian is a highly accomplished Research Scientist, currently holding the position of Senior Grade-III and Research Coordinator at the SSN Research Centre within SSN Institutions (Autonomous) in Chennai, Tamil Nadu, India. With 16 years of extensive research experience and 11 years dedicated to teaching, Dr. Pandian has made profound contributions to the field of crystal growth and materials science. Dr. Pandian's academic foundation was laid at The American College, Madurai, where he earned both his B.Sc. and M.Sc. in Physics. He went on to complete his Ph.D. from Anna University, Chennai, in 2013, solidifying his expertise in the nuances of materials science A testament to his hands-on research prowess, Dr. Pandian was a key member of the team that successfully grew a remarkable 1350 mm length and 55 mm diameter longest NLO single crystal, a significant achievement in the field. His prolific research output is evident in his extensive publication record, which includes 163 papers in international peer-reviewed journals and 35 papers in American Institute of Physics (AIP) and Materials Today Proceedings. These publications have garnered an impressive 2368 citations, an h-index of 27, and an i10-index of 66, underscoring the impact and recognition of his work. Dr. Pandian has successfully secured substantial funding for his research, including 7 external projects from prestigious agencies like DST, SERB, and DAE-BRNS, totaling an impressive Rs. 285.48 lakhs. Additionally, he has championed 17 internally funded faculty and student projects supported by the SSN Trust, with a budget of Rs. 33.31 lakhs, fostering a vibrant research environment. A dedicated mentor and educator, Dr. Pandian is a recognized supervisor at Anna University, Chennai. Under his guidance, 6 full-time Ph.D. scholars have successfully completed their doctoral studies, and 5 full-time Ph.D. scholars are currently pursuing their research. His mentorship extends to a large cohort of emerging researchers, with 14 Postdoctoral Fellows (PDFs), 4 Senior Research Fellows (SRFs), and 11 Junior Research Assistants (JRAs) having completed their research under his expert supervision. Dr. Pandian is a highly sought-after speaker, having delivered 133 invited lectures at international and national conferences, seminars, and workshops. His commitment to disseminating knowledge is further exemplified by the more than 250 papers presented by his Ph.D. students at various national and international conferences. He is also a published author, with 12 books, book chapters, and newsletters to his credit. His organizational skills are evident in the 23 international and national conferences, seminars, workshops, and summer schools he has successfully organized. His significant contributions have not gone unnoticed. The Asia Scientist Ranking recognized Dr. Muthu Senthil Pandian as one of the World Scientists in Physical Sciences for both 2021 and 2022. He has been honored with 30 prestigious awards, including the Sir C.V. Raman Young Scientist Award, The Academy of Sciences-Young Scientist Award, IACG – Prof. P. Ramasamy National Award, ISPA-Prof. S. Gunasekaran National Award, Shri. P.K. Das Memorial Best Young Faculty Award, and numerous Young Scientist and Young Researcher Awards. He has also received accolades such as the SSN Best Faculty Researcher Awards, Best Outgoing Project Award, Best Innovative Researcher Award, SSN Best Research Scholar Awards, Best Crystal Display Awards, Best Indigenous Product Presentation Award, and DAE-Best Poster Awards. In 2019, he received a Certificate of Appreciation for being a Highly Cited Author from the Royal Society of Chemistry (RSC), UK.",
   },
-
+{
+    id: 70,
+    name: "Dr. Muthukumaran Packirisamy",
+    institution: "CONCORDIA University",
+    country: "Canada",
+    image: "Muthukumaran Packirisamy.jpg",
+    description:
+    `
+    Dr. Muthukumaran Packirisamy received the B.S. degree from the University of Madras, Chennai, India, the M.S. degree from the Indian Institute of Technology, Chennai, and the Ph.D. degree from Concordia University, Montreal, QC, Canada.,He is currently a Professor and the Concordia Research Chair of Optical bioMEMS with the Department of Mechanical and Industrial Engineering, Concordia University. He has experience with many microelectromechanical systems industries in Canada. He is also involved in the development of bioMEMS devices in collaboration with industry. He has authored or coauthored more than 225 articles published in journals and conference proceedings. He holds nine patents. His current research interests include optical bio-MEMS, integration of microsystems, and micro- and nano-integration.,Prof. Packirisamy is a Fellow of the Canadian Society for Mechanical Engineers. He was a recipient of the I. W. Smith Award from the Canadian Society for Mechanical Engineers, the Concordia University Research Fellowship, the Petro Canada Young Innovator Award, and the ENCS Young Research Achievement Award.
+    `
+  },
 
   {
     id: 32,
@@ -418,7 +470,18 @@ Prof Johnson Goh is a Director at the A*STAR Quantum Innovation Centre (QInC). H
 fundamental aspects of electrode/electrolyte interfaces, nanomaterials for electrochemical energy storage applications including high rate On-chip Energy Storage and hybrid metal-ion capacitors.
 `
   },
-  
+    {
+    id: 71,
+    name: "  Dr. K. Pandian",
+    institution: "University of Madras",
+    country: "India",
+    image: "Pandian.jpg",
+    description:
+    `
+    Dr. Kannaiyan Pandian is a Professor of Inorganic Chemistry at the University of Madras, Guindy Campus, Chennai. He completed his Ph.D. in Analytical Chemistry from the University of Madras in 1995, following M.Sc. and B.Sc. degrees with first-class honors. Dr. Pandian carried out postdoctoral research at the Institute of Chemistry, Academia Sinica, Taipei, Taiwan. His professional experience includes roles as a Scientist B at the National Geophysical Research Institute and various academic positions leading up to his current professorship. His research interests encompass nanotechnology, semiconductor quantum dots, targeted drug delivery, conducting polymers, energy storage devices, microelectronic devices, biosensors, and electroanalytical methods. He has developed new technologies for disease diagnosis and environmental monitoring using nanomaterial-based sensors. Dr. Pandian has received numerous awards, including the Best Researcher Award from Madras University and the INSA Visiting Fellow Award. He also serves as Controller of Examinations at the University of Madras and has been actively involved in curriculum development, academic committees, and editorial roles for scientific journals. He has published extensively and delivered many invited talks, contributing significantly to nanoscience and inorganic chemistry research.
+`
+  },
+
 
 
   {
@@ -452,6 +515,18 @@ According to Research.com, Prof Show ranked #1 in the Best Rising Stars of Scien
       "Prof. Pranab Goswami received a Ph.D. degree in 1994 in chemical biology from Gauhati University. He was a BOYSCAST fellow of DST, India, at the University of Massachusetts Boston. He joined as a scientist at NEIST, CSIR India, in 1990, moved to IIT Guwahati, India, in 2002, attained the level of Professor in 2009, and then HAG Professor in 2015. Prof. Goswami also served as Head of the Department of Biosciences and Bioengineering from 2006-2009, Head of the Centre for Energy from 2014-2017, and Founder Head of the Central Instrument Facility from 2004-2006 at IIT Guwahati. He was a visiting Professor at the University of Alberta, Canada, in 2018. Prof. Goswami received many accolades, served as an editorial board member of many international scientific journals, and was chairman and expert member in many academic, research, and administrative bodies in India. He served as Senate nominee to the BoG, IIT Guwahati. The primary research area of Prof. Goswami is the biosensors and biofuel cells, focusing on developing novel biorecognition systems and signal transduction platforms for malaria, myocardial infarction, Shiga toxin, and alcohols. His group explores biofuel cells as biosensing platforms and green power-generating devices. A couple of proofs-of-concept developed in his lab have already been translated into portable kits, and two of these prototype kits were dedicated to the nation by the honorable HRD minister of India. Prof. Goswami has published over 135 peer-reviewed scientific papers, filed 11 patent applications, edited one book in biosensors, supervised more than 40 research students in Ph.D. and MTech programs, and 25 students have received Ph.D. degrees",
   },
 
+
+  {
+    id: 72,
+    name: "Dr. Prasad P. Phadnis",
+    institution: "BARC",
+    country: "India",
+    image: "Dr. Prasad P. Phadnis.jpeg",
+    description:
+    `
+    Dr. Prasad P. Phadnis is a Scientific Officer at the Bhabha Atomic Research Centre (BARC), Mumbai, where he has been contributing since 2008. He specializes in organoselenium chemistry and organometallic chemistry, focusing on advanced research in chemical sciences. Dr. Phadnis has published numerous research articles, enhancing the understanding of chemical interactions and potential applications in radiation biology and health sciences. His work involves innovative nanoparticle synthesis with promising applications in cancer theragnosis  on deoxyglucose-conjugated persistent luminescent nanoparticles. His scientific contributions play a vital role in the progress of chemical and biomedical research within the BARC framework and India's atomic energy programs.
+    `
+  },
  
 
    {
@@ -481,6 +556,18 @@ According to Research.com, Prof Show ranked #1 in the Best Rising Stars of Scien
     image: "Dr. Pravin.jpg",
     description:
       " Dr. Pravin G. Ingole is a Senior Scientist at the Chemical Engineering Group, CSIR-NEIST, Jorhat, Assam. He earned his PhD from CSIR-CSMCRI, Bhavnagar, and previously worked for five years as a senior researcher at the Korea Institute of Energy Research. His research focuses on polymeric and nanocomposite materials for applications like gas separation, wastewater treatment, and energy generation. He has authored 100+ papers, 7 patents, 1 book, and 21 book chapters, with an h-index of 42. Dr. Ingole serves on editorial boards of multiple journals and has received several honors, including the KIER Excellence Researcher Award (2014–2016) and the Springer Best Paper Award (2022). He is a Fellow of the Maharashtra Academy of Science and a member of prominent scientific societies like ACS and RSC.",
+  },
+
+  {
+    id: 73,
+    name: "Dr. Rajendrakumar Sharma",
+    institution: "Spel Technologies Pvt. Ltd",
+    country: "India",
+    image: "Dr. Rajendrakumar Sharma.jpeg",
+    description:
+    `
+    Dr. Rajendrakumar Sharma is the Managing Director of Spel Technologies Pvt. Ltd., based in Pune, India. He is recognized as the "Father of Supercapacitors" in India for pioneering the manufacturing of advanced energy storage devices such as supercapacitors and lithium-ion batteries. With a career spanning several decades since 1986, Dr. Sharma has led significant innovations in energy storage technology, including the development of lithium-ion supercapacitors and hybrid supercapacitor batteries. Under his leadership, Spel Technologies became India’s first manufacturer of supercapacitors and an industry partner in the Centre of Excellence on Rechargeable Battery Technology (CoERBT) supported by the Ministry of Electronics and Information Technology. Dr. Sharma has been honored with the Atma-Nirbhar Bharat Award for his exemplary contributions to the field, and he continues to drive research and development aimed at building a robust indigenous manufacturing ecosystem for rechargeable battery technologies in India.
+    `
   },
 
   {
@@ -650,15 +737,7 @@ Dr. Thomas has published over 250 journal articles, ~19 patents (several granted
     description:
       "Dr. Unyong Jeong is a distinguished figure in the field of Materials Science and Engineering, currently serving as a Professor at Pohang University of Science and Technology (POSTECH) in South Korea since March 2016. His academic journey includes a strong foundation in Chemical Engineering, culminating in a Ph.D. from POSTECH in 2003 with a thesis focused on the control of self-assembled nanostructures of block copolymer thin films. He also holds M.S. and B.S. degrees in Chemical Engineering from the same institution. Prior to his tenure at POSTECH, Professor Jeong held faculty positions at Yonsei University from 2006 to 2016, progressing from Assistant to Associate Professor. His postdoctoral research was conducted at the University of Washington, Seattle, under the guidance of Professor Younan Xia. Professor Jeong's research interests are broad and impactful, encompassing inorganic, organic, and hybrid organic/inorganic nanostructured materials. His work includes the synthesis and application of nanoparticles, nanowires, and nanotubes in areas such as optoelectronics, thermoelectronics, biomedical and gas sensing, and nanoelectronics. His significant contributions to the field are recognized through numerous awards, including the Nano Korea Revolutionary Research Award (Korean Minister Award) in 2020, the Young Scientist Award by the Korean President in 2011, and the Asia Outstanding Lectureship Award by the Japanese Chemical Society in 2013. He is an elected member of the Young Korean Academy of Science and Technology (Y-KAST) and an Associate Member of the Korean Academy of Science and Technology (KAST). Beyond his research and teaching, Professor Jeong is actively engaged with the scientific community, serving as an Associate Editor for Materials Advances and the Journal of Materials Chemistry C since 2019. He is also a member of the Samsung Future Technology Meeting Committee. His professional affiliations include memberships in esteemed societies such as the Material Research Society, the American Chemical Society, the American Physical Society, and various Korean scientific organizations.",
   },
-  {
-    id: 54,
-    name: "Dr Venkata Krishnan",
-    institution: "IIT Mandi",
-    country: "India",
-    image: "speak/venkata.JPG",
-    description:
-      "Prof. Venkata Krishnan completed his Ph.D. in Chemistry in 2006 from University of Stuttgart, Germany after completing his B.Sc. and M.Sc. degrees from PSG College of Technology, Coimbatore, Tamil Nadu, India. Subsequently, he worked as a postdoctoral researcher at University of Pennsylvania, U.S.A. from 2006 to 2010 and then as a research associate at National Institute for Materials Science (NIMS), Tsukuba, Japan from 2010 to 2012. He joined as a faculty at the Indian Institute of Technology (IIT) Mandi in April 2012 and is currently a full professor. His research group is mainly working in the field of Green Chemistry and Heterogeneous Catalysis for Energy and Environment Applications. He has successfully guided 12 Ph.D. and 26 M.Sc. students and is currently guiding 9 Ph.D. and 7 M.Sc. students, in addition to several short-term research interns. He has published more than 180 articles in well reputed international journals and is also a reviewer for several scientific journals. He has been bestowed with several awards, including DST INSPIRE faculty award, IIT Mandi foundation day award for excellence in teaching, MANA research fellowship, DoE postdoctoral fellowship, DFG doctoral fellowship, DAAD visiting scholar fellowship, etc. In addition to teaching and research, he has also served IIT Mandi in various administrative positions, such as first warden of the main hostel in permanent campus, founding coordinator of Advanced Materials Research Center (AMRC), Associate Dean Research and most recently as Dean of Sponsored Research, Industrial Consultancy, and International Relations (SRIC & IR), Director of IIT Mandi iHub and HCi foundation (a technology innovation hub) and Director of IIT Mandi Catalyst (a technology business incubator), besides being on several scientific and administrative committees at institute, national and international levels. Apart from academics, he likes reading books and is interested in linguistics.",
-  },
+  
   
   {
     id: 55,
