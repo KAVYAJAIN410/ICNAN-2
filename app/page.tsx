@@ -262,7 +262,7 @@ export default function Home() {
   </button>
     <button className="bg-[#0a2b52] text-white px-6 py-3 rounded font-semibold transition hover:bg-[#143a6e]">
     <a href='accomodation'>
-    Accommodation
+    Accomodation
     </a>
   </button>
 </div>
