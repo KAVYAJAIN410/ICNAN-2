@@ -1,0 +1,812 @@
+
+1.1 Breadth First Search Algorithm
+from collections import deque
+def bfs(graph, start, goal):
+visited = set([start])
+queue = deque([(start, [start])])
+while queue:
+node, path = queue.popleft()
+if node == goal:
+return path
+for neighbor in graph.get(node, []):
+if neighbor not in visited:
+visited.add(neighbor)
+new_path = list(path)
+new_path.append(neighbor)
+queue.append((neighbor, new_path))
+return None
+if __name__ == "__main__":
+graph = {
+'A': ['B', 'C'], 'B': ['A', 'D', 'E'], 'C': ['A', 'F'],
+'D': ['B', 'G'], 'E': ['B', 'G'], 'F': ['C'], 'G': ['D', 'E']
+}
+start = input("Enter start node (default A): ") or 'A'
+goal = input("Enter goal node (default G): ") or 'G'
+path = bfs(graph, start, goal)
+print(f"BFS Path: {path}")
+
+1.2 Depth First Search Algorithm
+from collections import deque
+def dfs(graph, start, goal):
+visited = set([start])
+stack = [(start, [start])]
+while stack:
+node, path = stack.pop()
+if node == goal:
+return path
+for neighbor in sorted(graph.get(node, []), reverse=True):
+if neighbor not in visited:
+visited.add(neighbor)
+new_path = list(path)
+new_path.append(neighbor)
+stack.append((neighbor, new_path))
+return None
+if __name__ == "__main__":
+graph = {
+'A': ['B', 'C'], 'B': ['A', 'D', 'E'], 'C': ['A', 'F'],
+'D': ['B', 'G'], 'E': ['B', 'G'], 'F': ['C'], 'G': ['D', 'E']
+}
+start = input("Enter start node (default A): ") or 'A'
+goal = input("Enter goal node (default G): ") or 'G'
+path = dfs(graph, start, goal)
+print(f"DFS Path: {path}")
+
+
+
+
+
+1.3 Iterative Deepening Search Algorithm
+def dls(graph, start, goal, depth_limit, path=None):
+if path is None:
+path = [start]
+if start == goal:
+return path
+if depth_limit <= 0:
+return None
+for neighbor in graph.get(start, []):
+if neighbor not in path:
+new_path = path + [neighbor]
+result = dls(graph, neighbor, goal, depth_limit - 1, new_path)
+if result is not None:
+return result
+return None
+def ids(graph, start, goal, max_depth=10):
+for depth in range(max_depth):
+result = dls(graph, start, goal, depth)
+if result is not None:
+return result
+return None
+if __name__ == "__main__":
+graph = {
+'A': ['B', 'C'], 'B': ['A', 'D', 'E'], 'C': ['A', 'F'],
+'D': ['B', 'G'], 'E': ['B', 'G'], 'F': ['C'], 'G': ['D', 'E']
+}
+start = input("Enter start node (default A): ") or 'A'
+goal = input("Enter goal node (default G): ") or 'G'
+path = ids(graph, start, goal)
+print(f"IDS Path: {path}")
+
+1.4 Uniform Cost Search Algorithm
+import heapq
+def ucs(graph, start, goal):
+pq = [(0, start, [start])]
+visited = set()
+while pq:
+cost, node, path = heapq.heappop(pq)
+if node in visited:
+continue
+visited.add(node)
+if node == goal:
+return path, cost
+for neighbor, weight in graph.get(node, []):
+if neighbor not in visited:
+new_cost = cost + weight
+new_path = path + [neighbor]
+heapq.heappush(pq, (new_cost, neighbor, new_path))
+return None, float('inf')
+if __name__ == "__main__":
+graph = {
+'A': [('B', 1), ('C', 4)], 'B': [('A', 1), ('D', 2), ('E', 5)],
+'C': [('A', 4), ('F', 3)], 'D': [('B', 2), ('G', 1)],
+'E': [('B', 5), ('G', 2)], 'F': [('C', 3)], 'G': [('D', 1), ('E', 2)]
+}
+
+Page 3
+
+
+start = input("Enter start node (default A): ") or 'A'
+goal = input("Enter goal node (default G): ") or 'G'
+path, cost = ucs(graph, start, goal)
+print(f"UCS Path: {path}, Cost: {cost}")
+
+Page 4
+
+
+
+1.5 Greedy Best First Search Algorithm
+import heapq
+def greedy_bfs(graph, start, goal, heuristics):
+pq = [(heuristics[start], start, [start])]
+visited = set()
+while pq:
+_, node, path = heapq.heappop(pq)
+if node in visited:
+continue
+visited.add(node)
+if node == goal:
+return path
+for neighbor in graph.get(node, []):
+if neighbor not in visited:
+heapq.heappush(pq, (heuristics[neighbor], neighbor, path + [neighbor]))
+return None
+if __name__ == "__main__":
+graph = {
+'A': ['B', 'C'], 'B': ['A', 'D', 'E'], 'C': ['A', 'F'],
+'D': ['B', 'G'], 'E': ['B', 'G'], 'F': ['C'], 'G': ['D', 'E']
+}
+heuristics = {'A': 3, 'B': 2, 'C': 2, 'D': 1, 'E': 1, 'F': 1, 'G': 0}
+start = input("Enter start node (default A): ") or 'A'
+goal = input("Enter goal node (default G): ") or 'G'
+path = greedy_bfs(graph, start, goal, heuristics)
+print(f"Greedy BFS Path: {path}")
+
+1.6 A* Algorithm
+import heapq
+def a_star(graph, start, goal, heuristics):
+pq = [(heuristics[start], 0, start, [start])]
+visited = set()
+while pq:
+f_cost, g_cost, node, path = heapq.heappop(pq)
+if node in visited:
+continue
+visited.add(node)
+if node == goal:
+return path, g_cost
+for neighbor, weight in graph.get(node, []):
+if neighbor not in visited:
+new_g_cost = g_cost + weight
+new_f_cost = new_g_cost + heuristics[neighbor]
+heapq.heappush(pq, (new_f_cost, new_g_cost, neighbor, path + [neighbor]))
+return None, float('inf')
+if __name__ == "__main__":
+graph = {
+'A': [('B', 1), ('C', 4)], 'B': [('A', 1), ('D', 2), ('E', 5)],
+'C': [('A', 4), ('F', 3)], 'D': [('B', 2), ('G', 1)],
+'E': [('B', 5), ('G', 2)], 'F': [('C', 3)], 'G': [('D', 1), ('E', 2)]
+}
+heuristics = {'A': 3, 'B': 2, 'C': 2, 'D': 1, 'E': 1, 'F': 1, 'G': 0}
+start = input("Enter start node (default A): ") or 'A'
+goal = input("Enter goal node (default G): ") or 'G'
+
+Page 5
+
+
+path, cost = a_star(graph, start, goal, heuristics)
+print(f"A* Path: {path}, Cost: {cost}")
+
+1.7 Minimax Algorithm
+def minimax(tree, is_maximizing):
+if isinstance(tree, int):
+return tree
+if is_maximizing:
+best_val = -float('inf')
+for child in tree:
+value = minimax(child, False)
+best_val = max(best_val, value)
+return best_val
+else:
+best_val = float('inf')
+for child in tree:
+value = minimax(child, True)
+best_val = min(best_val, value)
+return best_val
+if __name__ == "__main__":
+game_tree = [[3, 5], [6, 4]]
+result = minimax(game_tree, True)
+print(f"Minimax optimal value: {result}")
+
+Page 6
+
+
+
+1.8 Alpha-Beta Pruning Algorithm
+def alpha_beta(tree, alpha, beta, is_maximizing):
+if isinstance(tree, int):
+return tree
+if is_maximizing:
+best_val = -float('inf')
+for child in tree:
+value = alpha_beta(child, alpha, beta, False)
+best_val = max(best_val, value)
+alpha = max(alpha, best_val)
+if beta <= alpha:
+break
+return best_val
+else:
+best_val = float('inf')
+for child in tree:
+value = alpha_beta(child, alpha, beta, True)
+best_val = min(best_val, value)
+beta = min(beta, best_val)
+if beta <= alpha:
+break
+return best_val
+if __name__ == "__main__":
+game_tree = [[3, 5], [6, 4]]
+result = alpha_beta(game_tree, -float('inf'), float('inf'), True)
+print(f"Alpha-Beta optimal value: {result}")
+
+1.9 Hill Climbing Algorithm
+import random
+def hill_climbing(landscape, max_iterations=1000):
+current_pos = random.randint(0, len(landscape) - 1)
+for _ in range(max_iterations):
+current_value = landscape[current_pos]
+best_neighbor_pos = current_pos
+best_neighbor_value = current_value
+if current_pos > 0 and landscape[current_pos - 1] > best_neighbor_value:
+best_neighbor_pos = current_pos - 1
+best_neighbor_value = landscape[current_pos - 1]
+if current_pos < len(landscape) - 1 and landscape[current_pos + 1] > best_neighbor_value:
+best_neighbor_pos = current_pos + 1
+best_neighbor_value = landscape[current_pos + 1]
+if best_neighbor_pos == current_pos:
+return current_pos, current_value
+current_pos = best_neighbor_pos
+return current_pos, landscape[current_pos]
+if __name__ == "__main__":
+landscape = [1, 3, 5, 4, 2, 6, 8, 7, 5, 3]
+pos, value = hill_climbing(landscape)
+print(f"Hill Climbing - Peak at position {pos} with value {value}")
+
+Page 7
+
+
+
+DIGITAL ASSIGNMENT 2: CLASSIC AI PROBLEMS
+2.1 Missionaries and Cannibals Problem
+from collections import deque
+def is_valid(state):
+m, c, b = state
+if m < 0 or c < 0 or m > 3 or c > 3:
+return False
+if m > 0 and m < c:
+return False
+if 3 - m > 0 and (3 - m) < (3 - c):
+return False
+return True
+def solve_missionaries_cannibals():
+start_state = (3, 3, 1)
+goal_state = (0, 0, 0)
+queue = deque([(start_state, [start_state])])
+visited = {start_state}
+moves = [(1, 0), (2, 0), (0, 1), (0, 2), (1, 1)]
+while queue:
+current_state, path = queue.popleft()
+if current_state == goal_state:
+return path
+m, c, b = current_state
+for dm, dc in moves:
+if b == 1:
+new_state = (m - dm, c - dc, 0)
+else:
+new_state = (m + dm, c + dc, 1)
+if new_state not in visited and is_valid(new_state):
+visited.add(new_state)
+new_path = path + [new_state]
+queue.append((new_state, new_path))
+return None
+if __name__ == "__main__":
+solution = solve_missionaries_cannibals()
+if solution:
+print("Solution found:")
+for i, state in enumerate(solution):
+print(f"Step {i}: Missionaries={state[0]}, Cannibals={state[1]}, Boat={'Left' if state[2]
+else 'Right'}")
+else:
+print("No solution found!")
+
+2.2 Water Jug Problem
+from collections import deque
+def solve_water_jug(jug1_cap, jug2_cap, target):
+start_state = (0, 0)
+queue = deque([(start_state, [start_state])])
+visited = {start_state}
+while queue:
+(j1, j2), path = queue.popleft()
+if j1 == target or j2 == target:
+
+
+
+
+return path
+next_states = [
+(jug1_cap, j2), (j1, jug2_cap),
+(0, j2), (j1, 0),
+(j1 - min(j1, jug2_cap - j2), j2 + min(j1, jug2_cap - j2)),
+(j1 + min(j2, jug1_cap - j1), j2 - min(j2, jug1_cap - j1))
+]
+for state in next_states:
+if state not in visited and 0 <= state[0] <= jug1_cap and 0 <= state[1] <= jug2_cap:
+visited.add(state)
+new_path = path + [state]
+queue.append((state, new_path))
+return None
+if __name__ == "__main__":
+jug1 = int(input("Enter Jug 1 capacity (default 4): ") or "4")
+jug2 = int(input("Enter Jug 2 capacity (default 3): ") or "3")
+target = int(input("Enter target amount (default 2): ") or "2")
+solution = solve_water_jug(jug1, jug2, target)
+if solution:
+print("Solution found:")
+for i, state in enumerate(solution):
+print(f"Step {i}: Jug1={state[0]}, Jug2={state[1]}")
+else:
+print("No solution found!")
+
+
+2.3 8-Puzzle Problem
+import heapq
+def manhattan_distance(state, goal_state):
+distance = 0
+for i in range(3):
+for j in range(3):
+if state[i][j] != 0:
+val = state[i][j]
+goal_pos = next((r, c) for r, row in enumerate(goal_state) for c, x in enumerate(row) if
+x == val)
+distance += abs(i - goal_pos[0]) + abs(j - goal_pos[1])
+return distance
+def solve_8_puzzle(initial_state, goal_state):
+pq = [(0 + manhattan_distance(initial_state, goal_state), 0, initial_state,
+[initial_state])]
+visited = {tuple(map(tuple, initial_state))}
+while pq:
+_, g_cost, current_state, path = heapq.heappop(pq)
+if current_state == goal_state:
+return path
+zero_pos = next((r, c) for r, row in enumerate(current_state) for c, x in enumerate(row)
+if x == 0)
+for dr, dc in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
+nr, nc = zero_pos[0] + dr, zero_pos[1] + dc
+if 0 <= nr < 3 and 0 <= nc < 3:
+new_state = [list(row) for row in current_state]
+new_state[zero_pos[0]][zero_pos[1]], new_state[nr][nc] = new_state[nr][nc],
+new_state[zero_pos[0]][zero_pos[1]]
+if tuple(map(tuple, new_state)) not in visited:
+visited.add(tuple(map(tuple, new_state)))
+new_g = g_cost + 1
+h_cost = manhattan_distance(new_state, goal_state)
+f_cost = new_g + h_cost
+heapq.heappush(pq, (f_cost, new_g, new_state, path + [new_state]))
+return None
+if __name__ == "__main__":
+initial = [[1, 2, 3], [4, 0, 5], [6, 7, 8]]
+goal = [[1, 2, 3], [4, 5, 6], [7, 8, 0]]
+print("Initial state:")
+for row in initial: print(row)
+solution = solve_8_puzzle(initial, goal)
+if solution:
+print("\nSolution found!")
+for i, state in enumerate(solution):
+print(f"Step {i}:")
+for row in state: print(row)
+print()
+else:
+print("No solution found!")
+
+2.4 Traveling Salesman Problem
+import random
+def calculate_distance(tour, dist_matrix):
+total_dist = 0
+for i in range(len(tour)):
+total_dist += dist_matrix[tour[i-1]][tour[i]]
+
+
+return total_dist
+def solve_tsp_hill_climbing(dist_matrix, iterations=1000):
+num_cities = len(dist_matrix)
+current_tour = list(range(num_cities))
+random.shuffle(current_tour)
+current_dist = calculate_distance(current_tour, dist_matrix)
+for _ in range(iterations):
+i, j = random.sample(range(num_cities), 2)
+if i > j: i, j = j, i
+new_tour = current_tour[:i] + current_tour[i:j+1][::-1] + current_tour[j+1:]
+new_dist = calculate_distance(new_tour, dist_matrix)
+if new_dist < current_dist:
+current_tour, current_dist = new_tour, new_dist
+return current_tour, current_dist
+if __name__ == "__main__":
+dist_matrix = [[0, 10, 15, 20], [10, 0, 35, 25], [15, 35, 0, 30], [20, 25, 30, 0]]
+tour, dist = solve_tsp_hill_climbing(dist_matrix)
+print(f"TSP Tour: {tour}")
+print(f"Total Distance: {dist}")
+
+
+
+2.5 Tic-Tac-Toe Game
+import math
+def print_board(board):
+for row in board:
+print(" | ".join(row))
+print("-" * 9)
+def check_winner(board, player):
+win_conditions = [
+[board[0][0], board[0][1], board[0][2]], [board[1][0], board[1][1], board[1][2]],
+[board[2][0], board[2][1], board[2][2]], [board[0][0], board[1][0], board[2][0]],
+[board[0][1], board[1][1], board[2][1]], [board[0][2], board[1][2], board[2][2]],
+[board[0][0], board[1][1], board[2][2]], [board[0][2], board[1][1], board[2][0]]
+]
+return [player, player, player] in win_conditions
+def is_full(board):
+return all(cell != ' ' for row in board for cell in row)
+def minimax(board, depth, is_maximizing):
+if check_winner(board, 'X'): return 10 - depth
+if check_winner(board, 'O'): return depth - 10
+if is_full(board): return 0
+if is_maximizing:
+best_score = -math.inf
+for r in range(3):
+for c in range(3):
+if board[r][c] == ' ':
+board[r][c] = 'X'
+score = minimax(board, depth + 1, False)
+board[r][c] = ' '
+best_score = max(score, best_score)
+return best_score
+else:
+best_score = math.inf
+for r in range(3):
+for c in range(3):
+if board[r][c] == ' ':
+board[r][c] = 'O'
+score = minimax(board, depth + 1, True)
+board[r][c] = ' '
+best_score = min(score, best_score)
+return best_score
+def find_best_move(board):
+best_score = -math.inf
+move = (-1, -1)
+for r in range(3):
+for c in range(3):
+if board[r][c] == ' ':
+board[r][c] = 'X'
+score = minimax(board, 0, False)
+board[r][c] = ' '
+if score > best_score:
+best_score = score
+move = (r, c)
+return move
+def play_tic_tac_toe():
+board = [[' ' for _ in range(3)] for _ in range(3)]
+print("Tic-Tac-Toe Game (AI is X)")
+
+
+
+
+while True:
+print_board(board)
+row = int(input("Enter row (0-2): "))
+col = int(input("Enter column (0-2): "))
+if board[row][col] != ' ':
+print("Invalid move! Try again.")
+continue
+board[row][col] = 'O'
+if check_winner(board, 'O'):
+print_board(board)
+print("You win!")
+break
+if is_full(board):
+print_board(board)
+print("It's a tie!")
+break
+print("AI is thinking...")
+ai_row, ai_col = find_best_move(board)
+board[ai_row][ai_col] = 'X'
+if check_winner(board, 'X'):
+print_board(board)
+print("AI wins!")
+break
+if is_full(board):
+print_board(board)
+print("It's a tie!")
+break
+if __name__ == "__main__":
+play_tic_tac_toe()
+
+Page 13
+
+AI Lab - All Programs
+
+2.6 N-Queens Problem
+def is_safe(board, row, col, n):
+for i in range(row):
+if board[i] == col or abs(board[i] - col) == abs(i - row):
+return False
+return True
+def solve_n_queens_util(board, row, n):
+if row == n:
+return True
+for col in range(n):
+if is_safe(board, row, col, n):
+board[row] = col
+if solve_n_queens_util(board, row + 1, n):
+return True
+board[row] = -1
+return False
+def solve_n_queens(n):
+board = [-1] * n
+if solve_n_queens_util(board, 0, n):
+print(f"Solution for {n}-Queens:")
+for row in range(n):
+line = ["Q" if board[row] == col else "." for col in range(n)]
+print(" ".join(line))
+else:
+print(f"No solution exists for {n}-Queens")
+if __name__ == "__main__":
+n = int(input("Enter number of queens (default 4): ") or "4")
+solve_n_queens(n)
+
+2.7 Wumpus World Problem
+class WumpusAgent:
+def __init__(self, size):
+self.size = size
+self.kb = [['?' for _ in range(size)] for _ in range(size)]
+self.x, self.y = 0, 0
+self.kb[0][0] = 'S'
+def find_safe_move(self):
+for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
+nx, ny = self.x + dx, self.y + dy
+if 0 <= nx < self.size and 0 <= ny < self.size and self.kb[nx][ny] == 'S':
+return (nx, ny)
+return None
+def update_kb(self, percepts):
+if 'Stench' in percepts:
+for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
+nx, ny = self.x + dx, self.y + dy
+if 0 <= nx < self.size and 0 <= ny < self.size and self.kb[nx][ny] == '?':
+self.kb[nx][ny] = 'W?'
+if 'Breeze' in percepts:
+for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
+nx, ny = self.x + dx, self.y + dy
+if 0 <= nx < self.size and 0 <= ny < self.size and self.kb[nx][ny] == '?':
+self.kb[nx][ny] = 'P?'
+def decide_action(self, percepts):
+
+Page 14
+
+AI Lab - All Programs
+if 'Glitter' in percepts: return 'Grab'
+self.update_kb(percepts)
+for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
+nx, ny = self.x + dx, self.y + dy
+if 0 <= nx < self.size and 0 <= ny < self.size and self.kb[nx][ny] == '?':
+if 'Stench' not in percepts and 'Breeze' not in percepts:
+self.kb[nx][ny] = 'S'
+safe_move = self.find_safe_move()
+if safe_move:
+self.x, self.y = safe_move
+return f'Move to {safe_move}'
+return 'Climb'
+if __name__ == "__main__":
+agent = WumpusAgent(4)
+percepts = ['Breeze']
+action = agent.decide_action(percepts)
+print(f"Wumpus Agent Action: {action}")
+
+
+
+DIGITAL ASSIGNMENT 3: LOGIC AND PROBABILITY
+3.1 Forward and Backward Chaining
+def forward_chaining(facts, rules):
+inferred = set()
+while True:
+new_inferred_this_pass = set()
+for condition, conclusion in rules:
+if all(fact.strip() in facts for fact in condition.split(" and ")):
+if conclusion not in facts:
+new_inferred_this_pass.add(conclusion)
+if not new_inferred_this_pass:
+break
+facts.update(new_inferred_this_pass)
+inferred.update(new_inferred_this_pass)
+return inferred
+def backward_chaining(goal, facts, rules):
+if goal in facts:
+return True
+if goal not in rules:
+return False
+for rule_premises in rules[goal]:
+if all(backward_chaining(premise, facts, rules) for premise in rule_premises):
+return True
+return False
+if __name__ == "__main__":
+facts = {"American(West)", "Missile(M1)", "Owns(Nono, M1)", "Enemy(Nono, America)",
+"Sells(West, M1, Nono)"}
+rules = [
+("Enemy(Nono, America)", "Hostile(Nono)"),
+("American(West) and Sells(West, M1, Nono) and Hostile(Nono) and Missile(M1)",
+"Criminal(West)")
+]
+rules_bc = {
+"Criminal(West)": [["American(West)", "Sells(West, M1, Nono)", "Hostile(Nono)",
+"Missile(M1)"]],
+"Hostile(Nono)": [["Enemy(Nono, America)"]]
+}
+print("=== FORWARD CHAINING ===")
+facts_fc = facts.copy()
+derived_facts = forward_chaining(facts_fc, rules)
+print("Derived Facts:", derived_facts)
+if "Criminal(West)" in facts_fc:
+print("Forward Chaining Result: West is a Criminal")
+else:
+print("Forward Chaining Result: Could not prove West is a Criminal")
+print("\n=== BACKWARD CHAINING ===")
+facts_bc = facts.copy()
+if backward_chaining("Criminal(West)", facts_bc, rules_bc):
+print("Backward Chaining Result: West is a Criminal")
+else:
+print("Backward Chaining Result: Could not prove West is a Criminal")
+
+3.2 Bayes Theorem - Spam Filter
+def bayes_theorem():
+P_spam = 0.50
+P_nonspam = 1 - P_spam
+
+Page 16
+
+AI Lab - All Programs
+P_detected_given_spam = 0.99
+P_detected_given_nonspam = 0.05
+P_detected = (P_detected_given_spam * P_spam) + (P_detected_given_nonspam * P_nonspam)
+P_nonspam_given_detected = (P_detected_given_nonspam * P_nonspam) / P_detected
+print("=== Bayes Theorem - Spam Filter ===")
+print(f"P(Spam) = {P_spam}")
+print(f"P(Non-spam) = {P_nonspam}")
+print(f"P(Detected|Spam) = {P_detected_given_spam}")
+print(f"P(Detected|Non-spam) = {P_detected_given_nonspam}")
+print(f"P(Detected) = {P_detected:.4f}")
+print(f"P(Non-spam|Detected) = {P_nonspam_given_detected:.4f}")
+print(f"Probability that detected spam is actually non-spam:
+{P_nonspam_given_detected*100:.2f}%")
+if __name__ == "__main__":
+bayes_theorem()
+
+
+3.3 Naive Bayesian Classifier for Diabetes
+import pandas as pd
+from sklearn.model_selection import train_test_split, cross_val_score
+from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import accuracy_score
+import numpy as np
+def naive_bayes_diabetes():
+try:
+# Sample data creation (replace with actual CSV loading)
+data = {
+'Pregnancies': [6, 1, 8, 1, 0, 5, 3, 10, 2, 8],
+'Glucose': [148, 85, 183, 89, 137, 116, 78, 115, 197, 125],
+'BloodPressure': [72, 66, 64, 66, 40, 74, 50, 0, 70, 96],
+'SkinThickness': [35, 29, 0, 23, 35, 0, 32, 0, 45, 0],
+'Insulin': [0, 0, 0, 94, 168, 0, 88, 0, 543, 0],
+'BMI': [33.6, 26.6, 23.3, 28.1, 43.1, 25.6, 31.0, 35.3, 30.5, 0.0],
+'DiabetesPedigreeFunction': [0.627, 0.351, 0.672, 0.167, 2.288, 0.201, 0.248, 0.134,
+0.158, 0.232],
+'Age': [50, 31, 32, 21, 33, 30, 26, 29, 53, 54],
+'Outcome': [1, 0, 1, 0, 1, 0, 1, 0, 1, 1]
+}
+df = pd.DataFrame(data)
+X = df.drop('Outcome', axis=1)
+y = df['Outcome']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+model = GaussianNB()
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred) * 100
+cv_scores = cross_val_score(model, X, y, cv=5)
+avg_cv_accuracy = cv_scores.mean() * 100
+print(f"Accuracy (70:30 Split): {accuracy:.2f}%")
+print(f"Average 5-Fold CV Accuracy: {avg_cv_accuracy:.2f}%")
+except Exception as e:
+print(f"Error: {e}")
+print("Note: This is a sample implementation. For full functionality, use actual
+diabetes.csv")
+if __name__ == "__main__":
+naive_bayes_diabetes()
+
+
+
+DIGITAL ASSIGNMENT 4 & 5: MACHINE LEARNING
+4.1 Decision Tree Classifier (Iris Dataset)
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier, plot_tree
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+import matplotlib.pyplot as plt
+def decision_tree_iris():
+try:
+# Sample Iris data (replace with actual CSV loading)
+from sklearn.datasets import load_iris
+iris = load_iris()
+X, y = iris.data, iris.target
+feature_names = iris.feature_names
+target_names = iris.target_names
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+clf = DecisionTreeClassifier(random_state=42)
+clf.fit(X_train, y_train)
+y_pred = clf.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+precision = precision_score(y_test, y_pred, average='macro')
+recall = recall_score(y_test, y_pred, average='macro')
+f1 = f1_score(y_test, y_pred, average='macro')
+print("=== Decision Tree Classifier Performance ===")
+print(f"Accuracy : {accuracy:.4f}")
+print(f"Precision: {precision:.4f}")
+print(f"Recall
+: {recall:.4f}")
+print(f"F1 Score : {f1:.4f}")
+print("\nGenerating Decision Tree visualization...")
+plt.figure(figsize=(12, 8))
+plot_tree(clf, feature_names=feature_names, class_names=target_names, filled=True,
+rounded=True)
+plt.title("Decision Tree for Iris Dataset")
+plt.show()
+except Exception as e:
+print(f"Error: {e}")
+print("Note: This is a sample implementation")
+if __name__ == "__main__":
+decision_tree_iris()
+
+4.2 Linear Regression (Housing Prices)
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.impute import SimpleImputer
+from sklearn.pipeline import Pipeline
+import numpy as np
+import matplotlib.pyplot as plt
+def linear_regression_housing():
+try:
+# Sample housing data (replace with actual CSV loading)
+from sklearn.datasets import fetch_california_housing
+
+housing = fetch_california_housing()
+X, y = housing.data, housing.target
+feature_names = housing.feature_names
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+numeric_transformer = Pipeline(steps=[('imputer', SimpleImputer(strategy='mean'))])
+preprocessor = ColumnTransformer(transformers=[('num', numeric_transformer,
+list(range(X.shape[1])))])
+model = Pipeline(steps=[('preprocessor', preprocessor), ('regressor',
+LinearRegression())])
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+mae = mean_absolute_error(y_test, y_pred)
+mse = mean_squared_error(y_test, y_pred)
+rmse = np.sqrt(mse)
+r2 = r2_score(y_test, y_pred)
+print("=== Linear Regression Model Performance ===")
+print(f"Mean Absolute Error (MAE): {mae:.2f}")
+print(f"Mean Squared Error (MSE): {mse:.2f}")
+print(f"Root Mean Squared Error (RMSE): {rmse:.2f}")
+print(f"R-squared (R²): {r2:.4f}")
+print("\nGenerating visualization plots...")
+plt.figure(figsize=(6,6))
+plt.scatter(y_test, y_pred, alpha=0.5)
+plt.xlabel("Actual Values")
+plt.ylabel("Predicted Values")
+plt.title("Actual vs Predicted Values")
+plt.grid(True)
+plt.show()
+except Exception as e:
+print(f"Error: {e}")
+print("Note: This is a sample implementation")
+if __name__ == "__main__":
+linear_regression_housing()
+
+Page 20
+
+
