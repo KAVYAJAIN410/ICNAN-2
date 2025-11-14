@@ -1,0 +1,1504 @@
+TimeServerApp.java 
+import java.net.*; 
+import java.io.*; 
+import java.util.Date; 
+public class TimeServerApp { 
+ public static void main(String[] a) throws Exception { 
+ try (ServerSocket s = new ServerSocket(5050)) { 
+ System.out.println("TimeServer on 5050"); 
+ while (true) { 
+ Socket c = s.accept(); 
+ try (PrintWriter w = new PrintWriter(c.getOutputStream(), true)) {  w.println(new Date().toString()); 
+ } finally { c.close(); } 
+ } 
+ } 
+ } 
+} 
+TimeClientApp.java 
+import java.net.*; 
+import java.io.*; 
+public class TimeClientApp { 
+ public static void main(String[] a) throws Exception { 
+ try (Socket s = new Socket("localhost", 5050); 
+ BufferedReader r = new BufferedReader(new InputStreamReader(s.getInputStream()))) {  System.out.println("Current server time: " + r.readLine()); 
+ } 
+ } 
+} 
+ShiftServerApp.java 
+import java.net.*; 
+import java.io.*; 
+public class ShiftServerApp { 
+ static String shift(String in) { 
+ StringBuilder b = new StringBuilder(); 
+ for (char ch : in.toCharArray()) { 
+ if (Character.isLowerCase(ch)) b.append((char) ('a' + (ch - 'a' + 1) % 26));  else if (Character.isUpperCase(ch)) b.append((char) ('A' + (ch - 'A' + 1) % 26));  else b.append(ch); 
+ } 
+ return b.toString(); 
+ }
+ public static void main(String[] a) throws Exception { 
+ try (ServerSocket s = new ServerSocket(5051)) { 
+ System.out.println("ShiftServer 5051"); 
+ while (true) { 
+ Socket c = s.accept(); 
+ try (BufferedReader r = new BufferedReader(new InputStreamReader(c.getInputStream())); 
+ PrintWriter w = new PrintWriter(c.getOutputStream(), true)) {  String msg = r.readLine(); 
+ w.println(shift(msg == null ? "" : msg)); 
+ } finally { c.close(); } 
+ } 
+ } 
+ } 
+} 
+ShiftClientApp.java 
+import java.net.*; 
+import java.io.*; 
+import java.util.Scanner; 
+public class ShiftClientApp { 
+ public static void main(String[] a) throws Exception { 
+ try (Socket s = new Socket("localhost", 5051); 
+ PrintWriter w = new PrintWriter(s.getOutputStream(), true); 
+ BufferedReader r = new BufferedReader(new InputStreamReader(s.getInputStream()));  Scanner sc = new Scanner(System.in)) { 
+ System.out.print("Type a message: "); 
+ w.println(sc.nextLine()); 
+ System.out.println("Shift-encoded reply: " + r.readLine()); 
+ } 
+ } 
+} 
+ChatHubServer.java 
+import java.net.*; 
+import java.io.*; 
+import java.util.*; 
+public class ChatHubServer { 
+ static List<Client> clients = Collections.synchronizedList(new ArrayList<>()); 
+ public static void main(String[] a) throws Exception { 
+ try (ServerSocket s = new ServerSocket(5052)) { 
+ System.out.println("ChatHubServer running on 5052"); 
+ while (true) { 
+ Socket c = s.accept(); 
+ Client cl = new Client(c); 
+ clients.add(cl); 
+ new Thread(cl).start(); 
+ }
+ } 
+ } 
+ static void broadcast(String msg, Client from) { 
+ synchronized (clients) { 
+ for (Client c : clients) 
+ if (c != from) c.send(msg); 
+ } 
+ } 
+ static void remove(Client c) { 
+ clients.remove(c); 
+ } 
+ static class Client implements Runnable { 
+ Socket sock; BufferedReader r; PrintWriter w; String nick = "Guest"; 
+ Client(Socket s) throws IOException { 
+ sock = s; 
+ r = new BufferedReader(new InputStreamReader(s.getInputStream()));  w = new PrintWriter(s.getOutputStream(), true);  } 
+ public void run() { 
+ try { 
+ w.println("Enter your nickname:"); 
+ nick = r.readLine(); 
+ broadcast(nick + " joined the chat.", this);  String line; 
+ while ((line = r.readLine()) != null) { 
+ if ("exit".equalsIgnoreCase(line.trim())) break;  broadcast(nick + ": " + line, this); 
+ } 
+ } catch (IOException e) { 
+ } finally { 
+ try { sock.close(); } catch (IOException e) {}  remove(this); 
+ broadcast(nick + " left the chat.", this); 
+ } 
+ } 
+ void send(String msg) { w.println(msg); } 
+ } 
+} 
+ChatHubClient.java 
+import java.net.*; 
+import java.io.*; 
+import java.util.Scanner; 
+public class ChatHubClient { 
+ public static void main(String[] a) throws Exception {
+ try (Socket s = new Socket("localhost", 5052); 
+ BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));  PrintWriter out = new PrintWriter(s.getOutputStream(), true);  Scanner sc = new Scanner(System.in)) { 
+ Thread t = new Thread(() -> { 
+ try { 
+ String m; 
+ while ((m = in.readLine()) != null) System.out.println(m);  } catch (Exception e) { System.out.println("Disconnected."); }  }); 
+ t.setDaemon(true); 
+ t.start(); 
+ while (sc.hasNextLine()) { 
+ String l = sc.nextLine(); 
+ out.println(l); 
+ if ("exit".equalsIgnoreCase(l.trim())) break; 
+ } 
+ } 
+ } 
+} 
+NumberSumServer.java 
+import java.net.*; 
+import java.io.*; 
+import java.util.Random; 
+public class NumberSumServer { 
+ public static void main(String[] a) throws Exception { 
+ try (ServerSocket s = new ServerSocket(5053)) { 
+ System.out.println("NumberSumServer listening on 5053"); 
+ while (true) { 
+ Socket c = s.accept(); 
+ new Thread(() -> handle(c)).start(); 
+ } 
+ } 
+ } 
+ static void handle(Socket c) { 
+ try (DataInputStream dis = new DataInputStream(c.getInputStream());  DataOutputStream dos = new DataOutputStream(c.getOutputStream())) {  int n = dis.readInt(); 
+ if (n <= 0) n = 5; 
+ Random r = new Random(); 
+ long sum = 0; 
+ dos.writeInt(n); 
+ for (int i = 0; i < n; i++) { 
+ int v = r.nextInt(100); 
+ dos.writeInt(v); 
+ sum += v; 
+ } 
+ dos.writeLong(sum);
+ dos.flush(); 
+ } catch (IOException e) { 
+ } finally { 
+ try { c.close(); } catch (IOException e) {} 
+ } 
+ } 
+} 
+NumberSumClient.java 
+import java.net.*; 
+import java.io.*; 
+import java.util.Scanner; 
+public class NumberSumClient { 
+ public static void main(String[] a) throws Exception { 
+ Scanner sc = new Scanner(System.in); 
+ System.out.print("Enter number count: "); 
+ int n; 
+ try { n = Integer.parseInt(sc.nextLine().trim()); } catch (Exception e) { n = 5; } 
+ try (Socket s = new Socket("localhost", 5053); 
+ DataOutputStream dos = new DataOutputStream(s.getOutputStream());  DataInputStream dis = new DataInputStream(s.getInputStream())) {  dos.writeInt(n); 
+ dos.flush(); 
+ int ret = dis.readInt(); 
+ long sum = 0; 
+ System.out.print("Numbers: "); 
+ for (int i = 0; i < ret; i++) { 
+ int v = dis.readInt(); 
+ System.out.print(v + (i < ret - 1 ? ", " : "")); 
+ sum += v; 
+ } 
+ System.out.println(); 
+ long serverSum = dis.readLong(); 
+ System.out.println("Server sum=" + serverSum + ", Client sum=" + sum);  System.out.println(serverSum == sum ? "Match" : "Different");  } finally { sc.close(); } 
+ } 
+} 
+FileReceiverServer.java 
+import java.net.*; 
+import java.io.*; 
+public class FileReceiverServer { 
+ public static void main(String[] a) throws Exception { 
+ try (ServerSocket s = new ServerSocket(5054)) { 
+ System.out.println("FileReceiverServer running on 5054");  while (true) { 
+ Socket c = s.accept();
+ new Thread(() -> recv(c)).start(); 
+ } 
+ } 
+ } 
+ static void recv(Socket c) { 
+ try (DataInputStream dis = new DataInputStream(new BufferedInputStream(c.getInputStream())); 
+ DataOutputStream dos = new DataOutputStream(c.getOutputStream())) {  String name = dis.readUTF(); 
+ long size = dis.readLong(); 
+ String out = "received_" + name; 
+ try (FileOutputStream fos = new FileOutputStream(out)) { 
+ byte[] b = new byte[4096]; 
+ long rem = size; 
+ int r; 
+ while (rem > 0 && (r = dis.read(b, 0, (int) Math.min(b.length, rem))) != -1) {  fos.write(b, 0, r); 
+ rem -= r; 
+ } 
+ } 
+ dos.writeUTF("OK"); 
+ dos.flush(); 
+ } catch (IOException e) { 
+ System.err.println("Transfer error: " + e.getMessage()); 
+ } finally { 
+ try { c.close(); } catch (IOException ignored) {} 
+ } 
+ } 
+} 
+FileSenderClient.java 
+import java.net.*; 
+import java.io.*; 
+import java.util.Scanner; 
+public class FileSenderClient { 
+ public static void main(String[] a) throws Exception { 
+ Scanner sc = new Scanner(System.in); 
+ System.out.print("Enter file path: "); 
+ File f = new File(sc.nextLine().trim()); 
+ if (!f.exists() || !f.isFile()) { System.err.println("File not found."); return; } 
+ try (Socket s = new Socket("localhost", 5054); 
+ DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(s.getOutputStream())); 
+ DataInputStream dis = new DataInputStream(s.getInputStream());  FileInputStream fis = new FileInputStream(f)) { 
+ dos.writeUTF(f.getName()); 
+ dos.writeLong(f.length()); 
+ dos.flush(); 
+ byte[] b = new byte[4096];
+ int r; 
+ while ((r = fis.read(b)) != -1) dos.write(b, 0, r); 
+ dos.flush(); 
+ System.out.println("Server: " + dis.readUTF()); 
+ } finally { sc.close(); } 
+ } 
+} 
+UDPChatServer.java 
+import java.net.*; 
+import java.util.*; 
+import java.util.concurrent.ConcurrentHashMap; 
+public class UDPChatServer { 
+ public static void main(String[] a) throws Exception { 
+ DatagramSocket s = new DatagramSocket(9999); 
+ Set<InetSocketAddress> clients = ConcurrentHashMap.newKeySet(); 
+ byte[] buf = new byte[2048]; 
+ System.out.println("UDPChatServer running on 9999"); 
+ while (true) { 
+ DatagramPacket p = new DatagramPacket(buf, buf.length); 
+ s.receive(p); 
+ String msg = new String(p.getData(), 0, p.getLength()); 
+ InetSocketAddress addr = new InetSocketAddress(p.getAddress(), p.getPort());  clients.add(addr); 
+ String out = "[" + p.getAddress().getHostAddress() + ":" + p.getPort() + "] " + msg;  byte[] data = out.getBytes(); 
+ for (InetSocketAddress c : clients) 
+ s.send(new DatagramPacket(data, data.length, c)); 
+ } 
+ } 
+} 
+UDPChatClient.java 
+import java.net.*; 
+import java.util.*; 
+public class UDPChatClient { 
+ public static void main(String[] a) throws Exception { 
+ DatagramSocket s = new DatagramSocket(); 
+ InetAddress host = InetAddress.getByName("127.0.0.1"); 
+ int port = 9999; 
+ System.out.println("UDP chat started. Ctrl+C to quit."); 
+ Thread rx = new Thread(() -> { 
+ try { 
+ byte[] b = new byte[1024]; 
+ while (true) { 
+ DatagramPacket p = new DatagramPacket(b, b.length); 
+ s.receive(p);
+ System.out.println(new String(p.getData(), 0, p.getLength()));  } 
+ } catch (Exception ignored) {} 
+ }); 
+ rx.setDaemon(true); 
+ rx.start(); 
+ Scanner sc = new Scanner(System.in); 
+ while (true) { 
+ byte[] d = sc.nextLine().getBytes(); 
+ s.send(new DatagramPacket(d, d.length, host, port));  } 
+ } 
+}
+
+
+
+DHCP server 
+5. Step-by-Step Implementation
+
+Step 1: Build the Network in Packet Tracer
+Drag the following devices:
+
+
+1 Router (2811)
+
+
+1 DHCP Server
+
+
+2 Switches
+
+
+PCs for both LANs
+
+
+Make the physical connections:
+
+
+Router Fa0/0 → Switch 1
+
+
+Router Fa0/1 → Switch 2
+
+
+Router Gig0/1 → DHCP Server
+
+
+Switches → PCs
+
+
+Use Copper Straight-Through cables.
+
+Step 2: Configure the DHCP Server
+Assign Static IP to the Server
+Go to: Server → Config → FastEthernet0
+IP Address:     10.0.0.2  
+Subnet Mask:    255.255.255.0  
+Default Gateway: 10.0.0.1  
+
+
+Configure DHCP Pools
+Go to: Services → DHCP
+Pool for LAN 1
+Pool Name: LAN1
+Default Gateway: 192.168.10.1
+DNS Server: 8.8.8.8
+Start IP: 192.168.10.10
+Subnet Mask: 255.255.255.0
+Maximum Users: 100
+Save
+
+Pool for LAN 2
+Pool Name: LAN2
+Default Gateway: 192.168.20.1
+DNS Server: 8.8.8.8
+Start IP: 192.168.20.10
+Subnet Mask: 255.255.255.0
+Maximum Users: 100
+Save
+
+
+Step 3: Configure the Router
+Go to CLI of Router and enter:
+Configure LAN 1 Interface
+conf t
+interface fa0/0
+ip address 192.168.10.1 255.255.255.0
+no shutdown
+exit
+
+Configure LAN 2 Interface
+interface fa0/1
+ip address 192.168.20.1 255.255.255.0
+no shutdown
+exit
+
+Configure Server-side Interface
+interface gig0/1
+ip address 10.0.0.1 255.255.255.0
+no shutdown
+exit
+
+
+Step 4: Configure DHCP Relay (Important)
+DHCP broadcasts cannot pass through routers.
+ So we use ip helper-address to forward them.
+On LAN 1 Interface
+interface fa0/0
+ip helper-address 10.0.0.2
+exit
+
+On LAN 2 Interface
+interface fa0/1
+ip helper-address 10.0.0.2
+exit
+
+This tells the router to forward DHCP requests to the DHCP server.
+
+6. Configure the PCs
+On each PC:
+Go to Desktop → IP Configuration → Select DHCP
+The PCs should receive:
+LAN 1 PCs
+IP: 192.168.10.x
+
+
+Gateway: 192.168.10.1
+
+
+LAN 2 PCs
+IP: 192.168.20.x
+
+
+Gateway: 192.168.20.1
+
+
+
+7. Testing and Verification
+A. Test DHCP
+On any PC, open Command Prompt and type:
+ipconfig
+
+Check that IP is assigned by DHCP.
+
+B. Test Connectivity
+Ping the DHCP Server
+ping 10.0.0.2
+
+Ping from LAN 1 to LAN 2
+ping 192.168.20.10
+
+Ping from LAN 2 to LAN 1
+ping 192.168.10.10
+
+✔ If all ping tests succeed → DHCP configuration is successful.
+
+FTP:
+
+2. Network Topology
+PC 1 → Switch → FTP Server
+PC 2 → Switch (same switch)
+
+A simple LAN is created with:
+1 FTP Server
+
+
+2 PCs
+
+
+1 Switch
+
+
+All devices are within the same network.
+
+3. Devices Used
+Device
+Quantity
+Purpose
+Server
+1
+Acts as the FTP file server
+Switch (2960)
+1
+Connects PCs and server
+PC
+2
+Client systems (PC1 uploads/downloads files, PC2 accesses them)
+
+
+4. IP Addressing Scheme
+Device
+IP Address
+Subnet Mask
+Gateway
+FTP Server
+192.168.1.10
+255.255.255.0
+192.168.1.1
+PC1
+192.168.1.11
+255.255.255.0
+192.168.1.1
+PC2
+192.168.1.12
+255.255.255.0
+192.168.1.1
+
+(Gateway is not required in a simple LAN, but used for completeness.)
+
+5. Step-by-Step Implementation
+
+Step 1: Build the Topology
+Drag:
+
+
+1 Server
+
+
+1 Switch
+
+
+2 PCs
+
+
+Connect using Copper Straight-Through cables:
+
+
+PC1 → Switch
+
+
+PC2 → Switch
+
+
+Server → Switch
+
+
+
+Step 2: Configure the FTP Server
+Click Server → Desktop → IP Configuration
+
+
+Assign:
+
+
+IP Address: 192.168.1.10
+Subnet Mask: 255.255.255.0
+Gateway: 192.168.1.1
+To list files on the FTP server:
+
+
+ls
+
+To download a file:
+
+
+get test.txt
+
+To upload a file:
+
+
+put myfile.txt
+
+✔ PC1 is now using FTP to share files with the server.
+
+Step 5: Access the Same Folder from PC2
+Open PC2 → Desktop → Command Prompt
+
+
+Connect to the FTP server:
+
+
+ftp 192.168.1.10
+
+Login using same credentials:
+
+
+Username: user1
+Password: 1234
+
+To view the files uploaded by PC1:
+
+
+ls
+
+To download a file uploaded by PC1:
+
+
+get test.txt
+
+✔ PC2 can access/download the same shared files.
+
+7. Testing and Verification
+To verify proper functioning:
+Ping the Server
+From PC1:
+ping 192.168.1.10
+
+Ping between PCs
+From PC1:
+ping 192.168.1.12
+
+Test FTP Transfer
+Upload from PC1 → See on Server
+
+
+Download from PC2 → Confirm same file
+
+3. WLAN
+
+3. Devices Used
+Device
+Quantity
+Purpose
+Wireless Router (e.g., Linksys/WRT300N)
+1
+Provides Wi-Fi access
+Wireless PCs (Laptop or PC-Wireless)
+5
+Connect to WLAN
+Wireless NICs
+Built-in
+For wireless communication
+
+
+4. IP Addressing Scheme
+We allow the Wireless Router to act as a DHCP server, so all PCs receive IPs automatically.
+Example DHCP assignments:
+192.168.0.100 – 192.168.0.149
+Gateway: 192.168.0.1
+Subnet Mask: 255.255.255.0
+
+
+5. Step-by-Step Implementation
+
+Step 1: Build the Network in Packet Tracer
+Drag the following devices:
+
+
+1 Wireless Router (WRT300N recommended)
+
+
+5 Laptops (or PCs with “PC-Wireless” wireless NIC)
+
+
+No cables required — wireless communication only.
+
+
+
+Step 2: Configure the Wireless Router
+Click the Router → Config → Wireless
+Set:
+SSID: WLAN-Network
+Channel: 6
+Security: WPA2-PSK
+Passphrase: password123
+
+Now configure the router’s LAN IP:
+￼Go to Config → LAN
+IP Address: 192.168.0.1
+Subnet Mask: 255.255.255.0
+DHCP: ON
+
+DHCP Range should be:
+Start: 192.168.0.100
+End:   192.168.0.149
+
+✔ WLAN router is now ready.
+
+Step 3: Configure the Wireless PCs
+Do the following for all 5 PCs.
+Click PC → Desktop → PC Wireless
+
+
+Click Connect
+
+
+Select the wireless network:
+
+
+SSID: WLAN-Network
+
+Enter password:
+
+
+password123
+
+Click Connect
+
+
+Go to Desktop → IP Configuration
+
+
+Choose DHCP
+
+
+The PC should receive:
+IP Address: 192.168.0.xxx
+Gateway: 192.168.0.1
+
+✔ Repeat for each PC.
+
+6. Testing Connectivity
+
+Ping the Wireless Router from any PC
+Open Command Prompt:
+ping 192.168.0.1
+
+Expected output:
+Reply from 192.168.0.1: bytes=32 time<1ms TTL=64
+
+
+Ping Between PCs
+From PC1:
+ping 192.168.0.101
+ping 192.168.0.102
+ping 192.168.0.103
+ping 192.168.0.104
+
+✔ All replies must be successful.
+
+
+4. VLAN
+
+
+2. Network Diagram (Given)
+Your diagram shows:
+Three switches (Switch1, Switch2, Switch3)
+
+
+Two VLANs:
+
+
+VLAN 2 → CSC
+
+
+VLAN 3 → ARTS
+
+
+PCs distributed across switches, but must communicate according to VLAN
+
+
+Example IP Plan from your diagram:
+VLAN
+Network
+Example Host IPs
+VLAN 2 (CSC)
+10.0.0.0/24
+10.0.0.1, 10.0.0.2, 10.0.0.3, 10.0.0.4, 10.0.0.5
+VLAN 3 (ARTS)
+20.0.0.0/24
+20.0.0.1, 20.0.0.2, 20.0.0.3, 20.0.0.4, 20.0.0.5
+
+
+3. Devices Required
+Device
+Count
+Switch (2960 or 2950)
+3
+PCs
+10+ (as per diagram)
+Copper straight-through cables
+many
+
+
+4. Step-by-Step Implementation
+
+STEP 1: Build the Topology
+Connect as shown in the diagram:
+All PCs → Access ports on their switches
+
+
+Switch1 ↔ Switch2 (Trunk)
+
+
+Switch1 ↔ Switch3 (Trunk)
+
+
+Switch2 ↔ Switch3 (Trunk)
+
+
+Use Copper Straight-Through for all connections.
+
+STEP 2: Create VLANs on All Switches
+Do this on Switch1, Switch2, and Switch3:
+Go to CLI:
+enable
+configure terminal
+vlan 2
+name CSC
+exit
+vlan 3
+name ARTS
+exit
+
+
+STEP 3: Configure Access Ports for PCs
+Assign ports to VLANs based on diagram.
+🔹 Example for VLAN 2 (CSC):
+interface fa0/1
+switchport mode access
+switchport access vlan 2
+exit
+
+Do this for all VLAN 2 PCs.
+🔹 Example for VLAN 3 (ARTS):
+interface fa0/2
+switchport mode access
+switchport access vlan 3
+exit
+
+Repeat for all VLAN 3 PCs.
+
+STEP 4: Configure Trunk Ports Between Switches
+Trunk links carry VLAN 2 and VLAN 3.
+Example (Switch1 Fa0/24 → Switch2 Fa0/24):
+On Switch1:
+interface fa0/24
+switchport mode trunk
+switchport trunk allowed vlan 2,3
+exit
+
+On Switch2:
+interface fa0/24
+switchport mode trunk
+switchport trunk allowed vlan 2,3
+exit
+
+Repeat trunk configuration for:
+Switch1 ↔ Switch3
+
+
+Switch2 ↔ Switch3
+
+
+For each link, set:
+switchport mode trunk
+switchport trunk allowed vlan 2,3
+
+
+STEP 5: Assign IP Addresses to PCs
+VLAN 2 → CSC → 10.0.0.x
+Example:
+ PC0:
+IP: 10.0.0.1
+Mask: 255.255.255.0
+Gateway: (none required — no router in this topology)
+
+VLAN 3 → ARTS → 20.0.0.x
+Example:
+ PC2:
+IP: 20.0.0.1
+Mask: 255.255.255.0
+Gateway: (none)
+
+Repeat for all PCs.
+
+STEP 6: Testing Connectivity Using Ping
+
+Same VLAN = Must communicate
+Example:
+From PC0 (VLAN2) → PC1 (VLAN2):
+ping 10.0.0.2
+
+From PC3 (VLAN3) → PC5 (VLAN3):
+ping 20.0.0.3
+
+✔ Should work across different switches
+ ✔ Because trunk links carry VLAN traffic end-to-end
+
+Different VLAN = MUST NOT communicate
+Example:
+From PC in VLAN 2:
+ping 20.0.0.1
+
+❌ Should FAIL
+ Because different VLANs are isolated.
+
+7. Verification Commands
+On any switch:
+Check VLANs:
+show vlan brief
+
+Check trunk:
+show interfaces trunk
+
+You should see Fa0/24 (or your chosen ports) listed as TRUNK, carrying VLANs 2 and 3.
+
+5. STATIC ROUTING:
+
+
+2. Network Topology (Conceptual Diagram)
+LAN1 ↔ R1 ↔ R2 ↔ R3 ↔ R4 ↔ LAN4
+               ↕
+             LAN3
+               ↕
+             LAN2
+
+Each router has:
+1 FastEthernet interface → that router’s LAN
+
+
+1 or 2 Serial interfaces → connect to neighboring routers
+
+
+Routers are connected in a chain using serial links.
+
+3. Devices Required
+Device
+Quantity
+Routers (Cisco 2811)
+4
+Switches (2960)
+4
+PCs
+8 (2 per LAN)
+Serial DCE/DTE cables
+3
+Straight-through cables
+Many
+
+Each router must have WIC-2T serial module installed.
+
+4. IP Addressing Scheme
+LAN Networks (FastEthernet Interfaces)
+LAN
+Network
+Gateway (Router LAN IP)
+LAN 1
+192.168.1.0/24
+192.168.1.1
+LAN 2
+192.168.2.0/24
+192.168.2.1
+LAN 3
+192.168.3.0/24
+192.168.3.1
+LAN 4
+192.168.4.0/24
+192.168.4.1
+
+Serial Networks (Router-to-Router WAN Links)
+Link
+Network
+Router A
+Router B
+R1 ↔ R2
+10.0.1.0/30
+R1: 10.0.1.1
+R2: 10.0.1.2
+R2 ↔ R3
+10.0.2.0/30
+R2: 10.0.2.1
+R3: 10.0.2.2
+R3 ↔ R4
+10.0.3.0/30
+R3: 10.0.3.1
+R4: 10.0.3.2
+
+Note: /30 networks are used for point-to-point serial links.
+
+5. Step-by-Step Implementation
+
+STEP 1: Build the Physical Topology in Packet Tracer
+Drag 4 routers (2811)
+
+
+Install WIC-2T module in each router
+
+
+Power OFF router → Add module → Power ON
+
+
+Drag 4 switches
+
+
+Drag 8 PCs (2 for each LAN)
+
+
+Connect:
+
+
+PC → Switch (straight-through cable)
+
+
+Switch → Router FastEthernet0/0 (straight-through)
+
+
+Router ↔ Router using Serial DCE/DTE cable
+
+
+
+STEP 2: Configure Router LAN Interfaces
+Router R1
+conf t
+interface fa0/0
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+exit
+
+Router R2
+interface fa0/0
+ip address 192.168.2.1 255.255.255.0
+no shutdown
+exit
+
+Router R3
+interface fa0/0
+ip address 192.168.3.1 255.255.255.0
+no shutdown
+exit
+
+Router R4
+interface fa0/0
+ip address 192.168.4.1 255.255.255.0
+no shutdown
+exit
+
+
+STEP 3: Configure Router Serial Interfaces
+
+R1 ↔ R2 Serial Link
+On R1 (DCE side)
+interface s0/0/0
+ip address 10.0.1.1 255.255.255.252
+clock rate 64000
+no shutdown
+exit
+
+On R2
+interface s0/0/0
+ip address 10.0.1.2 255.255.255.252
+no shutdown
+exit
+
+
+R2 ↔ R3 Serial Link
+On R2 (DCE side)
+interface s0/0/1
+ip address 10.0.2.1 255.255.255.252
+clock rate 64000
+no shutdown
+exit
+
+On R3
+interface s0/1/0
+ip address 10.0.2.2 255.255.255.252
+no shutdown
+exit
+
+
+R3 ↔ R4 Serial Link
+On R3 (DCE side)
+interface s0/1/1
+ip address 10.0.3.1 255.255.255.252
+clock rate 64000
+no shutdown
+exit
+
+On R4
+interface s0/0/0
+ip address 10.0.3.2 255.255.255.252
+no shutdown
+exit
+
+
+STEP 4: Configure Static Routing
+Now configure routing tables on each router so all networks are reachable.
+
+Router R1
+ip route 192.168.2.0 255.255.255.0 10.0.1.2
+ip route 192.168.3.0 255.255.255.0 10.0.1.2
+ip route 192.168.4.0 255.255.255.0 10.0.1.2
+
+
+Router R2
+ip route 192.168.1.0 255.255.255.0 10.0.1.1
+ip route 192.168.3.0 255.255.255.0 10.0.2.2
+ip route 192.168.4.0 255.255.255.0 10.0.2.2
+
+
+Router R3
+ip route 192.168.1.0 255.255.255.0 10.0.2.1
+ip route 192.168.2.0 255.255.255.0 10.0.2.1
+ip route 192.168.4.0 255.255.255.0 10.0.3.2
+
+
+Router R4
+ip route 192.168.1.0 255.255.255.0 10.0.3.1
+ip route 192.168.2.0 255.255.255.0 10.0.3.1
+ip route 192.168.3.0 255.255.255.0 10.0.3.1
+
+
+STEP 5: Configure PCs
+Example for LAN 1 PC1:
+IP: 192.168.1.10
+Mask: 255.255.255.0
+Gateway: 192.168.1.1
+
+LAN 2 PC:
+IP: 192.168.2.10
+Mask: 255.255.255.0
+Gateway: 192.168.2.1
+
+LAN 3 PC:
+IP: 192.168.3.10
+Mask: 255.255.255.0
+Gateway: 192.168.3.1
+
+LAN 4 PC:
+IP: 192.168.4.10
+Mask: 255.255.255.0
+Gateway: 192.168.4.1
+
+
+STEP 6: Testing Connectivity (PING)
+From any PC, test:
+Ping across LANs
+PC in LAN1:
+ping 192.168.2.10
+ping 192.168.3.10
+ping 192.168.4.10
+
+All should reply.
+Ping across routers
+ping 10.0.1.1
+ping 10.0.2.1
+ping 10.0.3.2
+
+
+
+RIP:
+
+7. RIP Protocol Configuration Using Router CLI
+(Routing Information Protocol – Dynamic Routing)
+
+1. Objective
+To create a multi-router network and configure RIP v2 so each router automatically learns all routes.
+
+2. Devices Needed
+3 or 4 Routers (2811)
+
+
+Switches
+
+
+PCs
+
+
+Serial or Ethernet connections
+
+
+Example diagram:
+LAN1 — R1 — R2 — R3 — LAN3
+            |
+           LAN2
+
+
+3. IP Plan
+Example:
+Router
+LAN IP
+Serial IP to Next Router
+R1
+10.0.1.1/24
+20.0.0.1/30
+R2
+10.0.2.1/24
+20.0.0.2/30 , 30.0.0.1/30
+R3
+10.0.3.1/24
+30.0.0.2/30
+
+
+4. Router Interface Configuration
+Example for R1:
+interface fa0/0
+ip address 10.0.1.1 255.255.255.0
+no shutdown
+
+interface s0/0/0
+ip address 20.0.0.1 255.255.255.252
+no shutdown
+
+R2 & R3 configure similarly.
+
+5. RIP Configuration (MOST IMPORTANT SECTION)
+Use RIPv2 (supports classless routing).
+On ALL Routers:
+router rip
+version 2
+no auto-summary
+network 10.0.0.0
+network 20.0.0.0
+network 30.0.0.0
+
+
+6. Verify RIP
+Run:
+show ip route
+show ip protocols
+
+RIP-learned routes are marked with R.
+
+7. Test Connectivity
+From any PC:
+ping 10.0.2.1
+ping 10.0.3.1
+
+Cross-LAN connectivity should succeed.
+
+
+DNS AND WEB SERVER
+
+2. Network Topology
+PC0 — Switch — PC1
+         |
+       Server (DNS + HTTP)
+
+
+3. Devices Used
+Device
+Quantity
+Function
+PCs
+2
+PC0 sends messages / accesses web server
+Switch
+1
+Connects all devices
+Server
+1
+Acts as Web Server & DNS Server
+Cables
+3
+Straight-through cables
+
+
+4. Steps
+
+a. Creating a First Network
+Step 1: Build the topology
+Drag:
+
+
+PC0
+
+
+PC1
+
+
+Server
+
+
+Switch (2960)
+
+
+Connect using Copper Straight-Through:
+
+
+PC0 → Switch
+
+
+PC1 → Switch
+
+
+Server → Switch
+
+
+
+Step 2: Configure IP addresses
+Use any simple LAN network, for example:
+Device
+IP Address
+Subnet Mask
+Gateway
+PC0
+192.168.1.10
+255.255.255.0
+192.168.1.1
+PC1
+192.168.1.11
+255.255.255.0
+192.168.1.1
+Server
+192.168.1.50
+255.255.255.0
+192.168.1.1
+
+(No router needed here—gateway can be left blank.)
+
+b. Sending Simple Text Messages in Realtime Mode
+Using Packet Tracer’s “Add Simple PDU” Tool
+Click the Add Simple PDU (Envelope Icon).
+
+
+Click PC0, then click PC1.
+
+
+Packet Tracer will show:
+
+
+Successful or Failed message
+
+
+Source and destination MAC/IP information
+
+
+Using Command Prompt Message Test
+On PC0 open Command Prompt (Desktop → Command Prompt)
+
+
+Type:
+
+
+ping 192.168.1.11
+
+✔ If reply appears, message communication is successful.
+
+c. Establishing a Web Server Connection Using the PC’s Web Browser
+Step 1: Configure the Server
+Go to Server → Config → FastEthernet0:
+IP Address: 192.168.1.50
+Subnet Mask: 255.255.255.0
+
+Enable HTTP service:
+Server → Services → HTTP
+
+
+Ensure HTTP = ON
+
+
+
+Step 2: Configure DNS Server
+Go to Server → Services → DNS
+Add a DNS entry:
+Name
+Type
+Address
+mywebsite.com
+A
+192.168.1.50
+
+Enable DNS service.
+
+Step 3: Configure PC for DNS
+On PC0 → Desktop → IP Configuration:
+IP Address: 192.168.1.10
+DNS Server: 192.168.1.50
+
+
+Step 4: Open PC Web Browser
+Go to Desktop → Web Browser
+
+
+Type:
+
+
+http://mywebsite.com
+
+✔ The web server page should open.
+
+i. What Role Does DNS Play in Connecting to a Web Server?
+DNS (Domain Name System) is like the “phonebook of the internet.”
+Role of DNS:
+Translates domain names (e.g., mywebsite.com)
+ → into IP addresses (e.g., 192.168.1.50)
+
+
+The PC cannot reach a web server using a name unless DNS converts it to an IP address.
+
+
+In Packet Tracer:
+To configure DNS:
+Open Server → Services → DNS
+
+
+Turn DNS ON
+
+
+Add domain name and IP mapping
+
+
+PCs must have DNS server IP configured
+
+
+Without DNS:
+http://192.168.1.50  → works  
+http://mywebsite.com → FAILS
+
+
+ii. Common Issues Preventing Web Browser Connection & Troubleshooting
+Below are typical errors and solutions:
+
+1. Wrong IP Address Configuration
+❌ Problem:
+PC or Server has wrong IP or mask
+
+
+✔ Fix:
+Check PC IP settings:
+Desktop → IP Configuration
+
+Must match same network.
+
+2. DNS Not Configured or Incorrect
+❌ Problem:
+DNS name not added
+
+
+DNS IP wrong
+
+
+DNS service turned off
+
+
+✔ Fix:
+Add DNS entry: name → IP
+
+
+Enable DNS service
+
+
+Set correct DNS server address on PC
+
+
+
+3. HTTP Service Turned Off
+❌ Problem:
+Server → Services → HTTP = OFF
+✔ Fix:
+Turn HTTP = ON
+
+4. Wrong URL Format
+❌ Problem:
+Typing:
+mywebsite
+
+✔ Fix:
+Use:
+http://mywebsite.com
+
+
+5. Bad cable or connection
+❌ Problem:
+Switch port down or cable unplugged
+✔ Fix:
+Check link lights
+ Replace cable if needed
+
+6. Duplicate IP Address
+❌ Problem:
+Two devices use same IP
+✔ Fix:
+Change IP of one device
+
+7. Firewall on Server (Packet Tracer)
+Sometimes the Firewall can block HTTP (if using advanced PT profile).
+✔ Fix:
+Turn firewall OFF or allow HTTP.
+
+
+
+
+Enable FTP Service
+Go to Services → FTP
+
+
+Ensure FTP is ON
+
+
+Add a user account:
+
+
+Example:
+Username: user1
+Password: 1234
+
+Upload a sample file:
+
+
+Click Upload File
+
+
+Add test.txt or any file
+
+
+✔ FTP server is now active.
+
+Step 3: Configure PC1 and PC2
+PC1 Configuration
+IP Address: 192.168.1.11
+Subnet Mask: 255.255.255.0
+Gateway: 192.168.1.1
+
+PC2 Configuration
+IP Address: 192.168.1.12
+Subnet Mask: 255.255.255.0
+Gateway: 192.168.1.1
+
+
+6. Accessing the FTP Server from PCs
+
+Step 4: Access FTP Server from PC1
+Open PC1 → Desktop → Command Prompt
+
+
+Type:
+
+
+ftp 192.168.1.10
+
+Enter the login credentials:
+
+
+Username: user1
+Password: 1234
+
+
