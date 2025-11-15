@@ -22,8 +22,21 @@ export default function Accommodation() {
             process.
           </p>
           <div className="flex justify-center mt-2">
-          <p className="font-bold">Registration  will open shortly</p>
+          <p>
+            Those who are interested in availing the dormitory accommodation facility inside the campus
+are requested to register through the following link.
+While registering, please select the “number of days” you require accommodation and
+choose &quot;No Mess&quot; as the mess type.
+The rate for dormitory accommodation without food is Rs. 280 (including GST).
+Food for all registered conference participants will be served at the conference venue.
+          </p>
+         
           </div>
+           <button className="bg-[#0a2b52] text-white px-6 py-3 rounded font-semibold transition hover:bg-[#143a6e] mt-4">
+    <a href='https://events.vit.ac.in/'>
+    Accommodation
+    </a>
+  </button>
         </section>
 
         {/* Off-Campus Section */}
