@@ -129,6 +129,12 @@ export default function CallForPapers() {
         link:"https://www.rsc.org/publishing/journals/sustainable-energy-and-fuels",
         img:"https://www.rsc.org/getContentAsset/c651c47d-77da-4f61-869e-c5a7e855a32b/97c19dfb-06fc-4638-b657-b9d8300eab48/sustainable-energy-fuels-journal-cover.jpg?language=en&width=768&resizemode=force&format=webp",
         
+      },
+      {
+        id:10,
+        title:"Cell Press iScience(IF 4.1)",
+        link:"https://www.cell.com/iscience/home",
+        img:"/cover.tif.jpg"
       }
     ].map((journal, idx) => (
        <div

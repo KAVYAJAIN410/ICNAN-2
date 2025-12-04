@@ -265,8 +265,26 @@ export default function Home() {
     Accommodation
     </a>
   </button>
+  
 </div>
+  <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
 
+  <button className="bg-[#0a2b52] text-white px-6 py-3 rounded font-semibold transition hover:bg-[#143a6e]">
+    <a href='/ICNAN 2025 Poster Template.pptx' download>
+    Template for poster presentation
+    </a>
+  </button>
+  <button className="bg-[#0a2b52] text-white px-6 py-3 rounded font-semibold transition hover:bg-[#143a6e]">
+    <a href=''>
+    Oral/Poster
+    </a>
+  </button>
+  <button className="bg-[#0a2b52] text-white px-6 py-3 rounded font-semibold transition hover:bg-[#143a6e]">
+    <a href="/ICNAN'25 Schedule.pdf" download>
+    Schedule
+    </a>
+  </button>
+  </div>
       {/* Themes and Journals */}
       
       <section className="py-10 px-4">

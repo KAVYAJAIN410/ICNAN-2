@@ -94,6 +94,7 @@ const Page: React.FC = () => {
      
       <center><h2 className='text-2xl text-[#0a2240] mt-7' style={{fontWeight:"bolder"}} >Conference Chair</h2></center>
      <div className='mb-4'>
+      <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr.) Raja Sellappan</h1>
       <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr.) R. Vimala</h1>
       
       </div>
@@ -107,7 +108,7 @@ const Page: React.FC = () => {
 
       <center><h2 className='text-2xl text-[#0a2240] mt-7' style={{fontWeight:"bolder"}} >Co-Conveners</h2></center>
      <div className='mb-4'>
-      <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr.) Raja Sellappan</h1>
+
       <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr.) Krishnamoorthi C.</h1>
       <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr.) Niroj Kumar Sahu</h1>
       <h1 className="text-center text-lg font-bold leading-tight mt-4">Prof. (Dr.) Anand S.</h1>
