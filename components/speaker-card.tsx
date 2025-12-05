@@ -310,7 +310,7 @@ Presently she is heading the Planning, Coordination and Human Resource Division,
  
   {
     id: 60,
-    name: "R. Jayavel",
+    name: "Dr. R. Jayavel",
     institution: "Anna University",
     country: "India",
     image: "Jayavel.jpg",
@@ -672,7 +672,7 @@ Dr. Sarathlal Koyiloth Vayalil is working as Beamline Manager at Deutsches Elekt
 {
     id: 49,
     name: "Dr. Sudarsanam Putla",
-    institution: "IT Hyderabad",
+    institution: "IIT Hyderabad",
     country: "India",
     image: "Dr. Sudarsanam.png",
     description:
