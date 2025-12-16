@@ -44,6 +44,9 @@ const awards = [
     details:
       'Top presentations by women will receive ₹5000 and a certificate of appreciation.',
   },
+  {
+    
+  }
 ]
 
 
